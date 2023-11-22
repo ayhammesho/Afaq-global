@@ -15401,7 +15401,7 @@ footer {
       }
 
       img {
-        min-height: 20rem;
+        min-height: 28rem;
         border-radius: 10px;
 
         @include md-down-device() {
@@ -15642,7 +15642,7 @@ footer {
     }
 
     img {
-      min-height: 239px;
+      min-height: 285px;
       border-radius: 10px;
 
       @include md-down-device() {

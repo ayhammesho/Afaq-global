@@ -13761,7 +13761,7 @@ footer.style-3 .footer-btm .social-area ul li a:hover {
   transition: 0.35s;
 }
 .featured-car-section .feature-card .product-img img {
-  min-height: 20rem;
+  min-height: 28rem;
   border-radius: 10px;
 }
 @media (max-width: 767px) {
@@ -13971,7 +13971,7 @@ footer.style-3 .footer-btm .social-area ul li a:hover {
   background-color: var(--primary-color1);
 }
 .product-card2 .product-img img {
-  min-height: 239px;
+  min-height: 285px;
   border-radius: 10px;
 }
 @media (max-width: 767px) {
