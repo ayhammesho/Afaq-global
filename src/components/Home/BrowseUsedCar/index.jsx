@@ -11,7 +11,7 @@ import Link from "next/link";
 //     </div>
 //     <div className="product-content">
 //       <div className="company-logo">
-//         <Link legacyBehavior href="/single-brand-category">
+//         <Link legacyBehavior href="#">
 //           <a>
 //             <img
 //               src="assets/img/menu-icon/hyundai-2.svg"
@@ -45,7 +45,7 @@ for (let index = 1; index <= 8; index++) {
         </div>
         <div className="product-content">
           <div className="company-logo">
-            <Link legacyBehavior href="/single-brand-category">
+            <Link legacyBehavior href="#">
               <a>
                 <img src="assets/img/menu-icon/kia-2.svg" alt="" />
               </a>
@@ -77,7 +77,7 @@ for (let index = 1; index <= 8; index++) {
         </div>
         <div className="product-content">
           <div className="company-logo">
-            <Link legacyBehavior href="/single-brand-category">
+            <Link legacyBehavior href="#">
               <a>
                 <img src="assets/img/menu-icon/hyundai-2.svg" alt="" />
               </a>
@@ -179,7 +179,7 @@ function index() {
                       </div>
                       <div className="product-content">
                         <div className="company-logo">
-                          <Link legacyBehavior href="/single-brand-category">
+                          <Link legacyBehavior href="#">
                             <a>
                               <img
                                 src="assets/img/menu-icon/hyundai-2.svg"
@@ -209,7 +209,7 @@ function index() {
                       </div>
                       <div className="product-content">
                         <div className="company-logo">
-                          <Link legacyBehavior href="/single-brand-category">
+                          <Link legacyBehavior href="#">
                             <a>
                               <img
                                 src="assets/img/menu-icon/kia-2.svg"
@@ -239,7 +239,7 @@ function index() {
                       </div>
                       <div className="product-content">
                         <div className="company-logo">
-                          <Link legacyBehavior href="/single-brand-category">
+                          <Link legacyBehavior href="#">
                             <a>
                               <img
                                 src="assets/img/menu-icon/hyundai-2.svg"
@@ -270,7 +270,7 @@ function index() {
                       </div>
                       <div className="product-content">
                         <div className="company-logo">
-                          <Link legacyBehavior href="/single-brand-category">
+                          <Link legacyBehavior href="#">
                             <a>
                               <img
                                 src="assets/img/menu-icon/kia-2.svg"
@@ -300,7 +300,7 @@ function index() {
                       </div>
                       <div className="product-content">
                         <div className="company-logo">
-                          <Link legacyBehavior href="/single-brand-category">
+                          <Link legacyBehavior href="#">
                             <a>
                               <img
                                 src="assets/img/menu-icon/hyundai-2.svg"
@@ -330,7 +330,7 @@ function index() {
                       </div>
                       <div className="product-content">
                         <div className="company-logo">
-                          <Link legacyBehavior href="/single-brand-category">
+                          <Link legacyBehavior href="#">
                             <a>
                               <img
                                 src="assets/img/menu-icon/kia-2.svg"
@@ -360,7 +360,7 @@ function index() {
                       </div>
                       <div className="product-content">
                         <div className="company-logo">
-                          <Link legacyBehavior href="/single-brand-category">
+                          <Link legacyBehavior href="#">
                             <a>
                               <img
                                 src="assets/img/menu-icon/hyundai-2.svg"
@@ -390,7 +390,7 @@ function index() {
                       </div>
                       <div className="product-content">
                         <div className="company-logo">
-                          <Link legacyBehavior href="/single-brand-category">
+                          <Link legacyBehavior href="#">
                             <a>
                               <img
                                 src="assets/img/menu-icon/hyundai-2.svg"

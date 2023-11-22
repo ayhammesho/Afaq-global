@@ -782,7 +782,7 @@ function About() {
                       </div>
                       <div className="view-btn-area">
                         <p>Thousand of People Reviews to Us</p>
-                        <Link legacyBehavior href="/customer-review">
+                        <Link legacyBehavior href="#">
                           <a className="view-btn">View All Review</a>
                         </Link>
                       </div>

@@ -144,7 +144,7 @@ function index() {
                       <strong>$22,656.00</strong>
                     </div>
                     <h5>
-                      <Link legacyBehavior href="/car-deatils">
+                      <Link legacyBehavior href="#">
                         <a>Mercedes-Benz C-Class-2023</a>
                       </Link>
                     </h5>
@@ -261,7 +261,7 @@ function index() {
                       <strong>$32,445.00</strong>
                     </div>
                     <h5>
-                      <Link legacyBehavior href="/car-deatils">
+                      <Link legacyBehavior href="#">
                         <a>Hyundai Sonata-2022</a>
                       </Link>
                     </h5>
@@ -378,7 +378,7 @@ function index() {
                       <strong>$67,542.00</strong>
                     </div>
                     <h5>
-                      <Link legacyBehavior href="/car-deatils">
+                      <Link legacyBehavior href="#">
                         <a>BMW 3 Series Class-2022</a>
                       </Link>
                     </h5>
@@ -495,7 +495,7 @@ function index() {
                       <strong>$45,328.00</strong>
                     </div>
                     <h5>
-                      <Link legacyBehavior href="/car-deatils">
+                      <Link legacyBehavior href="#">
                         <a>Jeep Grand Cherokee-2022</a>
                       </Link>
                     </h5>
@@ -612,7 +612,7 @@ function index() {
                       <strong>$22,656.00</strong>
                     </div>
                     <h5>
-                      <Link legacyBehavior href="/car-deatils">
+                      <Link legacyBehavior href="#">
                         <a>Mercedes-Benz C-Class-2023</a>
                       </Link>
                     </h5>
@@ -729,7 +729,7 @@ function index() {
                       <strong>$32,445.00</strong>
                     </div>
                     <h5>
-                      <Link legacyBehavior href="/car-deatils">
+                      <Link legacyBehavior href="#">
                         <a>Hyundai Sonata-2022</a>
                       </Link>
                     </h5>
@@ -846,7 +846,7 @@ function index() {
                       <strong>$67,542.00</strong>
                     </div>
                     <h5>
-                      <Link legacyBehavior href="/car-deatils">
+                      <Link legacyBehavior href="#">
                         <a>BMW 3 Series Class-2022</a>
                       </Link>
                     </h5>
@@ -963,7 +963,7 @@ function index() {
                       <strong>$45,328.00</strong>
                     </div>
                     <h5>
-                      <Link legacyBehavior href="/car-deatils">
+                      <Link legacyBehavior href="#">
                         <a>Jeep Grand Cherokee-2022</a>
                       </Link>
                     </h5>

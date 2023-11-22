@@ -39,7 +39,7 @@ function SingleBrandCategoryPage() {
                 </div>
                 <div className="product-content">
                   <h5>
-                    <Link legacyBehavior href="/car-deatils">
+                    <Link legacyBehavior href="#">
                       <a>Suzuki Swift E#-2023</a>
                     </Link>
                   </h5>
@@ -54,7 +54,7 @@ function SingleBrandCategoryPage() {
                     </div>
                   </div>
                   <div className="content-btm">
-                    <Link legacyBehavior href="/car-deatils">
+                    <Link legacyBehavior href="#">
                       <a className="view-btn2">
                         <svg
                           width={35}

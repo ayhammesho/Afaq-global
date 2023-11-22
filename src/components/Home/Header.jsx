@@ -104,7 +104,11 @@ function Header({ lang }) {
               <div className="mobile-logo-wrap">
                 <Link legacyBehavior href="/">
                   <a>
-                    <img alt="image" src="assets/img/logo-english-white.svg" />
+                    <img
+                      width={200}
+                      alt="image"
+                      src="assets/img/logo-english.svg"
+                    />
                   </a>
                 </Link>
               </div>

@@ -11710,6 +11710,9 @@ header.style-6 {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 321px 0 167px 0px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
   overflow: hidden;
   position: relative;
   padding-left: 11%;
@@ -11725,7 +11728,7 @@ header.style-6 {
     padding-left: 5%;
   }
   @include md-down-device() {
-    padding: 220px 0 120px 0px;
+    // padding: 220px 0 120px 0px;
     padding-left: 5%;
   }
 
@@ -15398,9 +15401,11 @@ footer {
       }
 
       img {
+        min-height: 20rem;
         border-radius: 10px;
 
         @include md-down-device() {
+          min-height: 28rem;
           width: 100%;
         }
       }
@@ -15637,6 +15642,7 @@ footer {
     }
 
     img {
+      min-height: 239px;
       border-radius: 10px;
 
       @include md-down-device() {
@@ -21951,6 +21957,7 @@ footer {
             .swiper-slide {
               border-radius: 10px;
               img {
+                min-height: 19rem;
                 border-radius: 10px;
               }
             }

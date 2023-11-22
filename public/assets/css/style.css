@@ -10482,6 +10482,9 @@ header.style-6 .main-menu .hotline-area .content h6 a {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 321px 0 167px 0px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
   overflow: hidden;
   position: relative;
   padding-left: 11%;
@@ -10501,7 +10504,6 @@ header.style-6 .main-menu .hotline-area .content h6 a {
 }
 @media (max-width: 767px) {
   .banner-section2 {
-    padding: 220px 0 120px 0px;
     padding-left: 5%;
   }
 }
@@ -13759,10 +13761,12 @@ footer.style-3 .footer-btm .social-area ul li a:hover {
   transition: 0.35s;
 }
 .featured-car-section .feature-card .product-img img {
+  min-height: 20rem;
   border-radius: 10px;
 }
 @media (max-width: 767px) {
   .featured-car-section .feature-card .product-img img {
+    min-height: 28rem;
     width: 100%;
   }
 }
@@ -13967,6 +13971,7 @@ footer.style-3 .footer-btm .social-area ul li a:hover {
   background-color: var(--primary-color1);
 }
 .product-card2 .product-img img {
+  min-height: 239px;
   border-radius: 10px;
 }
 @media (max-width: 767px) {
@@ -15485,6 +15490,7 @@ footer.style-3 .footer-btm .social-area ul li a:hover {
   border-radius: 10px;
 }
 .car-details-area .car-img-area .tab-content .product-img-slider .tab-pane .swiper-wrapper .swiper-slide img {
+  min-height: 19rem;
   border-radius: 10px;
 }
 .car-details-area .car-img-area .nav-tabs {

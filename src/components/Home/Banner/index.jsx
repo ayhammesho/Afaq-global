@@ -14,7 +14,7 @@ function index() {
             </p>
             {/* <p>{hero.descreption}</p> */}
             <div className="banner-content-bottom">
-              <Link legacyBehavior href="grid-left-sidebar">
+              <Link legacyBehavior href="#">
                 <a className="primary-btn3">
                   <svg
                     width={24}

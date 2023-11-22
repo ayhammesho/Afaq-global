@@ -7,7 +7,10 @@ import Image from "next/image";
 function index() {
   return (
     <div className="dream-car-area pt-100 pb-100 ">
-      <div className="row mb-50 wow fadeInUp" data-wow-delay="200ms">
+      <div
+        className="d-flex flex-wrap mb-50 wow fadeInUp justify-content-center"
+        data-wow-delay="200ms"
+      >
         <div className="col-lg-12">
           <div className="section-title-2 text-center">
             <h2>Search Your Dream Car</h2>
@@ -15,9 +18,9 @@ function index() {
           </div>
         </div>
       </div>
-      <div className="row gap-3 justify-content-center ">
+      <div className="d-flex flex-wrap gap-3 justify-content-center ">
         <div
-          className="col-xl-5 col-md-3 col-sm-4 col-6 wow fadeInUp  rounded position-relative p-0 overflow-hidden shadow brand-category"
+          className="col-xl-5  col-10 wow fadeInUp  rounded position-relative p-0 overflow-hidden shadow brand-category"
           data-wow-delay="300ms"
         >
           <Link href="#">
@@ -35,7 +38,7 @@ function index() {
           </Link>
         </div>
         <div
-          className="col-xl-5 col-md-3 col-sm-4 col-6 wow fadeInUp  rounded position-relative p-0 overflow-hidden shadow brand-category"
+          className="col-xl-5 col-10 wow fadeInUp  rounded position-relative p-0 overflow-hidden shadow brand-category"
           data-wow-delay="300ms"
         >
           <Link href="#">
