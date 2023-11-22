@@ -60,7 +60,7 @@ function index() {
         <div className="row mb-50 wow fadeInUp" data-wow-delay="200ms">
           <div className="col-lg-12 d-flex align-items-center justify-content-between gap-3 flex-wrap">
             <div className="section-title-2">
-              <h2>Featured Cars</h2>
+              <h2>Featured Parts</h2>
               <p>Here are some of the featured cars in different categories</p>
             </div>
             <div className="slider-btn-group2">
@@ -111,7 +111,7 @@ function index() {
                         <div className="swiper-slide">
                           <img
                             className="img-fluid"
-                            src="assets/img/home2/feature-1.png"
+                            src="assets/img/demo/part-1.webp"
                             alt="image"
                           />
                         </div>
@@ -249,7 +249,7 @@ function index() {
                         <div className="swiper-slide">
                           <img
                             className="img-fluid"
-                            src="assets/img/home2/feature-2.png"
+                            src="assets/img/demo/part-2.jpg"
                             alt="image"
                           />
                         </div>
@@ -366,7 +366,7 @@ function index() {
                         <div className="swiper-slide">
                           <img
                             className="img-fluid"
-                            src="assets/img/home2/feature-3.png"
+                            src="assets/img/demo/part-3.webp"
                             alt="image"
                           />
                         </div>
@@ -483,7 +483,7 @@ function index() {
                         <div className="swiper-slide">
                           <img
                             className="img-fluid"
-                            src="assets/img/home2/feature-4.png"
+                            src="assets/img/demo/part-4.webp"
                             alt="image"
                           />
                         </div>
@@ -600,7 +600,7 @@ function index() {
                         <div className="swiper-slide">
                           <img
                             className="img-fluid"
-                            src="assets/img/home2/feature-1.png"
+                            src="assets/img/demo/part-4.webp"
                             alt="image"
                           />
                         </div>
@@ -717,7 +717,7 @@ function index() {
                         <div className="swiper-slide">
                           <img
                             className="img-fluid"
-                            src="assets/img/home2/feature-2.png"
+                            src="assets/img/demo/part-5.webp"
                             alt="image"
                           />
                         </div>
@@ -834,7 +834,7 @@ function index() {
                         <div className="swiper-slide">
                           <img
                             className="img-fluid"
-                            src="assets/img/home2/feature-3.png"
+                            src="assets/img/demo/part-6.jpg"
                             alt="image"
                           />
                         </div>
@@ -951,7 +951,7 @@ function index() {
                         <div className="swiper-slide">
                           <img
                             className="img-fluid"
-                            src="assets/img/home2/feature-4.png"
+                            src="assets/img/demo/part-7.jpeg"
                             alt="image"
                           />
                         </div>

@@ -28,27 +28,27 @@ function About() {
   const images = [
     {
       id: 1,
-      imageBig: "assets/img/inner-page/gallery-01.png",
+      imageBig: "../assets/img/demo/gallery-1.jpg",
     },
     {
       id: 2,
-      imageBig: "assets/img/inner-page/gallery-02.png",
+      imageBig: "../assets/img/demo/gallery-2.jpg",
     },
     {
       id: 3,
-      imageBig: "assets/img/inner-page/gallery-03.png",
+      imageBig: "../assets/img/demo/gallery-3.jpg",
     },
     {
       id: 4,
-      imageBig: "assets/img/inner-page/gallery-04.png",
+      imageBig: "../assets/img/demo/gallery-4.jpg",
     },
     {
       id: 5,
-      imageBig: "assets/img/inner-page/gallery-05.png",
+      imageBig: "../assets/img/demo/gallery-5.jpg",
     },
     {
       id: 6,
-      imageBig: "assets/img/inner-page/gallery-06.png",
+      imageBig: "../assets/img/demo/gallery-6.jpg",
     },
   ];
   const slideSettings = useMemo(() => {
@@ -106,7 +106,7 @@ function About() {
                   data-wow-delay="200ms"
                 >
                   <span>(Since-1994)</span>
-                  <h2>Welcome To Drivco</h2>
+                  <h2>Welcome To AFAQ</h2>
                 </div>
                 <div
                   className="welcome-content wow fadeInUp"
@@ -118,7 +118,7 @@ function About() {
                     we're thrilled to have you join our community of automotive
                     enthusiasts and professionals. Whether you're a passionate
                     driver, a car owner, or someone who loves all things
-                    automotive, you've come to the right place.At Drivco, we
+                    automotive, you've come to the right place.At AFAQ, we
                     strive to create a space where people can connect, share
                     knowledge, and explore the exciting world of automobiles.
                     From discussing the latest car models and technologies to
@@ -128,14 +128,14 @@ function About() {
                     conversations with fellow members. Our community is full of
                     experts and enthusiasts who are eager to share their
                     insights and experiences. Buckle up and enjoy your journey
-                    with Drivco!
+                    with AFAQ!
                   </p>
                 </div>
                 <div
                   className="author-area wow fadeInUp"
                   data-wow-delay="400ms"
                 >
-                  <img src="assets/img/inner-page/signature.svg" alt="" />
+                  <img src="../assets/img/inner-page/signature.svg" alt="" />
                   <h6>Natrison Mongla</h6>
                   <span>(CEO &amp; Founder)</span>
                 </div>
@@ -151,7 +151,7 @@ function About() {
             <div className="col-lg-12 d-flex justify-content-center">
               <div className="section-title1 text-center">
                 <span>Best Car Agency</span>
-                <h2>Why Only Choose Drivco</h2>
+                <h2>Why Only Choose AFAQ</h2>
               </div>
             </div>
           </div>
@@ -163,7 +163,7 @@ function About() {
               <div className="choose-card">
                 <div className="choose-top">
                   <div className="choose-icon">
-                    <img src="assets/img/home1/icon/affordable.svg" alt="" />
+                    <img src="../assets/img/home1/icon/affordable.svg" alt="" />
                   </div>
                   <h5>
                     <span>Affordable</span> Price
@@ -182,7 +182,7 @@ function About() {
               <div className="choose-card">
                 <div className="choose-top">
                   <div className="choose-icon">
-                    <img src="assets/img/home1/icon/guarantee.svg" alt="" />
+                    <img src="../assets/img/home1/icon/guarantee.svg" alt="" />
                   </div>
                   <h5>
                     Money Back <span>Guarantee</span>
@@ -201,7 +201,7 @@ function About() {
               <div className="choose-card">
                 <div className="choose-top">
                   <div className="choose-icon">
-                    <img src="assets/img/home1/icon/warranty.svg" alt="" />
+                    <img src="../assets/img/home1/icon/warranty.svg" alt="" />
                   </div>
                   <h5>
                     8 Month <span>Warranty</span>
@@ -222,7 +222,7 @@ function About() {
               >
                 <div className="single-activiti">
                   <div className="icon">
-                    <img src="assets/img/home1/icon/av-car.svg" alt="" />
+                    <img src="../assets/img/home1/icon/av-car.svg" alt="" />
                   </div>
                   <div className="content">
                     <div className="number">
@@ -239,7 +239,7 @@ function About() {
               >
                 <div className="single-activiti">
                   <div className="icon">
-                    <img src="assets/img/home1/icon/sold-car.svg" alt="" />
+                    <img src="../assets/img/home1/icon/sold-car.svg" alt="" />
                   </div>
                   <div className="content">
                     <div className="number">
@@ -256,7 +256,7 @@ function About() {
               >
                 <div className="single-activiti">
                   <div className="icon">
-                    <img src="assets/img/home1/icon/use-car.svg" alt="" />
+                    <img src="../assets/img/home1/icon/use-car.svg" alt="" />
                   </div>
                   <div className="content">
                     <div className="number">
@@ -274,7 +274,7 @@ function About() {
                 <div className="single-activiti">
                   <div className="icon">
                     <img
-                      src="assets/img/home1/icon/happy-customar.svg"
+                      src="../assets/img/home1/icon/happy-customar.svg"
                       alt=""
                     />
                   </div>
@@ -293,7 +293,10 @@ function About() {
             <div className="col-lg-12 d-flex justify-content-center">
               <div className="trustpilot-review">
                 <strong>Excellent!</strong>
-                <img src="assets/img/home1/icon/trustpilot-star2.svg" alt="" />
+                <img
+                  src="../assets/img/home1/icon/trustpilot-star2.svg"
+                  alt=""
+                />
                 <p>
                   5.0 Rating out of <strong>5.0</strong> based on{" "}
                   <a href="#">
@@ -301,7 +304,10 @@ function About() {
                     reviews
                   </a>
                 </p>
-                <img src="assets/img/home1/icon/trustpilot-logo.svg" alt="" />
+                <img
+                  src="../assets/img/home1/icon/trustpilot-logo.svg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -313,7 +319,7 @@ function About() {
           <div className="row mb-50 wow fadeInUp" data-wow-delay="200ms">
             <div className="col-lg-12">
               <div className="section-title1 text-center">
-                <h2>Drivco Gallery</h2>
+                <h2>AFAQ Gallery</h2>
               </div>
             </div>
           </div>
@@ -326,7 +332,7 @@ function About() {
               <div className="gallery-item">
                 <img
                   className="img-fluid"
-                  src="assets/img/inner-page/gallery-01.png"
+                  src="../assets/img/demo/gallery-1.jpg"
                   alt="gallery"
                   onClick={() =>
                     setOpenimg({ openingState: true, openingIndex: 0 })
@@ -345,7 +351,7 @@ function About() {
                   onClick={() =>
                     setOpenimg({ openingState: true, openingIndex: 1 })
                   }
-                  src="assets/img/inner-page/gallery-02.png"
+                  src="../assets/img/demo/gallery-3.jpg"
                   alt="gallery"
                 />
               </div>
@@ -361,7 +367,7 @@ function About() {
                   onClick={() =>
                     setOpenimg({ openingState: true, openingIndex: 2 })
                   }
-                  src="assets/img/inner-page/gallery-03.png"
+                  src="../assets/img/demo/gallery-2.jpg"
                   alt="gallery"
                 />
               </div>
@@ -377,7 +383,7 @@ function About() {
                   onClick={() =>
                     setOpenimg({ openingState: true, openingIndex: 3 })
                   }
-                  src="assets/img/inner-page/gallery-04.png"
+                  src="../assets/img/demo/gallery-5.jpg"
                   alt="gallery"
                 />
               </div>
@@ -393,7 +399,7 @@ function About() {
                   onClick={() =>
                     setOpenimg({ openingState: true, openingIndex: 4 })
                   }
-                  src="assets/img/inner-page/gallery-05.png"
+                  src="../assets/img/demo/gallery-4.jpg"
                   alt="gallery"
                 />
               </div>
@@ -409,7 +415,7 @@ function About() {
                   onClick={() =>
                     setOpenimg({ openingState: true, openingIndex: 5 })
                   }
-                  src="assets/img/inner-page/gallery-06.png"
+                  src="../assets/img/demo/gallery-6.jpg"
                   alt="gallery"
                 />
               </div>
@@ -454,7 +460,10 @@ function About() {
                         <span>01</span>
                       </div>
                       <div className="icon">
-                        <img src="assets/img/home2/icon/loaction.svg" alt="" />
+                        <img
+                          src="../assets/img/home2/icon/loaction.svg"
+                          alt=""
+                        />
                       </div>
                       <div className="content">
                         <h6>Choose Any where</h6>
@@ -471,7 +480,10 @@ function About() {
                         <span>02</span>
                       </div>
                       <div className="icon">
-                        <img src="assets/img/home2/icon/contact.svg" alt="" />
+                        <img
+                          src="../assets/img/home2/icon/contact.svg"
+                          alt=""
+                        />
                       </div>
                       <div className="content">
                         <h6>Contact With Us</h6>
@@ -488,7 +500,7 @@ function About() {
                         <span>03</span>
                       </div>
                       <div className="icon">
-                        <img src="assets/img/home2/icon/pay.svg" alt="" />
+                        <img src="../assets/img/home2/icon/pay.svg" alt="" />
                       </div>
                       <div className="content">
                         <h6>Pay For The Car</h6>
@@ -505,7 +517,10 @@ function About() {
                         <span>04</span>
                       </div>
                       <div className="icon">
-                        <img src="assets/img/home2/icon/recieve.svg" alt="" />
+                        <img
+                          src="../assets/img/home2/icon/recieve.svg"
+                          alt=""
+                        />
                       </div>
                       <div className="content">
                         <h6>Recieve The Car</h6>
@@ -524,7 +539,10 @@ function About() {
             <div className="col-lg-12 d-flex justify-content-center">
               <div className="trustpilot-review">
                 <strong>Excellent!</strong>
-                <img src="assets/img/home1/icon/trustpilot-star2.svg" alt="" />
+                <img
+                  src="../assets/img/home1/icon/trustpilot-star2.svg"
+                  alt=""
+                />
                 <p>
                   5.0 Rating out of <strong>5.0</strong> based on{" "}
                   <a href="#">
@@ -532,7 +550,10 @@ function About() {
                     reviews
                   </a>
                 </p>
-                <img src="assets/img/home1/icon/trustpilot-logo.svg" alt="" />
+                <img
+                  src="../assets/img/home1/icon/trustpilot-logo.svg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -556,7 +577,7 @@ function About() {
                   <h5>Excellent!</h5>
                   <img
                     className="star"
-                    src="assets/img/home1/icon/trustpilot-star3.svg"
+                    src="../assets/img/home1/icon/trustpilot-star3.svg"
                     alt=""
                   />
                   <span>
@@ -564,14 +585,14 @@ function About() {
                   </span>
                   <img
                     className="logo"
-                    src="assets/img/home1/icon/trustpilot-log3.svg"
+                    src="../assets/img/home1/icon/trustpilot-log3.svg"
                     alt=""
                   />
                 </div>
                 <div className="google">
                   <img
                     className="logo"
-                    src="assets/img/home1/icon/google3.svg"
+                    src="../assets/img/home1/icon/google3.svg"
                     alt=""
                   />
                   <div className="star">
@@ -633,13 +654,13 @@ function About() {
                           </div>
                           <div className="logo">
                             <img
-                              src="assets/img/home1/icon/google3.svg"
+                              src="../assets/img/home1/icon/google3.svg"
                               alt=""
                             />
                           </div>
                         </div>
                         <p>
-                          Drivco-Agency to the actively encourage customers to
+                          AFAQ-Global to the actively encourage customers to
                           leave reviews to the help promote their products and
                           services.”
                         </p>
@@ -653,22 +674,22 @@ function About() {
                         <div className="feedback-top">
                           <div className="stat-area">
                             <img
-                              src="assets/img/home1/icon/trustpilot-star.svg"
+                              src="../assets/img/home1/icon/trustpilot-star.svg"
                               alt=""
                             />
                             <span>Trusted Company</span>
                           </div>
                           <div className="logo">
                             <img
-                              src="assets/img/home1/icon/trustpilot-log3.svg"
+                              src="../assets/img/home1/icon/trustpilot-log3.svg"
                               alt=""
                             />
                           </div>
                         </div>
                         <p>
-                          Drivco-Agency customer feedback is an invaluable
-                          source of information that can help businesses improve
-                          their offerings and provide better experiences.
+                          AFAQ-Agency customer feedback is an invaluable source
+                          of information that can help businesses improve their
+                          offerings and provide better experiences.
                         </p>
                         <div className="author-name">
                           <h6>Jhon Abraham</h6>
@@ -702,13 +723,13 @@ function About() {
                           </div>
                           <div className="logo">
                             <img
-                              src="assets/img/home1/icon/google3.svg"
+                              src="../assets/img/home1/icon/google3.svg"
                               alt=""
                             />
                           </div>
                         </div>
                         <p>
-                          Drivco-Agency to the actively encourage customers to
+                          AFAQ-Agency to the actively encourage customers to
                           leave reviews to the help promote their products and
                           services.”
                         </p>
@@ -722,22 +743,22 @@ function About() {
                         <div className="feedback-top">
                           <div className="stat-area">
                             <img
-                              src="assets/img/home1/icon/trustpilot-star.svg"
+                              src="../assets/img/home1/icon/trustpilot-star.svg"
                               alt=""
                             />
                             <span>Trusted Company</span>
                           </div>
                           <div className="logo">
                             <img
-                              src="assets/img/home1/icon/trustpilot-log3.svg"
+                              src="../assets/img/home1/icon/trustpilot-log3.svg"
                               alt=""
                             />
                           </div>
                         </div>
                         <p>
-                          Drivco-Agency customer feedback is an invaluable
-                          source of information that can help businesses improve
-                          their offerings and provide better experiences.
+                          AFAQ-Agency customer feedback is an invaluable source
+                          of information that can help businesses improve their
+                          offerings and provide better experiences.
                         </p>
                         <div className="author-name">
                           <h6>Jhon Abraham</h6>

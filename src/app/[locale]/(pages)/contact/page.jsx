@@ -35,8 +35,8 @@ function ContactPage() {
                       </svg>
                     </div>
                     <div className="info">
-                      <a href="tel:05661111985">+880 566 1111 985</a>
-                      <a href="tel:06571111576">+880 657 1111 576</a>
+                      <a href="tel:05661111985">+555 555 5555 555</a>
+                      <a href="tel:06571111576">+555 555 5555 555</a>
                     </div>
                   </li>
                   <li>

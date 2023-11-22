@@ -91,7 +91,7 @@ function Header({ lang }) {
                 <img
                   alt="image"
                   className="img-fluid"
-                  src="assets/img/home2/LOGO.png"
+                  src="assets/img/logo-english-white.svg"
                   width={250}
                 />
               </a>
@@ -104,7 +104,7 @@ function Header({ lang }) {
               <div className="mobile-logo-wrap">
                 <Link legacyBehavior href="/">
                   <a>
-                    <img alt="image" src="assets/img/home2/LOGO.png" />
+                    <img alt="image" src="assets/img/logo-english-white.svg" />
                   </a>
                 </Link>
               </div>
@@ -142,20 +142,20 @@ function Header({ lang }) {
                 >
                   <li>
                     <Link
-                      className="d-flex flex-wrap align-items-center gap-2"
-                      href={`/${lang}/single-brand-category`}
+                      className="d-flex flex-wrap align-items-center justify-content-between fw-bold fs-24"
+                      href={`/${lang}/singleBrand`}
                     >
-                      Merchedes Benz
-                      <img src="assets/img/menu-icon/merchedes.svg" alt="" />
+                      KIA
+                      <img src="assets/img/menu-icon/kia.svg" alt="" />
                     </Link>
                   </li>
                   <li>
                     <Link
-                      className="d-flex flex-wrap align-items-center gap-2"
-                      href={`/${lang}/single-brand-category`}
+                      className="d-flex flex-wrap align-items-center gap-2 justify-content-between fw-bold fs-24"
+                      href={`/${lang}/singleBrand`}
                     >
-                      Volkswagen
-                      <img src="assets/img/menu-icon/volkswagen.svg" alt="" />
+                      Hyundai
+                      <img src="assets/img/menu-icon/hyundai.svg" alt="" />
                     </Link>
                   </li>
                 </ul>

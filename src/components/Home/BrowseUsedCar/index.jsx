@@ -1,6 +1,102 @@
 import React from "react";
 import Link from "next/link";
 
+//    <div
+//   className="col-xl-3 col-md-4 col-sm-6 wow fadeInUp"
+//   data-wow-delay="500ms"
+// >
+//   <div className="product-card2 two">
+//     <div className="product-img">
+//       <img src="assets/img/home2/used-car-08.png" alt="img" />
+//     </div>
+//     <div className="product-content">
+//       <div className="company-logo">
+//         <Link legacyBehavior href="/single-brand-category">
+//           <a>
+//             <img
+//               src="assets/img/menu-icon/hyundai-2.svg"
+//               alt=""
+//             />
+//           </a>
+//         </Link>
+//       </div>
+//       <div className="price">
+//         <strong>$65,665.00</strong>
+//       </div>
+//       <h6>
+//         <Link legacyBehavior href="/car-deatils">
+//           <a>Audi A4-2023</a>
+//         </Link>
+//       </h6>
+//     </div>
+//   </div>
+// </div>
+
+let kiaTab = [];
+for (let index = 1; index <= 8; index++) {
+  kiaTab.push(
+    <div
+      className="col-xl-3 col-md-4 col-sm-6 wow fadeInUp"
+      data-wow-delay="300ms"
+    >
+      <div className="product-card2 two">
+        <div className="product-img">
+          <img src="assets/img/demo/part-7.jpeg" alt="img" />
+        </div>
+        <div className="product-content">
+          <div className="company-logo">
+            <Link legacyBehavior href="/single-brand-category">
+              <a>
+                <img src="assets/img/menu-icon/kia-2.svg" alt="" />
+              </a>
+            </Link>
+          </div>
+          <div className="price">
+            <strong>$65,543.00</strong>
+          </div>
+          <h6>
+            <Link legacyBehavior href="/car-deatils">
+              <a>Hyundai Sonata-2022</a>
+            </Link>
+          </h6>
+        </div>
+      </div>
+    </div>
+  );
+}
+let hyundaiTab = [];
+for (let index = 1; index <= 8; index++) {
+  hyundaiTab.push(
+    <div
+      className="col-xl-3 col-md-4 col-sm-6 wow fadeInUp"
+      data-wow-delay="300ms"
+    >
+      <div className="product-card2 two">
+        <div className="product-img">
+          <img src="assets/img/demo/part-1.webp" alt="img" />
+        </div>
+        <div className="product-content">
+          <div className="company-logo">
+            <Link legacyBehavior href="/single-brand-category">
+              <a>
+                <img src="assets/img/menu-icon/hyundai-2.svg" alt="" />
+              </a>
+            </Link>
+          </div>
+          <div className="price">
+            <strong>$65,543.00</strong>
+          </div>
+          <h6>
+            <Link legacyBehavior href="/car-deatils">
+              <a>Toyota Camry-2022</a>
+            </Link>
+          </h6>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function index() {
   return (
     <div className="browse-used-car-section mb-100">
@@ -79,14 +175,14 @@ function index() {
                   >
                     <div className="product-card2 two">
                       <div className="product-img">
-                        <img src="assets/img/home2/used-car-01.png" alt="img" />
+                        <img src="assets/img/demo/part-1.webp" alt="img" />
                       </div>
                       <div className="product-content">
                         <div className="company-logo">
                           <Link legacyBehavior href="/single-brand-category">
                             <a>
                               <img
-                                src="assets/img/home2/icon/mercedes-2.svg"
+                                src="assets/img/menu-icon/hyundai-2.svg"
                                 alt=""
                               />
                             </a>
@@ -109,14 +205,14 @@ function index() {
                   >
                     <div className="product-card2 two">
                       <div className="product-img">
-                        <img src="assets/img/home2/used-car-02.png" alt="img" />
+                        <img src="assets/img/demo/part-2.jpg" alt="img" />
                       </div>
                       <div className="product-content">
                         <div className="company-logo">
                           <Link legacyBehavior href="/single-brand-category">
                             <a>
                               <img
-                                src="assets/img/home2/icon/volkswagen-2.svg"
+                                src="assets/img/menu-icon/kia-2.svg"
                                 alt=""
                               />
                             </a>
@@ -139,14 +235,14 @@ function index() {
                   >
                     <div className="product-card2 two">
                       <div className="product-img">
-                        <img src="assets/img/home2/used-car-03.png" alt="img" />
+                        <img src="assets/img/demo/part-3.webp" alt="img" />
                       </div>
                       <div className="product-content">
                         <div className="company-logo">
                           <Link legacyBehavior href="/single-brand-category">
                             <a>
                               <img
-                                src="assets/img/home2/icon/volkswagen-2.svg"
+                                src="assets/img/menu-icon/hyundai-2.svg"
                                 alt=""
                               />
                             </a>
@@ -170,14 +266,14 @@ function index() {
                   >
                     <div className="product-card2 two">
                       <div className="product-img">
-                        <img src="assets/img/home2/used-car-04.png" alt="img" />
+                        <img src="assets/img/demo/part-4.webp" alt="img" />
                       </div>
                       <div className="product-content">
                         <div className="company-logo">
                           <Link legacyBehavior href="/single-brand-category">
                             <a>
                               <img
-                                src="assets/img/home2/icon/mitsubishi-2.svg"
+                                src="assets/img/menu-icon/kia-2.svg"
                                 alt=""
                               />
                             </a>
@@ -200,14 +296,14 @@ function index() {
                   >
                     <div className="product-card2 two">
                       <div className="product-img">
-                        <img src="assets/img/home2/used-car-05.png" alt="img" />
+                        <img src="assets/img/demo/part-5.webp" alt="img" />
                       </div>
                       <div className="product-content">
                         <div className="company-logo">
                           <Link legacyBehavior href="/single-brand-category">
                             <a>
                               <img
-                                src="assets/img/home2/icon/tata-2.svg"
+                                src="assets/img/menu-icon/hyundai-2.svg"
                                 alt=""
                               />
                             </a>
@@ -230,14 +326,14 @@ function index() {
                   >
                     <div className="product-card2 two">
                       <div className="product-img">
-                        <img src="assets/img/home2/used-car-06.png" alt="img" />
+                        <img src="assets/img/demo/part-6.jpg" alt="img" />
                       </div>
                       <div className="product-content">
                         <div className="company-logo">
                           <Link legacyBehavior href="/single-brand-category">
                             <a>
                               <img
-                                src="assets/img/home2/icon/mazda-2.svg"
+                                src="assets/img/menu-icon/kia-2.svg"
                                 alt=""
                               />
                             </a>
@@ -260,14 +356,14 @@ function index() {
                   >
                     <div className="product-card2 two">
                       <div className="product-img">
-                        <img src="assets/img/home2/used-car-07.png" alt="img" />
+                        <img src="assets/img/demo/part-7.jpeg" alt="img" />
                       </div>
                       <div className="product-content">
                         <div className="company-logo">
                           <Link legacyBehavior href="/single-brand-category">
                             <a>
                               <img
-                                src="assets/img/home2/icon/suziki-2.svg"
+                                src="assets/img/menu-icon/hyundai-2.svg"
                                 alt=""
                               />
                             </a>
@@ -290,14 +386,14 @@ function index() {
                   >
                     <div className="product-card2 two">
                       <div className="product-img">
-                        <img src="assets/img/home2/used-car-08.png" alt="img" />
+                        <img src="assets/img/demo/part-1.webp" alt="img" />
                       </div>
                       <div className="product-content">
                         <div className="company-logo">
                           <Link legacyBehavior href="/single-brand-category">
                             <a>
                               <img
-                                src="assets/img/home2/icon/audi-2.svg"
+                                src="assets/img/menu-icon/hyundai-2.svg"
                                 alt=""
                               />
                             </a>
@@ -323,222 +419,7 @@ function index() {
                 aria-labelledby="fuel-type-tab"
               >
                 <div className="row justify-content-center g-4">
-                  <div className="col-xl-3 col-md-4 col-sm-6">
-                    <div className="product-card2 two">
-                      <div className="product-img">
-                        <img src="assets/img/home2/used-car-01.png" alt="img" />
-                      </div>
-                      <div className="product-content">
-                        <div className="company-logo">
-                          <Link legacyBehavior href="/single-brand-category">
-                            <a>
-                              <img
-                                src="assets/img/home2/icon/mercedes-2.svg"
-                                alt=""
-                              />
-                            </a>
-                          </Link>
-                        </div>
-                        <div className="price">
-                          <strong>$32,445.00</strong>
-                        </div>
-                        <h6>
-                          <Link legacyBehavior href="/car-deatils">
-                            <a>Mercedes-Benz-2023</a>
-                          </Link>
-                        </h6>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xl-3 col-md-4 col-sm-6">
-                    <div className="product-card2 two">
-                      <div className="product-img">
-                        <img src="assets/img/home2/used-car-02.png" alt="img" />
-                      </div>
-                      <div className="product-content">
-                        <div className="company-logo">
-                          <Link legacyBehavior href="/single-brand-category">
-                            <a>
-                              <img
-                                src="assets/img/home2/icon/mercedes-2.svg"
-                                alt=""
-                              />
-                            </a>
-                          </Link>
-                        </div>
-                        <div className="price">
-                          <strong>$65,543.00</strong>
-                        </div>
-                        <h6>
-                          <Link legacyBehavior href="/car-deatils">
-                            <a>Mercedes A Class</a>
-                          </Link>
-                        </h6>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xl-3 col-md-4 col-sm-6">
-                    <div className="product-card2 two">
-                      <div className="product-img">
-                        <img src="assets/img/home2/used-car-03.png" alt="img" />
-                      </div>
-                      <div className="product-content">
-                        <div className="company-logo">
-                          <Link legacyBehavior href="/single-brand-category">
-                            <a>
-                              <img
-                                src="assets/img/home2/icon/mercedes-2.svg"
-                                alt=""
-                              />
-                            </a>
-                          </Link>
-                        </div>
-                        <div className="price">
-                          <strong>$78,432.00</strong>
-                        </div>
-                        <h6>
-                          <Link legacyBehavior href="/car-deatils">
-                            <a>Mercedes-Benz C-Class</a>
-                          </Link>
-                        </h6>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xl-3 col-md-4 col-sm-6">
-                    <div className="product-card2 two">
-                      <div className="product-img">
-                        <img src="assets/img/home2/used-car-04.png" alt="img" />
-                      </div>
-                      <div className="product-content">
-                        <div className="company-logo">
-                          <Link legacyBehavior href="/single-brand-category">
-                            <a>
-                              <img
-                                src="assets/img/home2/icon/mercedes-2.svg"
-                                alt=""
-                              />
-                            </a>
-                          </Link>
-                        </div>
-                        <div className="price">
-                          <strong>$22,765.00</strong>
-                        </div>
-                        <h6>
-                          <Link legacyBehavior href="/car-deatils">
-                            <a>Mercedes-Benz G-Class</a>
-                          </Link>
-                        </h6>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xl-3 col-md-4 col-sm-6">
-                    <div className="product-card2 two">
-                      <div className="product-img">
-                        <img src="assets/img/home2/used-car-05.png" alt="img" />
-                      </div>
-                      <div className="product-content">
-                        <div className="company-logo">
-                          <Link legacyBehavior href="/single-brand-category">
-                            <a>
-                              <img
-                                src="assets/img/home2/icon/mercedes-2.svg"
-                                alt=""
-                              />
-                            </a>
-                          </Link>
-                        </div>
-                        <div className="price">
-                          <strong>$44,745.00</strong>
-                        </div>
-                        <h6>
-                          <Link legacyBehavior href="/car-deatils">
-                            <a>Mercedes-Benz GLE</a>
-                          </Link>
-                        </h6>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xl-3 col-md-4 col-sm-6">
-                    <div className="product-card2 two">
-                      <div className="product-img">
-                        <img src="assets/img/home2/used-car-06.png" alt="img" />
-                      </div>
-                      <div className="product-content">
-                        <div className="company-logo">
-                          <Link legacyBehavior href="/single-brand-category">
-                            <a>
-                              <img
-                                src="assets/img/home2/icon/mercedes-2.svg"
-                                alt=""
-                              />
-                            </a>
-                          </Link>
-                        </div>
-                        <div className="price">
-                          <strong>$23,445.00</strong>
-                        </div>
-                        <h6>
-                          <Link legacyBehavior href="/car-deatils">
-                            <a>Mercedes-Benz CLA</a>
-                          </Link>
-                        </h6>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xl-3 col-md-4 col-sm-6">
-                    <div className="product-card2 two">
-                      <div className="product-img">
-                        <img src="assets/img/home2/used-car-07.png" alt="img" />
-                      </div>
-                      <div className="product-content">
-                        <div className="company-logo">
-                          <Link legacyBehavior href="/single-brand-category">
-                            <a>
-                              <img
-                                src="assets/img/home2/icon/mercedes-2.svg"
-                                alt=""
-                              />
-                            </a>
-                          </Link>
-                        </div>
-                        <div className="price">
-                          <strong>$32,445.00</strong>
-                        </div>
-                        <h6>
-                          <Link legacyBehavior href="/car-deatils">
-                            <a>Mercedes-Benz EQB</a>
-                          </Link>
-                        </h6>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xl-3 col-md-4 col-sm-6">
-                    <div className="product-card2 two">
-                      <div className="product-img">
-                        <img src="assets/img/home2/used-car-08.png" alt="img" />
-                      </div>
-                      <div className="product-content">
-                        <div className="company-logo">
-                          <Link legacyBehavior href="/single-brand-category">
-                            <a>
-                              <img
-                                src="assets/img/home2/icon/mercedes-2.svg"
-                                alt=""
-                              />
-                            </a>
-                          </Link>
-                        </div>
-                        <div className="price">
-                          <strong>$65,665.00</strong>
-                        </div>
-                        <h6>
-                          <Link legacyBehavior href="/car-deatils">
-                            <a>Mercedes-Benz S-Class</a>
-                          </Link>
-                        </h6>
-                      </div>
-                    </div>
-                  </div>
+                  {kiaTab.map((item) => item)}
                 </div>
               </div>
               <div
@@ -548,222 +429,7 @@ function index() {
                 aria-labelledby="transmission-tab"
               >
                 <div className="row justify-content-center g-4">
-                  <div className="col-xl-3 col-md-4 col-sm-6">
-                    <div className="product-card2 two">
-                      <div className="product-img">
-                        <img src="assets/img/home2/used-car-01.png" alt="img" />
-                      </div>
-                      <div className="product-content">
-                        <div className="company-logo">
-                          <Link legacyBehavior href="/single-brand-category">
-                            <a>
-                              <img
-                                src="assets/img/home2/icon/toyota-2.svg"
-                                alt=""
-                              />
-                            </a>
-                          </Link>
-                        </div>
-                        <div className="price">
-                          <strong>$32,445.00</strong>
-                        </div>
-                        <h6>
-                          <Link legacyBehavior href="/car-deatils">
-                            <a>Toyota Camry</a>
-                          </Link>
-                        </h6>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xl-3 col-md-4 col-sm-6">
-                    <div className="product-card2 two">
-                      <div className="product-img">
-                        <img src="assets/img/home2/used-car-02.png" alt="img" />
-                      </div>
-                      <div className="product-content">
-                        <div className="company-logo">
-                          <Link legacyBehavior href="/single-brand-category">
-                            <a>
-                              <img
-                                src="assets/img/home2/icon/toyota-2.svg"
-                                alt=""
-                              />
-                            </a>
-                          </Link>
-                        </div>
-                        <div className="price">
-                          <strong>$65,543.00</strong>
-                        </div>
-                        <h6>
-                          <Link legacyBehavior href="/car-deatils">
-                            <a>Toyota Prius</a>
-                          </Link>
-                        </h6>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xl-3 col-md-4 col-sm-6">
-                    <div className="product-card2 two">
-                      <div className="product-img">
-                        <img src="assets/img/home2/used-car-03.png" alt="img" />
-                      </div>
-                      <div className="product-content">
-                        <div className="company-logo">
-                          <Link legacyBehavior href="/single-brand-category">
-                            <a>
-                              <img
-                                src="assets/img/home2/icon/toyota-2.svg"
-                                alt=""
-                              />
-                            </a>
-                          </Link>
-                        </div>
-                        <div className="price">
-                          <strong>$78,432.00</strong>
-                        </div>
-                        <h6>
-                          <Link legacyBehavior href="/car-deatils">
-                            <a>Toyota Fortuner</a>
-                          </Link>
-                        </h6>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xl-3 col-md-4 col-sm-6">
-                    <div className="product-card2 two">
-                      <div className="product-img">
-                        <img src="assets/img/home2/used-car-04.png" alt="img" />
-                      </div>
-                      <div className="product-content">
-                        <div className="company-logo">
-                          <Link legacyBehavior href="/single-brand-category">
-                            <a>
-                              <img
-                                src="assets/img/home2/icon/toyota-2.svg"
-                                alt=""
-                              />
-                            </a>
-                          </Link>
-                        </div>
-                        <div className="price">
-                          <strong>$22,765.00</strong>
-                        </div>
-                        <h6>
-                          <Link legacyBehavior href="/car-deatils">
-                            <a>Toyota 4Runner</a>
-                          </Link>
-                        </h6>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xl-3 col-md-4 col-sm-6">
-                    <div className="product-card2 two">
-                      <div className="product-img">
-                        <img src="assets/img/home2/used-car-05.png" alt="img" />
-                      </div>
-                      <div className="product-content">
-                        <div className="company-logo">
-                          <Link legacyBehavior href="/single-brand-category">
-                            <a>
-                              <img
-                                src="assets/img/home2/icon/toyota-2.svg"
-                                alt=""
-                              />
-                            </a>
-                          </Link>
-                        </div>
-                        <div className="price">
-                          <strong>$44,745.00</strong>
-                        </div>
-                        <h6>
-                          <Link legacyBehavior href="/car-deatils">
-                            <a>Toyota Land Cruiser</a>
-                          </Link>
-                        </h6>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xl-3 col-md-4 col-sm-6">
-                    <div className="product-card2 two">
-                      <div className="product-img">
-                        <img src="assets/img/home2/used-car-06.png" alt="img" />
-                      </div>
-                      <div className="product-content">
-                        <div className="company-logo">
-                          <Link legacyBehavior href="/single-brand-category">
-                            <a>
-                              <img
-                                src="assets/img/home2/icon/toyota-2.svg"
-                                alt=""
-                              />
-                            </a>
-                          </Link>
-                        </div>
-                        <div className="price">
-                          <strong>$23,445.00</strong>
-                        </div>
-                        <h6>
-                          <Link legacyBehavior href="/car-deatils">
-                            <a>Toyota HiAce</a>
-                          </Link>
-                        </h6>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xl-3 col-md-4 col-sm-6">
-                    <div className="product-card2 two">
-                      <div className="product-img">
-                        <img src="assets/img/home2/used-car-07.png" alt="img" />
-                      </div>
-                      <div className="product-content">
-                        <div className="company-logo">
-                          <Link legacyBehavior href="/single-brand-category">
-                            <a>
-                              <img
-                                src="assets/img/home2/icon/toyota-2.svg"
-                                alt=""
-                              />
-                            </a>
-                          </Link>
-                        </div>
-                        <div className="price">
-                          <strong>$32,445.00</strong>
-                        </div>
-                        <h6>
-                          <Link legacyBehavior href="/car-deatils">
-                            <a>Toyota Avanza</a>
-                          </Link>
-                        </h6>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xl-3 col-md-4 col-sm-6">
-                    <div className="product-card2 two">
-                      <div className="product-img">
-                        <img src="assets/img/home2/used-car-08.png" alt="img" />
-                      </div>
-                      <div className="product-content">
-                        <div className="company-logo">
-                          <Link legacyBehavior href="/single-brand-category">
-                            <a>
-                              <img
-                                src="assets/img/home2/icon/toyota-2.svg"
-                                alt=""
-                              />
-                            </a>
-                          </Link>
-                        </div>
-                        <div className="price">
-                          <strong>$65,665.00</strong>
-                        </div>
-                        <h6>
-                          <Link legacyBehavior href="/car-deatils">
-                            <a>Toyota Tundra</a>
-                          </Link>
-                        </h6>
-                      </div>
-                    </div>
-                  </div>
+                  {hyundaiTab.map((item) => item)}
                 </div>
               </div>
             </div>

@@ -1,11 +1,13 @@
 import React from "react";
 import { breadcrumbData } from "../../data/data";
-import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 function Breadcrumb() {
-  const router = useRouter();
+  const pathname = usePathname().split("/");
+  const currentPage = "/" + pathname[pathname.length - 1];
+  console.log(currentPage);
   const currentPathData = breadcrumbData.find(
-    (item) => item.path === router.pathname
+    (item) => item.path === currentPage
   );
   const lastPathSegment = currentPathData?.path.split("/").pop();
 
@@ -36,13 +38,13 @@ function Breadcrumb() {
                           <div className="review-top">
                             <div className="logo">
                               <img
-                                src="assets/img/home1/icon/trstpilot-logo.svg"
+                                src="../assets/img/home1/icon/trstpilot-logo.svg"
                                 alt=""
                               />
                             </div>
                             <div className="star">
                               <img
-                                src="assets/img/home1/icon/trustpilot-star.svg"
+                                src="../assets/img/home1/icon/trustpilot-star.svg"
                                 alt=""
                               />
                             </div>
@@ -64,7 +66,7 @@ function Breadcrumb() {
                           <div className="review-top">
                             <div className="logo">
                               <img
-                                src="assets/img/home1/icon/google-logo.svg"
+                                src="../assets/img/home1/icon/google-logo.svg"
                                 alt=""
                               />
                             </div>
@@ -109,7 +111,7 @@ function Breadcrumb() {
                   <img
                     src={
                       currentPathData?.img_src ||
-                      "assets/img/inner-page/inner-banner-img.png"
+                      "../assets/img/inner-page/inner-banner-img.png"
                     }
                     alt=""
                   />

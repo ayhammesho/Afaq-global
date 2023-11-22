@@ -1,46 +1,21 @@
 import React from "react";
-import SelectComponent from "@/src/utils/SelectComponent";
+import SelectComponent from "../../utils/SelectComponent";
 
 function ProductSearch() {
-  const conditions = ["New Car", "Used Car", "Auction Car"];
-  const brand = ["Toyota", "Suzuki", "Tata", "Tesla", "Mazda"];
-  const model = ["Civic Type R", "RS e tron GT", "S-2023", "Sonata-2022"];
-  const budget = ["1 - 5 lakh", "5 - 10 lakh", "10 - 15 lakh", "15 - 20 lakh"];
+  const brand = ["KIA", "Hyundai"];
+
   return (
     <div className="product-search-area mb-100">
       <div className="container">
         <form>
-          <div className="row row-cols-xl-5 row-cols-md-3 row-cols-sm-2 row-cols-1 g-3 justify-content-center">
-            <div className="col">
-              <div className="form-inner">
-                <label>Vehicle Condition*</label>
-                <SelectComponent
-                  placeholder="select condition"
-                  options={conditions}
-                />
-              </div>
-            </div>
+          <div className="row row-cols-xl-2 row-cols-md-2 row-cols-sm-2 row-cols-1 g-3 justify-content-center">
             <div className="col">
               <div className="form-inner">
                 <label>Select Brand*</label>
                 <SelectComponent placeholder="select brand" options={brand} />
               </div>
             </div>
-            <div className="col">
-              <div className="form-inner">
-                <label>Select Model*</label>
-                <SelectComponent placeholder="select model" options={model} />
-              </div>
-            </div>
-            <div className="col">
-              <div className="form-inner">
-                <label>Select Budget*</label>
-                <SelectComponent
-                  placeholder="Ex: 1 - 5 lakh"
-                  options={budget}
-                />
-              </div>
-            </div>
+
             <div className="col d-flex align-items-end">
               <div className="form-inner">
                 <button className="primary-btn3" type="submit">
