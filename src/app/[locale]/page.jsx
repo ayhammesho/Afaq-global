@@ -1,16 +1,18 @@
 import React from "react";
 
 import Banner from "../../components/Home/Banner";
+import BannerV2 from "../../components/Home/BannerV2";
 
 import DreamCar from "../../components/Home/DreamCar";
 import FeatureCars from "../../components/Home/FeaturedCars/index";
 import InerBanner from "../../components/Home/InnerBanner";
 
-import BroseUsedCar from "../../components/Home/BrowseUsedCar";
+import WhyChooseUs from "../../components/Home/WhyDrivco/WhyChooseUs";
 import HowItWorks from "../../components/Home/HowDoesItWork";
 
 import OurTrustedPartner from "../../components/Home/OurTrustedPartners";
 import Modals from "../../components/Home/Modals";
+import Blog from "../../components/Home/Blog";
 
 import Testimonial from "../../components/Home/Testimonial";
 import Header from "../../components/Home/Header";
@@ -21,14 +23,14 @@ function HomePage({ params: { locale } }) {
     <>
       <Modals />
       <Header lang={locale} />
-      <Banner />
+      <BannerV2 />
       <OurTrustedPartner />
       <DreamCar />
-      <FeatureCars />
-      <InerBanner />;
-      <BroseUsedCar />;
+      <WhyChooseUs />
       <HowItWorks />
+      <InerBanner className="mb-100" />
       <Testimonial />
+      <Blog />
       <Footer1 />
     </>
   );

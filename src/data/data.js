@@ -804,16 +804,16 @@ export const breadcrumbData = [
   },
   {
     id: 13,
-    path: "/blog-standard",
-    sub_title: "Blog Standard",
-    title: "Car Blog Standard",
-    img_src: "../assets/img/demo/inner-banner-img.png",
+    path: "/news",
+    sub_title: "News Standard",
+    title: "AFAQ News",
+    img_src: "../../assets/img/demo/inner-banner-img.png",
   },
   {
     id: 13,
     path: "/blog-details",
-    sub_title: "Blog Details",
-    title: "Car Blog Details",
+    sub_title: "News Details",
+    title: "AFAQ News Details",
     img_src: "../assets/img/demo/inner-banner-img.png",
   },
   {

@@ -23,6 +23,7 @@ import "../../../public/assets/css/style.css";
 import { useEffect, useState } from "react";
 import Script from "next/script";
 import Preloader from "../../components/common/Preloader";
+import { WhatsAppProvider } from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -57,7 +58,9 @@ export default function LocaleLayout({ children, params: { locale } }) {
 
   return (
     <html lang={locale} dir={locale == "ar" ? "rtl" : "ltr"}>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <WhatsAppProvider>{children}</WhatsAppProvider>
+      </body>
     </html>
   );
 }

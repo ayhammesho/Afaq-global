@@ -14,6 +14,7 @@ export default function PagesLayout({ children, params: { locale } }) {
       <Header lang={locale} />
       <Breadcrumb />
       {children}
+
       <Footer1 />
     </>
   );

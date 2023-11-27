@@ -131,7 +131,7 @@ function Header({ lang }) {
                     state.activeMenu === "home-one" ? "active" : ""
                   }`}
                 >
-                  Parts
+                  Products
                 </a>
                 <i
                   onClick={() => toggleMenu("parts")}
@@ -149,6 +149,46 @@ function Header({ lang }) {
                       className="d-flex flex-wrap align-items-center justify-content-between fw-bold fs-24"
                       href={`/${lang}/singleBrand`}
                     >
+                      Japanese brands
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="d-flex flex-wrap align-items-center justify-content-between fw-bold fs-24"
+                      href={`/${lang}/singleBrand`}
+                    >
+                      Korean brands
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="d-flex flex-wrap align-items-center justify-content-between fw-bold fs-24"
+                      href={`/${lang}/singleBrand`}
+                    >
+                      Chinese brands
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="d-flex flex-wrap align-items-center justify-content-between fw-bold fs-24"
+                      href={`/${lang}/singleBrand`}
+                    >
+                      Taiwanese brands
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="d-flex flex-wrap align-items-center justify-content-between fw-bold fs-24"
+                      href={`/${lang}/singleBrand`}
+                    >
+                      European brands
+                    </Link>
+                  </li>
+                  {/* <li>
+                    <Link
+                      className="d-flex flex-wrap align-items-center justify-content-between fw-bold fs-24"
+                      href={`/${lang}/singleBrand`}
+                    >
                       KIA
                       <img src="assets/img/menu-icon/kia.svg" alt="" />
                     </Link>
@@ -161,10 +201,12 @@ function Header({ lang }) {
                       Hyundai
                       <img src="assets/img/menu-icon/hyundai.svg" alt="" />
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </li>
-
+              <li>
+                <Link href={`/${lang}/news`}>News</Link>
+              </li>
               <li>
                 <Link className="drop-down" href={`/${lang}/contact`}>
                   CONTACT US
@@ -172,20 +214,9 @@ function Header({ lang }) {
               </li>
             </ul>
           </div>
-          <div className="nav-right d-flex jsutify-content-end align-items-center">
+          <div className="nav-right d-lg-none d-flex jsutify-content-end align-items-center">
             {/* Button trigger modal */}
 
-            <div className="hotline-area d-xl-flex d-none">
-              <div className="icon">
-                <img src="assets/img/home1/icon/hotline-icon.svg" alt="" />
-              </div>
-              <div className="content">
-                <span>To More Inquiry</span>
-                <h6>
-                  <a href="tel:+990737621432">+990-737 621 432</a>
-                </h6>
-              </div>
-            </div>
             <div
               className={`sidebar-button mobile-menu-btn ${
                 state.isSidebarOpen ? "active" : ""

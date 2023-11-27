@@ -1,6 +1,5 @@
 import React from "react";
 
-import ProductSearch from "../../../../components/common/ProductSearch";
 import Testimonial from "../../../../components/Home/Testimonial";
 import InerBanner from "../../../../components/Home/InnerBanner";
 import Link from "next/link";
@@ -8,8 +7,7 @@ import Link from "next/link";
 function SingleBrandCategoryPage() {
   return (
     <>
-      <ProductSearch />
-      <div className="single-category-page mb-100">
+      <div className="single-category-page mb-100 mt-100">
         <div className="container">
           <div className="row g-4 mb-40">
             <div className="col-xl-3 col-lg-4 col-md-6">
@@ -43,16 +41,7 @@ function SingleBrandCategoryPage() {
                       <a>Suzuki Swift E#-2023</a>
                     </Link>
                   </h5>
-                  <div className="price-location">
-                    <div className="price">
-                      <strong>$7,656.00</strong>
-                    </div>
-                    <div className="location">
-                      <a href="#">
-                        <i className="bi bi-geo-alt" /> Panama City
-                      </a>
-                    </div>
-                  </div>
+
                   <div className="content-btm">
                     <Link legacyBehavior href="#">
                       <a className="view-btn2">

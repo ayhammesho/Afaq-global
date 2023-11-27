@@ -15,6 +15,7 @@ import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import "yet-another-react-lightbox/styles.css";
 import "node_modules/react-modal-video/css/modal-video.css";
 import ModalVideo from "react-modal-video";
+import WhyChooseUs from "@/components/Home/WhyDrivco/WhyChooseUs";
 
 SwiperCore.use([Pagination, Autoplay, EffectFade, Navigation]);
 // import MainLayout from "../layout/MainLayout";
@@ -145,7 +146,7 @@ function About() {
         </div>
       </div>
 
-      <div className="why-choose-area pt-90 pb-90 mb-100">
+      {/* <div className="why-choose-area pt-90 pb-90 mb-100">
         <div className="container">
           <div className="row mb-60 wow fadeInUp" data-wow-delay="200ms">
             <div className="col-lg-12 d-flex justify-content-center">
@@ -312,8 +313,9 @@ function About() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
+      <WhyChooseUs />
       <div className="drivco-gallery mb-100">
         <div className="container">
           <div className="row mb-50 wow fadeInUp" data-wow-delay="200ms">

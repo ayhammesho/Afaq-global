@@ -18,15 +18,15 @@ function index() {
           </div>
         </div>
       </div>
-      <div className="d-flex flex-wrap gap-3 justify-content-center ">
+      <div className=" d-flex flex-wrap gap-3 justify-content-center ">
         <div
-          className="col-xl-5  col-10 wow fadeInUp  rounded position-relative p-0 overflow-hidden shadow brand-category"
+          className="col-xl-3 col-md-5 col-10  wow fadeInUp  rounded position-relative p-0 overflow-hidden shadow brand-category"
           data-wow-delay="300ms"
         >
           <Link href="#">
             <Image
               className="img-fluid category-image h-100"
-              src="/assets/img/home2/hyundai-brand.jpg"
+              src="/assets/img/demo/hyundai-brand.jpg"
               width="1400"
               height="1200"
               alt=""
@@ -38,13 +38,89 @@ function index() {
           </Link>
         </div>
         <div
-          className="col-xl-5 col-10 wow fadeInUp  rounded position-relative p-0 overflow-hidden shadow brand-category"
+          className="col-xl-3 col-md-5 col-10  wow fadeInUp  rounded position-relative p-0 overflow-hidden shadow brand-category"
           data-wow-delay="300ms"
         >
           <Link href="#">
             <Image
               className="img-fluid category-image h-100"
-              src="/assets/img/home2/kia-brand.jpg"
+              src="/assets/img/demo/isuzu-brand.jpg"
+              width="1400"
+              height="1200"
+              alt=""
+            />
+
+            <div className=" position-absolute category-link  w-100 bottom-0 start-0  d-flex justify-content-center text-center py-1">
+              <img src="assets/img/home1/icon/isuzu.svg" alt="" />
+            </div>
+          </Link>
+        </div>
+        <div
+          className="col-xl-3 col-md-5 col-10  wow fadeInUp  rounded position-relative p-0 overflow-hidden shadow brand-category"
+          data-wow-delay="300ms"
+        >
+          <Link href="#">
+            <Image
+              className="img-fluid category-image h-100"
+              src="/assets/img/demo/toyota-brand.jpg"
+              width="1400"
+              height="1200"
+              alt=""
+            />
+
+            <div className=" position-absolute category-link  w-100 bottom-0 start-0  d-flex justify-content-center text-center py-3">
+              <img width={60} src="assets/img/home1/icon/toyota.svg" alt="" />
+            </div>
+          </Link>
+        </div>
+        <div
+          className="col-xl-3 col-md-5 col-10 wow fadeInUp  rounded position-relative p-0 overflow-hidden shadow brand-category"
+          data-wow-delay="300ms"
+        >
+          <Link href="#">
+            <Image
+              className="img-fluid category-image h-100"
+              src="/assets/img/demo/mitsubishi-brand.jpg"
+              width="1400"
+              height="1200"
+              alt=""
+            />
+
+            <div className=" position-absolute category-link  w-100 bottom-0 start-0  d-flex justify-content-center text-center py-3">
+              <img
+                width={60}
+                src="assets/img/home2/icon/mitsubidhi.svg"
+                alt=""
+              />
+            </div>
+          </Link>
+        </div>
+        <div
+          className="col-xl-3 col-md-5 col-10  wow fadeInUp  rounded position-relative p-0 overflow-hidden shadow brand-category"
+          data-wow-delay="300ms"
+        >
+          <Link href="#">
+            <Image
+              className="img-fluid category-image h-100"
+              src="/assets/img/demo/mazda-brand.jpg"
+              width="1400"
+              height="1200"
+              alt=""
+            />
+
+            <div className=" position-absolute category-link  w-100 bottom-0 start-0  d-flex justify-content-center text-center py-3">
+              <img width={60} src="assets/img/home1/icon/mazda.svg" alt="" />
+            </div>
+          </Link>
+        </div>
+        <div
+          className="col-xl-3 col-md-5 col-10 wow fadeInUp  rounded position-relative p-0 overflow-hidden shadow brand-category"
+          data-wow-delay="300ms"
+        >
+          <Link href="#">
+            <Image
+              className="img-fluid category-image h-100"
+              src="/assets/img/demo/kia-brand.jpg"
               width="1400"
               height="1200"
               alt=""
