@@ -43,13 +43,11 @@ export default function LocaleLayout({ children, params: { locale } }) {
   };
 
   useEffect(() => {
-    if (locale === "ar") {
-    }
     // Simulate loading for 3 seconds (adjust as needed)
     setTimeout(() => {
       setLoading(false);
     }, 3000);
-  }, [locale]);
+  }, []);
   useEffect(() => {
     import("../../../public/assets/js/bootstrap.min.js");
   }, []);
@@ -59,7 +57,11 @@ export default function LocaleLayout({ children, params: { locale } }) {
   return (
     <html lang={locale} dir={locale == "ar" ? "rtl" : "ltr"}>
       <body className={inter.className}>
-        <WhatsAppProvider>{children}</WhatsAppProvider>
+        {loading ? (
+          <Preloader onClose={handlePreloaderClose} />
+        ) : (
+          <WhatsAppProvider>{children}</WhatsAppProvider>
+        )}
       </body>
     </html>
   );

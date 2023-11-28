@@ -947,7 +947,7 @@ p {
   max-width: 140px;
   height: 100%;
   max-height: 140px;
-  border: 0 solid var(--primary-color1);
+  border: 0 solid #cda863;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -958,17 +958,17 @@ p {
 }
 
 .circle-border svg {
-  fill: var(--primary-color1);
+  fill: #cda863;
 }
 
 .circle-border svg path {
-  stroke: var(--primary-color1);
+  stroke: #cda863;
 }
 
 .circle-border .moving-circle {
   width: 10px;
   height: 10px;
-  background: var(--primary-color1);
+  background: #cda863;
   border-radius: 50%;
   position: absolute;
   top: 0;
@@ -983,7 +983,7 @@ p {
 .circle-border .moving-circle:nth-child(2) {
   width: 10px;
   height: 10px;
-  background: var(--primary-color1);
+  background: #cda863;
   border-radius: 50%;
   position: absolute;
   top: 0;
@@ -998,7 +998,7 @@ p {
 .circle-border .moving-circle:nth-child(3) {
   width: 10px;
   height: 10px;
-  background: var(--primary-color1);
+  background: #cda863;
   border-radius: 50%;
   position: absolute;
   top: 0;

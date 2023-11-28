@@ -816,7 +816,7 @@ export const breadcrumbData = [
     title: "AFAQ News Details",
     img_src: "../assets/img/demo/inner-banner-img.png",
   },
-  {
+{
     id: 14,
     path: "/shop",
     sub_title: "Shop Car Parts",
