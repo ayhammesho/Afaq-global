@@ -4,7 +4,7 @@ import Brand from "../Brand";
 
 import Image from "next/image";
 
-function index() {
+function index({ lang }) {
   return (
     <div className="dream-car-area pt-100 pb-100 ">
       <div
@@ -23,7 +23,7 @@ function index() {
           className="col-xl-3 col-md-5 col-10  wow fadeInUp  rounded position-relative p-0 overflow-hidden shadow brand-category"
           data-wow-delay="300ms"
         >
-          <Link href="SingleBrand">
+          <Link href={`${lang}/singleBrand`}>
             <div
               className="img-fluid category-image h-100"
               style={{
@@ -40,7 +40,7 @@ function index() {
           className="col-xl-3 col-md-5 col-10  wow fadeInUp  rounded position-relative p-0 overflow-hidden shadow brand-category"
           data-wow-delay="300ms"
         >
-          <Link href="SingleBrand">
+          <Link href={`${lang}/singleBrand`}>
             <div
               className="img-fluid category-image h-100"
               style={{
@@ -57,7 +57,7 @@ function index() {
           className="col-xl-3 col-md-5 col-10  wow fadeInUp  rounded position-relative p-0 overflow-hidden shadow brand-category"
           data-wow-delay="300ms"
         >
-          <Link href="SingleBrand">
+          <Link href={`${lang}/singleBrand`}>
             <div
               className="img-fluid category-image h-100"
               style={{
@@ -74,7 +74,7 @@ function index() {
           className="col-xl-3 col-md-5 col-10  wow fadeInUp  rounded position-relative p-0 overflow-hidden shadow brand-category"
           data-wow-delay="300ms"
         >
-          <Link href="SingleBrand">
+          <Link href={`${lang}/singleBrand`}>
             <div
               className="img-fluid category-image h-100"
               style={{
@@ -91,7 +91,7 @@ function index() {
           className="col-xl-3 col-md-5 col-10  wow fadeInUp  rounded position-relative p-0 overflow-hidden shadow brand-category"
           data-wow-delay="300ms"
         >
-          <Link href="SingleBrand">
+          <Link href={`${lang}/singleBrand`}>
             <div
               className="img-fluid category-image h-100"
               style={{
@@ -108,7 +108,7 @@ function index() {
           className="col-xl-3 col-md-5 col-10  wow fadeInUp  rounded position-relative p-0 overflow-hidden shadow brand-category"
           data-wow-delay="300ms"
         >
-          <Link href="SingleBrand">
+          <Link href={`${lang}/singleBrand`}>
             <div
               className="img-fluid category-image h-100"
               style={{

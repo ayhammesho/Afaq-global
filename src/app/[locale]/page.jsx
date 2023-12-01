@@ -25,7 +25,7 @@ function HomePage({ params: { locale } }) {
       <Header lang={locale} />
       <BannerV2 />
       <OurTrustedPartner />
-      <DreamCar />
+      <DreamCar lang={locale} />
 
       <Blog />
       <Footer1 />
