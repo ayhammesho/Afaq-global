@@ -13,7 +13,7 @@ function index() {
       >
         <div className="col-lg-12">
           <div className="section-title-2 text-center">
-            <h2>Search Your Dream Car</h2>
+            <h2>You will find everything you need here!</h2>
             <p>There has 30+ Brand Category Available </p>
           </div>
         </div>
@@ -23,17 +23,16 @@ function index() {
           className="col-xl-3 col-md-5 col-10  wow fadeInUp  rounded position-relative p-0 overflow-hidden shadow brand-category"
           data-wow-delay="300ms"
         >
-          <Link href="#">
-            <Image
+          <Link href="SingleBrand">
+            <div
               className="img-fluid category-image h-100"
-              src="/assets/img/demo/hyundai-brand.jpg"
-              width="1400"
-              height="1200"
-              alt=""
-            />
+              style={{
+                backgroundImage: "url(../../assets/img/demo/EngineParts.jpg)",
+              }}
+            ></div>
 
             <div className=" position-absolute category-link  w-100 bottom-0 start-0  d-flex justify-content-center text-center py-3">
-              <img width={60} src="assets/img/menu-icon/hyundai.svg" alt="" />
+              <h4 className="text-white">Engine Parts</h4>
             </div>
           </Link>
         </div>
@@ -41,17 +40,16 @@ function index() {
           className="col-xl-3 col-md-5 col-10  wow fadeInUp  rounded position-relative p-0 overflow-hidden shadow brand-category"
           data-wow-delay="300ms"
         >
-          <Link href="#">
-            <Image
+          <Link href="SingleBrand">
+            <div
               className="img-fluid category-image h-100"
-              src="/assets/img/demo/isuzu-brand.jpg"
-              width="1400"
-              height="1200"
-              alt=""
-            />
+              style={{
+                backgroundImage: "url(../../assets/img/demo/tiresParts.jpg)",
+              }}
+            ></div>
 
-            <div className=" position-absolute category-link  w-100 bottom-0 start-0  d-flex justify-content-center text-center py-1">
-              <img src="assets/img/home1/icon/isuzu.svg" alt="" />
+            <div className=" position-absolute category-link  w-100 bottom-0 start-0  d-flex justify-content-center text-center py-3">
+              <h4 className="text-white">Tires Parts</h4>
             </div>
           </Link>
         </div>
@@ -59,39 +57,16 @@ function index() {
           className="col-xl-3 col-md-5 col-10  wow fadeInUp  rounded position-relative p-0 overflow-hidden shadow brand-category"
           data-wow-delay="300ms"
         >
-          <Link href="#">
-            <Image
+          <Link href="SingleBrand">
+            <div
               className="img-fluid category-image h-100"
-              src="/assets/img/demo/toyota-brand.jpg"
-              width="1400"
-              height="1200"
-              alt=""
-            />
+              style={{
+                backgroundImage: "url(../../assets/img/demo/TimingParts.jpg)",
+              }}
+            ></div>
 
             <div className=" position-absolute category-link  w-100 bottom-0 start-0  d-flex justify-content-center text-center py-3">
-              <img width={60} src="assets/img/home1/icon/toyota.svg" alt="" />
-            </div>
-          </Link>
-        </div>
-        <div
-          className="col-xl-3 col-md-5 col-10 wow fadeInUp  rounded position-relative p-0 overflow-hidden shadow brand-category"
-          data-wow-delay="300ms"
-        >
-          <Link href="#">
-            <Image
-              className="img-fluid category-image h-100"
-              src="/assets/img/demo/mitsubishi-brand.jpg"
-              width="1400"
-              height="1200"
-              alt=""
-            />
-
-            <div className=" position-absolute category-link  w-100 bottom-0 start-0  d-flex justify-content-center text-center py-3">
-              <img
-                width={60}
-                src="assets/img/home2/icon/mitsubidhi.svg"
-                alt=""
-              />
+              <h4 className="text-white">Timing Parts</h4>
             </div>
           </Link>
         </div>
@@ -99,35 +74,50 @@ function index() {
           className="col-xl-3 col-md-5 col-10  wow fadeInUp  rounded position-relative p-0 overflow-hidden shadow brand-category"
           data-wow-delay="300ms"
         >
-          <Link href="#">
-            <Image
+          <Link href="SingleBrand">
+            <div
               className="img-fluid category-image h-100"
-              src="/assets/img/demo/mazda-brand.jpg"
-              width="1400"
-              height="1200"
-              alt=""
-            />
+              style={{
+                backgroundImage: "url(../../assets/img/demo/Brakes.jpg)",
+              }}
+            ></div>
 
             <div className=" position-absolute category-link  w-100 bottom-0 start-0  d-flex justify-content-center text-center py-3">
-              <img width={60} src="assets/img/home1/icon/mazda.svg" alt="" />
+              <h4 className="text-white">Brakes</h4>
             </div>
           </Link>
         </div>
         <div
-          className="col-xl-3 col-md-5 col-10 wow fadeInUp  rounded position-relative p-0 overflow-hidden shadow brand-category"
+          className="col-xl-3 col-md-5 col-10  wow fadeInUp  rounded position-relative p-0 overflow-hidden shadow brand-category"
           data-wow-delay="300ms"
         >
-          <Link href="#">
-            <Image
+          <Link href="SingleBrand">
+            <div
               className="img-fluid category-image h-100"
-              src="/assets/img/demo/kia-brand.jpg"
-              width="1400"
-              height="1200"
-              alt=""
-            />
+              style={{
+                backgroundImage: "url(../../assets/img/demo/PipesParts.jpg)",
+              }}
+            ></div>
 
             <div className=" position-absolute category-link  w-100 bottom-0 start-0  d-flex justify-content-center text-center py-3">
-              <img width={60} src="assets/img/menu-icon/kia.svg" alt="" />
+              <h4 className="text-white">Pieps</h4>
+            </div>
+          </Link>
+        </div>
+        <div
+          className="col-xl-3 col-md-5 col-10  wow fadeInUp  rounded position-relative p-0 overflow-hidden shadow brand-category"
+          data-wow-delay="300ms"
+        >
+          <Link href="SingleBrand">
+            <div
+              className="img-fluid category-image h-100"
+              style={{
+                backgroundImage: "url(../../assets/img/demo/Batteries.jpg)",
+              }}
+            ></div>
+
+            <div className=" position-absolute category-link  w-100 bottom-0 start-0  d-flex justify-content-center text-center py-3">
+              <h4 className="text-white">Batteries</h4>
             </div>
           </Link>
         </div>

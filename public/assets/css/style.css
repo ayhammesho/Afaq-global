@@ -3172,7 +3172,7 @@ header.style-1 .main-menu .hotline-area .content h6 a:hover {
     box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.03);
   }
   header.style-1 .main-menu.show-menu {
-    transform: translateX(0);
+    transform: translateX(0) !important;
   }
   header.style-1 .main-menu .mobile-menu-logo {
     text-align: left;
@@ -12294,7 +12294,7 @@ header.style-6 .main-menu .hotline-area .content h6 a {
   fill: var(--title-color);
 }
 .shop-card2 .content {
-  margin-top: -17px;
+  margin-top: 17px;
   padding: 0 20px;
 }
 .shop-card2 .content .cart-btn {
@@ -15053,21 +15053,21 @@ footer.style-3 .footer-btm .social-area ul li a:hover {
   height: 60px;
 }
 .inner-page-banner .banner-wrapper {
-  padding: 11% 11%;
+  padding: 6% 7%;
 }
 @media (min-width: 1400px) and (max-width: 1599px) {
   .inner-page-banner .banner-wrapper {
-    padding: 15% 3%;
+    padding: 7% 3%;
   }
 }
 @media (max-width: 1399px) {
   .inner-page-banner .banner-wrapper {
-    padding: 15% 3%;
+    padding: 11% 3%;
   }
 }
 @media (max-width: 1199px) {
   .inner-page-banner .banner-wrapper {
-    padding: 15% 1%;
+    padding: 5% 1%;
   }
 }
 .inner-page-banner .breadcrumb-list {
@@ -20504,6 +20504,9 @@ button {
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .brand-category .category-image {
+  background-position: center;
+  background-size: cover;
+  min-height: 250px;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .brand-category:hover .category-image {
@@ -20527,6 +20530,754 @@ button {
 
 .fs-30 {
   font-size: 30px;
+}
+
+html:lang(ar) {
+  /*================================================
+  1. Mixins Css
+  =================================================*/
+}
+html:lang(ar) .top-bar .search-area form .form-inner input {
+  border-radius: 0 5px 5px 0;
+}
+html:lang(ar) .top-bar .search-area form .form-inner button {
+  border-radius: 5px 0 0 5px;
+}
+html:lang(ar) header.header-area .main-menu ul > li.menu-item-has-children::after {
+  left: 10px;
+  right: unset;
+}
+html:lang(ar) header.header-area .main-menu ul > li.position-inherit > a::after {
+  left: 2px;
+  right: unset;
+}
+html:lang(ar) .mobile-menu-btn {
+  display: none;
+  visibility: hidden;
+}
+@media (max-width: 991px) {
+  html:lang(ar) .mobile-menu-btn {
+    display: flex;
+    margin-left: 50px;
+    flex-direction: column;
+    align-items: end;
+    visibility: visible;
+    justify-content: center;
+    position: relative;
+  }
+  html:lang(ar) .mobile-menu-btn span {
+    height: 2px;
+    width: 25px;
+    background-color: var(--title-color);
+    display: flex;
+    transition: transform 0.5s ease-in;
+    position: absolute;
+    top: 0px;
+    right: 15px !important;
+  }
+  html:lang(ar) .mobile-menu-btn span::before {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: 35px;
+    height: 2px;
+    background-color: var(--title-color);
+    content: "";
+    top: -10px;
+    right: 0;
+  }
+  html:lang(ar) .mobile-menu-btn span::after {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    right: 0;
+    background-color: var(--title-color);
+    content: "";
+    top: 10px;
+  }
+  html:lang(ar) .mobile-menu-btn.active span {
+    background-color: transparent;
+  }
+  html:lang(ar) .mobile-menu-btn.active span::before {
+    transform: rotateZ(45deg) translate(8px, 6px);
+    width: 35px;
+  }
+  html:lang(ar) .mobile-menu-btn.active span::after {
+    transform: rotateZ(-45deg) translate(8px, -6px);
+    width: 35px;
+  }
+}
+html:lang(ar) header.header-area .main-menu ul > li:first-child {
+  padding-left: 8px;
+}
+@media (max-width: 991px) {
+  html:lang(ar) header.header-area .main-menu ul > li:first-child {
+    padding: 10px 0;
+  }
+}
+html:lang(ar) header.header-area .main-menu ul > li:first-child a {
+  padding: 15px 20px;
+}
+@media (max-width: 991px) {
+  html:lang(ar) header.header-area .main-menu ul > li:first-child a {
+    padding: 0;
+  }
+}
+@media (max-width: 991px) {
+  html:lang(ar) header.header-area .main-menu {
+    left: unset;
+    right: 0;
+    transform: translateX(100%);
+  }
+  html:lang(ar) header.header-area .main-menu ul li .bi {
+    top: 10px;
+    left: -5px;
+    right: unset;
+  }
+  html:lang(ar) header.header-area .main-menu ul > li .mega-menu .menu-row .menu-single-item h6 {
+    color: #b5b5b5;
+    position: relative;
+    padding-left: 0;
+    padding-right: 15px;
+  }
+  html:lang(ar) header.header-area .main-menu ul > li .mega-menu .menu-row .menu-single-item h6::before {
+    left: unset;
+    right: 0;
+  }
+}
+html:lang(ar) header.header-area .main-menu .hotline-area .content::after {
+  left: unset;
+  right: -10px;
+}
+html:lang(ar) header.header-area .main-menu ul > li a {
+  text-align: start;
+}
+html:lang(ar) .mega-menu .menu-row .menu-single-item h6 {
+  text-align: start;
+}
+html:lang(ar) .main-menu ul > li ul.sub-menu > li a {
+  text-align: start;
+}
+html:lang(ar) header .main-menu ul > li ul.sub-menu > li .dropdown-icon {
+  right: unset !important;
+  left: 10px !important;
+  transform: rotate(180deg);
+}
+html:lang(ar) header.header-area .main-menu ul > li ul.sub-menu > li .sub-menu {
+  right: 220px;
+  left: unset;
+}
+html:lang(ar) header.header-area .main-menu ul > li .mega-menu .menu-row .menu-single-item .explore-more-btn a i {
+  transform: rotate(180deg);
+}
+html:lang(ar) header.style-1 .nav-right .hotline-area .content::after {
+  right: -10px;
+}
+html:lang(ar) header.style-1 .nav-right .hotline-area .icon img {
+  transform: rotate(-90deg);
+}
+html:lang(ar) .banner-section1 .banner-content .customar-review > ul > li::after {
+  right: -40px;
+}
+html:lang(ar) .banner-section1 .banner-content .customar-review > ul > li a .content ul li::after {
+  right: -10px;
+}
+html:lang(ar) .nice-select::after {
+  left: 28px;
+  right: unset;
+}
+html:lang(ar) .quick-link-area ul li::after {
+  right: -134px;
+}
+html:lang(ar) .product-card .product-content .price-location .price::after {
+  left: -15px;
+  right: unset;
+}
+html:lang(ar) .product-card .product-img .slider-btn-group .swiper-arrow {
+  transform: rotate(180deg);
+}
+html:lang(ar) .slider-btn-group .slider-btn {
+  transform: rotate(180deg);
+}
+html:lang(ar) .shop-car-parts-section .section-title1 {
+  margin-left: unset;
+  margin-right: auto;
+}
+html:lang(ar) .customar-feedback-area .customer-feedback-right .feedback-card .author-name h6 {
+  padding-left: unset;
+  padding-right: 30px;
+}
+html:lang(ar) .customar-feedback-area .customer-feedback-right .feedback-card .author-name h6::after {
+  left: unset;
+  right: 0;
+}
+html:lang(ar) .customar-feedback-area .partner-slider {
+  direction: ltr;
+}
+html:lang(ar) .top-rate-used-car-area .form-inner .nice-select {
+  padding-right: 18px;
+  padding-left: 36px;
+}
+html:lang(ar) .top-rate-used-car-area .form-inner .nice-select::after {
+  right: unset;
+  left: 18px;
+}
+html:lang(ar) footer .footer-center .contact-area .hotline-area .icon::after {
+  left: -11px;
+  right: unset;
+}
+html:lang(ar) header.header-area .main-menu ul > li .mega-menu .menu-row .menu-single-item {
+  padding-right: unset;
+  padding-left: 60px;
+}
+html:lang(ar) header.header-area .main-menu ul > li .mega-menu .menu-row .menu-single-item::after {
+  right: unset;
+  left: 27px;
+}
+html:lang(ar) .top-bar.style-2 .topbar-right .hotline-area .content::after {
+  left: unset;
+  right: -10px;
+}
+html:lang(ar) .top-bar.style-2 .topbar-right .hotline-area .icon svg {
+  transform: rotate(-90deg);
+}
+html:lang(ar) .sidebar-menu {
+  left: unset;
+  right: 0;
+  transform: translateX(100%);
+}
+html:lang(ar) .sidebar-menu ul li .bi {
+  top: 10px;
+  left: -5px;
+  right: unset;
+}
+html:lang(ar) .sidebar-menu ul > li a {
+  text-align: start;
+}
+html:lang(ar) .sidebar-menu ul > li .mega-menu .menu-row .menu-single-item h6 {
+  padding-left: 0;
+  padding-right: 15px;
+}
+html:lang(ar) .sidebar-menu ul > li .mega-menu .menu-row .menu-single-item h6::before {
+  left: unset;
+  right: 0;
+}
+html:lang(ar) .sidebar-menu ul > li ul.sub-menu > li .dropdown-icon {
+  left: 0px;
+  right: unset;
+}
+html:lang(ar) .sidebar-menu ul > li .mega-menu .menu-row .menu-single-item .explore-more-btn a i {
+  transform: rotate(180deg);
+}
+html:lang(ar) .sidebar-menu .hotline-area .content::after {
+  left: unset;
+  right: -10px;
+}
+html:lang(ar) .cart-menu {
+  right: unset !important;
+  left: 0 !important;
+}
+html:lang(ar) .signUp-modal .modal-dialog .modal-content .form-inner i {
+  right: unset;
+  left: 20px;
+}
+html:lang(ar) .signUp-modal .modal-dialog .modal-content .modal-header .btn-close {
+  right: unset;
+  left: 20px;
+}
+html:lang(ar) .banner-section2 {
+  padding-left: 0;
+  padding-right: 11%;
+}
+@media (min-width: 1400px) and (max-width: 1599px) {
+  html:lang(ar) .banner-section2 {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+@media (max-width: 1399px) {
+  html:lang(ar) .banner-section2 {
+    padding-left: 0;
+    padding-right: 5%;
+  }
+}
+@media (max-width: 767px) {
+  html:lang(ar) .banner-section2 {
+    padding-left: 0;
+    padding-right: 5%;
+  }
+}
+@media (max-width: 576px) {
+  html:lang(ar) .banner-section2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+html:lang(ar) .explore-btn2 i {
+  transform: rotate(180deg);
+}
+html:lang(ar) .product-card2 .product-content .details-btn {
+  right: unset;
+  left: 20px;
+  transform: rotate(270deg);
+}
+html:lang(ar) .product-card2:hover .product-content .details-btn a i {
+  transform: rotate(-90deg);
+}
+html:lang(ar) .slider-btn-group2 .slider-btn {
+  transform: rotate(-180deg);
+}
+html:lang(ar) .product-card2 .product-content .company-logo {
+  right: unset;
+  left: 20px;
+}
+html:lang(ar) .partner-slider {
+  direction: ltr;
+}
+html:lang(ar) .home2-testimonial-section .feedback-card .author-name h6 {
+  padding-left: 0;
+  padding-right: 30px;
+}
+html:lang(ar) .home2-testimonial-section .feedback-card .author-name h6::after {
+  left: unset;
+  right: 0px;
+}
+html:lang(ar) header.style-3 .main-menu ul > li:first-child a {
+  padding: 24px 20px;
+}
+html:lang(ar) .header-and-filter-area .filter-area .filter-wrap form .form-inner .nice-select::after {
+  right: unset;
+  left: 18px;
+}
+html:lang(ar) .header-and-filter-area .filter-area .hotline-area .icon::after {
+  right: unset;
+  left: -11px;
+}
+html:lang(ar) .home3-banner-area .banner-wrapper .banner-content .banner-feature ul li::after {
+  left: unset;
+  right: -22px;
+}
+html:lang(ar) .home3-banner-area .banner-wrapper .banner-content .banner-feature ul li:last-child {
+  margin-right: 25px;
+}
+html:lang(ar) .home3-banner-area .banner-wrapper .banner-content .banner-feature ul li:first-child {
+  margin-right: 0;
+}
+html:lang(ar) .product-card3 .product-content .price-location .price::after {
+  right: unset;
+  left: -15px;
+}
+html:lang(ar) .why-choose-area.two .rating a .content ul li::after {
+  left: unset;
+  right: -10px;
+}
+html:lang(ar) .product-card3 .product-img .slider-btn-group .swiper-arrow {
+  transform: rotate(180deg);
+}
+html:lang(ar) .primary-btn3 i {
+  transform: rotate(180deg);
+}
+html:lang(ar) .home4-banner-area .banner-content .banner-content-bottom .rating a .content ul li::after {
+  left: unset;
+  right: -10px;
+}
+html:lang(ar) .search-bar .filter-wrap form .form-inner .nice-select {
+  padding-left: 36px;
+  padding-right: 18px;
+}
+html:lang(ar) .search-bar .filter-wrap form .form-inner .nice-select::after {
+  left: 18px;
+  right: unset;
+}
+html:lang(ar) header.style-4 .nav-right .hotline-area .content::after {
+  right: -10px;
+  left: unset;
+}
+html:lang(ar) .home3-available-car .slider-btn .prev-10 {
+  transform: rotate(180deg);
+}
+html:lang(ar) .home3-available-car .slider-btn .next-10 {
+  transform: rotate(180deg);
+}
+html:lang(ar) .home3-available-car .explore-btn a i {
+  transform: rotate(180deg);
+}
+html:lang(ar) .explore-more-btn a i {
+  transform: rotate(180deg);
+  display: inline-block;
+}
+html:lang(ar) .product-card4 .product-img .slider-btn-group .swiper-arrow {
+  transform: rotate(180deg);
+}
+html:lang(ar) .slider-btn-pagination .slider-btn {
+  transform: rotate(180deg);
+}
+html:lang(ar) .product-card4.style-2 .product-content .exp-date p span {
+  padding-left: 0;
+  padding-right: 40px;
+}
+html:lang(ar) .product-card4.style-2 .product-content .exp-date p span::after {
+  left: unset;
+  right: 10px;
+}
+html:lang(ar) .news-section .news-card.style-2 .social-area .social-icons {
+  right: unset;
+  transform-origin: left;
+  left: 38px;
+}
+html:lang(ar) .top-bar.style-5 .hotline-area .content::after {
+  right: -10px;
+  left: unset;
+}
+html:lang(ar) .home5-banner-area .banner-content .banner-content-bottom .rating a .content ul li::after {
+  right: -10px;
+  left: unset;
+}
+html:lang(ar) .product-card5 .product-img .slider-btn-group .swiper-arrow {
+  transform: rotate(180deg);
+}
+html:lang(ar) .single-category5::before {
+  right: unset;
+  left: -23px;
+}
+html:lang(ar) .single-category5::after {
+  right: unset;
+  left: -20px;
+}
+html:lang(ar) .single-category5 .explore-btn5 a i {
+  transform: rotate(225deg);
+}
+html:lang(ar) .slick-wrapper {
+  direction: ltr;
+}
+html:lang(ar) .home5-recent-car-section .slick-arrow.slick-next {
+  left: 220px;
+}
+html:lang(ar) .home5-recent-car-section .slick-arrow.slick-prev {
+  right: unset;
+  left: 162px;
+}
+html:lang(ar) .explore-more-btn.two::after {
+  right: -20px;
+  left: unset;
+}
+html:lang(ar) .product-card5.two .product-content .exp-date p span {
+  padding-right: 40px;
+  padding-left: 0px;
+}
+html:lang(ar) .product-card5.two .product-content .exp-date p span::after {
+  left: unset;
+  right: 10px;
+}
+html:lang(ar) .home5-compare-car-section .compare-card5 .single-compare .compare-img.one img {
+  border-radius: 0 5px 0 0;
+}
+@media (max-width: 576px) {
+  html:lang(ar) .home5-compare-car-section .compare-card5 .single-compare .compare-img.one img {
+    border-radius: 0 5px 5px 0;
+  }
+}
+html:lang(ar) .home5-compare-car-section .compare-card5 .single-compare .compare-img.two img {
+  border-radius: 0 0 5px 0;
+}
+@media (max-width: 576px) {
+  html:lang(ar) .home5-compare-car-section .compare-card5 .single-compare .compare-img.two img {
+    border-radius: 5px 0 0 5px;
+  }
+}
+html:lang(ar) .home5-compare-car-section .compare-card5 .single-compare .content {
+  padding-right: 0px;
+  padding-left: 35px;
+}
+html:lang(ar) .home5-compare-car-section .compare-card5 .primary-btn3 {
+  left: -81px;
+  right: unset;
+}
+@media (max-width: 576px) {
+  html:lang(ar) .home5-compare-car-section .compare-card5 .primary-btn3 {
+    left: unset;
+  }
+}
+html:lang(ar) .home5-testimonial-section .rating a .content ul li::after {
+  left: unset;
+  right: -10px;
+}
+html:lang(ar) .top-bar.style-6 .hotline-area .content::after {
+  left: unset;
+  right: -10px;
+}
+html:lang(ar) .top-bar.style-6 .hotline-area .icon img {
+  transform: rotate(-90deg);
+}
+html:lang(ar) .home6-banner-area .banner-content .banner-content-bottom .rating a .content ul li::after {
+  left: unset;
+  right: -10px;
+}
+html:lang(ar) .home6-banner-area .banner-img-group .top-img-group .top-right-img img {
+  border-radius: 73px 73px 0 73px;
+}
+html:lang(ar) .home6-banner-area .banner-img-group .top-img-group .top-left-card {
+  border-radius: 73px 73px 70px 0;
+}
+html:lang(ar) .home6-banner-area .banner-img-group .bottom-img-group .bottom-right-img img {
+  border-radius: 73px 0 73px 73px;
+}
+html:lang(ar) .home6-banner-area .banner-img-group .bottom-img-group .bottom-left-img img {
+  border-radius: 0 73px 73px 73px;
+}
+html:lang(ar) .home6-search-area form .form-inner .nice-select::after {
+  left: 23px;
+  right: unset;
+}
+html:lang(ar) .home6-search-area form .form-inner .nice-select {
+  padding-left: 38px;
+}
+html:lang(ar) .inner-page-banner .breadcrumb-list li {
+  padding-right: 18px;
+  padding-left: unset;
+}
+html:lang(ar) .inner-page-banner .breadcrumb-list li::before {
+  left: unset;
+  right: 0;
+}
+html:lang(ar) .inner-page-banner .banner-content .customar-review > ul > li::after {
+  right: -40px;
+  left: unset;
+}
+html:lang(ar) .inner-page-banner .banner-content .customar-review > ul > li a .content ul li::after {
+  right: -10px;
+  left: unset;
+}
+html:lang(ar) .product-search-area form .form-inner .nice-select {
+  padding-left: 38px;
+}
+html:lang(ar) .product-search-area form .form-inner .nice-select::after {
+  right: unset;
+  left: 23px;
+}
+html:lang(ar) .pagination-and-next-prev .next-prev-btn ul li::before {
+  left: unset;
+  right: -21px;
+}
+html:lang(ar) .pagination-and-next-prev .next-prev-btn ul li a svg {
+  transform: rotate(180deg);
+}
+html:lang(ar) .toprated-used-cars .brand-list ul li a {
+  display: inline-flex;
+  gap: 5px;
+}
+html:lang(ar) .customar-feedback-area .sub-title h6 {
+  padding: 0 0 0 20px;
+}
+html:lang(ar) .product-page .show-item-and-filte .filter-atra .nice-select {
+  padding-left: 35px;
+  padding-right: 15px;
+}
+html:lang(ar) .product-page .show-item-and-filte .filter-atra .nice-select::after {
+  left: 18px;
+  right: unset;
+}
+html:lang(ar) .product-sidebar .product-widget .check-box-item .checkbox-container > ul > li .containerss {
+  padding-right: 28px;
+  padding-left: 0;
+}
+html:lang(ar) .product-sidebar .product-widget .check-box-item .checkbox-container > ul > li .containerss .checkmark {
+  left: unset;
+  right: 0;
+}
+html:lang(ar) .inner-page-banner .banner-content.style-2 .price-model-and-fav-area .share-and-fav::before {
+  left: unset;
+  right: -50px;
+}
+html:lang(ar) .inner-page-banner .banner-content.style-2 .price-model-and-fav-area .share-and-fav > li .social-icons {
+  left: unset;
+  right: 38px;
+  transform-origin: right;
+}
+html:lang(ar) .inner-page-banner .banner-content.style-2 .location-and-notification ul li.alart button {
+  background: transparent;
+}
+html:lang(ar) .car-details-sidebar .inquiry-form .form-inner .iti__country-list {
+  left: 0;
+}
+html:lang(ar) .car-details-area .title h5::after {
+  left: -53px;
+  right: unset;
+  transform: rotate(180deg);
+}
+html:lang(ar) .faq-wrap .accordion .accordion-item .accordion-header .accordion-button {
+  padding: 15px 25px 15px 55px;
+}
+html:lang(ar) .faq-wrap .accordion .accordion-item .accordion-header .accordion-button::after {
+  right: unset;
+  left: 17px;
+}
+html:lang(ar) .car-details-area .section-title-and-filter .filter-atra .nice-select {
+  padding-left: 35px;
+  padding-right: 15px;
+}
+html:lang(ar) .car-details-area .section-title-and-filter .filter-atra .nice-select::after {
+  left: 18px;
+  right: unset;
+}
+html:lang(ar) .car-details-area .section-title-and-filter .filter-atra {
+  padding: 6px 20px 6px 6px;
+}
+html:lang(ar) .car-details-area .text-input-area .form-inner button svg {
+  transform: rotate(245deg);
+  min-width: 30px;
+}
+html:lang(ar) .comment .single-comment-area .comment-content .replay-btn svg {
+  transform: rotate(180deg);
+}
+html:lang(ar) .most-search-area.style-2 .slider-btn {
+  transform: rotate(180deg);
+}
+html:lang(ar) .car-details-area .car-img-area .tab-content .product-img2 .slider-btn-group .swiper-arrow {
+  transform: rotate(180deg);
+}
+html:lang(ar) .car-details-area .car-img-area .tab-content .product-img .slider-btn-group .swiper-arrow {
+  transform: rotate(180deg);
+}
+html:lang(ar) .product-st-card1.two .product-img {
+  border-radius: 0 5px 5px 0;
+}
+html:lang(ar) .product-st-card1.two .product-img img {
+  border-radius: 0 5px 5px 0;
+}
+html:lang(ar) .product-card.style-2.compare .close-btn {
+  right: unset;
+  left: 0;
+}
+html:lang(ar) .compare-page .single-compare .section-title::after {
+  right: unset;
+  left: -53px;
+  transform: rotate(180deg);
+}
+html:lang(ar) .compare-page .section-title-and-filter .filter-atra .nice-select {
+  padding-left: 35px;
+  padding-right: 15px;
+}
+html:lang(ar) .compare-page .section-title-and-filter .filter-atra .nice-select::after {
+  left: 18px;
+  right: unset;
+}
+html:lang(ar) .compare-page .text-input-area .form-inner button svg {
+  transform: rotate(245deg);
+  min-width: 30px;
+}
+html:lang(ar) .product-sidebar .wp-block-categoris-cloud li a {
+  padding-right: 20px;
+  padding-left: unset;
+}
+html:lang(ar) .product-sidebar .wp-block-categoris-cloud li a::before {
+  left: unset;
+  right: 0;
+}
+html:lang(ar) .product-page .show-item-and-filte .filter-atra {
+  padding: 6px 20px 6px 6px;
+}
+html:lang(ar) .product-details-page .tab-content2 .review-form .form-inner2 .review-rate-area .rate {
+  float: right;
+  direction: ltr;
+}
+html:lang(ar) .checkout-page .choose-payment-mathord .payment-option ul li .checked i {
+  position: absolute;
+  left: 3px;
+  top: 1px;
+}
+html:lang(ar) .checkout-page .inquiry-form .form-inner label.containerss {
+  padding-left: unset;
+  padding-right: 28px;
+}
+html:lang(ar) .checkout-page .inquiry-form .form-inner label.containerss .checkmark {
+  left: 0;
+  right: 0;
+}
+html:lang(ar) .blog-sidebar .single-widgets .wp-block-categoris-cloud li a {
+  padding-left: unset;
+  padding-right: 20px;
+}
+html:lang(ar) .blog-sidebar .single-widgets .wp-block-categoris-cloud li a::before {
+  left: unset;
+  right: 0;
+}
+html:lang(ar) .sidebar-banner .product-content .text h6::after {
+  right: unset;
+  left: -50px;
+}
+html:lang(ar) .blog-details-page blockquote p span {
+  padding-left: unset;
+  padding-right: 80px;
+}
+html:lang(ar) .blog-details-page blockquote p span::before {
+  left: unset;
+  right: 10px;
+}
+html:lang(ar) .blog-details-page .details-navigation .single-navigation .arrow svg {
+  transform: rotate(180deg);
+}
+html:lang(ar) .blog-details-page .inquiry-form .form-inner label.containerss {
+  padding-left: unset;
+  padding-right: 28px;
+}
+html:lang(ar) .blog-details-page .inquiry-form .form-inner label.containerss .checkmark {
+  left: unset;
+  right: 0;
+}
+html:lang(ar) .customer-feedback-pages .feedback-card .author-name h6 {
+  padding-right: 30px;
+  padding-left: unset;
+}
+html:lang(ar) .customer-feedback-pages .feedback-card .author-name h6::after {
+  left: unset;
+  right: 0;
+}
+html:lang(ar) .contact-page .single-contact .title {
+  right: 35px;
+  left: unset;
+}
+html:lang(ar) .signUp-modal .modal-dialog .modal-content .form-agreement input[type=checkbox] + label:before {
+  margin-right: 0;
+  margin-left: 5px;
+}
+html:lang(ar) .signUp-modal .modal-dialog .modal-content .form-agreement input[type=checkbox]:checked + label:after {
+  right: 4px;
+  left: unset;
+}
+html:lang(ar) .adSearch-modal .modal-dialog .modal-content .btn-close {
+  left: 20px;
+  right: unset;
+}
+@media (max-width: 1399px) {
+  html:lang(ar) header.style-3 .main-menu ul > li.menu-item-has-children::after {
+    left: 3px;
+  }
+  html:lang(ar) header.style-3 .main-menu ul > li:first-child a {
+    padding: 24px 12px;
+  }
+  html:lang(ar) header.header-area .main-menu ul > li.position-inherit > a::after {
+    left: -5px;
+  }
+}
+html:lang(ar) .header-and-filter-area .filter-area .filter-wrap form .form-inner .nice-select {
+  padding-right: 18px;
+  padding-left: 36px;
+}
+html:lang(ar) .home4-inner-banner-section {
+  overflow: hidden;
+}
+html:lang(ar) .product-card4 .product-content .button-and-price {
+  gap: 20px;
+}
+html:lang(ar) .no-sidebar .list-group-wrapper .item .product-card4 .product-img img {
+  border-radius: 0 5px 5px 0;
+}
+@media (max-width: 576px) {
+  html:lang(ar) .car-details-area .car-details-menu.sticky {
+    padding-right: 0;
+    padding-left: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

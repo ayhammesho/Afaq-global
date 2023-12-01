@@ -1,7 +1,15 @@
+"use client";
+
 import React, { useEffect, useReducer, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import CardMenu from "./CardMenu";
+import LocaleSwitcher from "../common/LocaleSwitcher";
+import { usePathname } from "next/navigation";
+import tr from "../../../public/assets/img/demo/tr.svg";
+import ar from "../../../public/assets/img/demo/ar.svg";
+import en from "../../../public/assets/img/demo/en.svg";
 
 const initialState = {
   activeMenu: "",
@@ -67,6 +75,32 @@ function Header({ lang }) {
     dispatch({ type: "TOGGLE_MENU", menu: "" });
     dispatch({ type: "TOGGLE_SUB_MENU", subMenu: "" });
     dispatch({ type: "TOGGLE_SIDEBAR" });
+  };
+
+  const locales = [
+    {
+      key: "en",
+      icon: en,
+    },
+    {
+      key: "ar",
+      icon: ar,
+    },
+    {
+      key: "tr",
+      icon: tr,
+    },
+  ];
+  const pathName = usePathname();
+
+  const redirectedPathName = (locale) => {
+    if (!pathName) return "/";
+    const segments = pathName.split("/");
+    segments[1] = locale;
+    if (segments[3] !== undefined) {
+      return "/" + locale;
+    }
+    return segments.join("/");
   };
   return (
     <header
@@ -201,6 +235,62 @@ function Header({ lang }) {
             <Link className="drop-down" href={`/${lang}/contact`}>
               CONTACT US
             </Link>
+          </li>
+          <li
+            className={`menu-item-has-children ${
+              currentRoute === "/" ? "active" : ""
+            }`}
+          >
+            <a
+              href="#"
+              className={`drop-down ${
+                state.activeMenu === "home-one" ? "active" : ""
+              }`}
+            >
+              LANG
+            </a>
+            <i
+              onClick={() => toggleMenu("lang")}
+              className={`bi bi-${
+                state.activeMenu === "lang" ? "dash" : "plus"
+              } dropdown-icon`}
+            />
+            <ul
+              className={`sub-menu ${
+                state.activeMenu === "lang" ? "d-block" : ""
+              }`}
+            >
+              {locales.map((locale) => (
+                <li>
+                  <Link
+                    className="d-flex flex-wrap align-items-center justify-content-between fw-bold fs-24"
+                    href={redirectedPathName(locale.key)}
+                  >
+                    {locale.key}
+                    <Image src={locale.icon} alt={`${locale.key} flag`} />
+                  </Link>
+                </li>
+              ))}
+
+              {/* <li>
+                <Link
+                  className="d-flex flex-wrap align-items-center justify-content-between fw-bold fs-24"
+                  href={`/${lang}/singleBrand`}
+                >
+                  KIA
+                  <img src="../assets/img/menu-icon/kia.svg" alt="" />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  className="d-flex flex-wrap align-items-center gap-2 justify-content-between fw-bold fs-24"
+                  href={`/${lang}/singleBrand`}
+                >
+                  Hyundai
+                  <img src="../assets/img/menu-icon/hyundai.svg" alt="" />
+                </Link>
+              </li> */}
+            </ul>
           </li>
         </ul>
       </div>

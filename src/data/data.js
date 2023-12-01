@@ -816,7 +816,7 @@ export const breadcrumbData = [
     title: "AFAQ News Details",
     img_src: "../assets/img/demo/inner-banner-img.png",
   },
-{
+  {
     id: 14,
     path: "/shop",
     sub_title: "Shop Car Parts",
@@ -828,7 +828,7 @@ export const breadcrumbData = [
     path: "/product-details",
     sub_title: "Product Details",
     title: "Steering Rack Details",
-    img_src: "../assets/img/demo/product-dt-bannner-img.png",
+    img_src: "../../assets/img/demo/product-dt-bannner-img.png",
   },
   {
     id: 16,

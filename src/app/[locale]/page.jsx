@@ -15,7 +15,7 @@ import Modals from "../../components/Home/Modals";
 import Blog from "../../components/Home/Blog";
 
 import Testimonial from "../../components/Home/Testimonial";
-import Header from "../../components/Home/Header";
+import Header from "../../components/Header/Header";
 import Footer1 from "../../components/Footer/Footer1";
 
 function HomePage({ params: { locale } }) {
@@ -26,10 +26,7 @@ function HomePage({ params: { locale } }) {
       <BannerV2 />
       <OurTrustedPartner />
       <DreamCar />
-      <WhyChooseUs />
-      <HowItWorks />
-      <InerBanner className="mb-100" />
-      <Testimonial />
+
       <Blog />
       <Footer1 />
     </>
