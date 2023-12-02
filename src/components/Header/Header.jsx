@@ -164,7 +164,7 @@ function Header({ lang }) {
               } dropdown-icon`}
             />
             <ul
-              className={`sub-menu ${
+              className={`sub-menu  large-menu ${
                 state.activeMenu === "parts" ? "d-block" : ""
               }`}
             >
@@ -263,11 +263,15 @@ function Header({ lang }) {
               {locales.map((locale) => (
                 <li>
                   <Link
-                    className="d-flex flex-wrap align-items-center justify-content-between fw-bold fs-24"
+                    className="d-flex flex-wrap align-items-center justify-content-between fw-bold gap-2 fs-24"
                     href={redirectedPathName(locale.key)}
                   >
                     {locale.key}
-                    <Image src={locale.icon} alt={`${locale.key} flag`} />
+                    <Image
+                      // width={25}
+                      src={locale.icon}
+                      alt={`${locale.key} flag`}
+                    />
                   </Link>
                 </li>
               ))}
