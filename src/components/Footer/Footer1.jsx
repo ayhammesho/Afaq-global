@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-function Footer1() {
+function Footer1({ footerLogo, SocialLinks, FooterSlogan, MapLink }) {
   return (
     <footer>
       <div className="container-fluid">
@@ -12,11 +12,12 @@ function Footer1() {
                   <a>
                     <img
                       width={300}
-                      src="../assets/img/logo-english-white.svg"
+                      src={"http://68.183.74.28:1337" + footerLogo}
                       alt=""
                     />
                   </a>
                 </Link>
+                {/* <p className="text-white mt-4 ">{FooterSlogan}</p> */}
               </div>
             </div>
 
@@ -226,7 +227,7 @@ function Footer1() {
             <div className="col d-flex justify-content-lg-start">
               <div className="contact-map">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3649.564763185785!2d90.36311167608078!3d23.834071185557615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c14c8682a473%3A0xa6c74743d52adb88!2sEgens%20Lab!5e0!3m2!1sen!2sbd!4v1685535738307!5m2!1sen!2sbd"
+                  src={MapLink}
                   style={{ border: 0, height: "300px" }}
                   allowFullScreen
                   loading="lazy"
@@ -248,22 +249,22 @@ function Footer1() {
             <h6>Follow Us:</h6>
             <ul>
               <li>
-                <a href="https://www.facebook.com/">
+                <a href={SocialLinks?.FACEBOOK} target="_blank">
                   <i className="bx bxl-facebook" />
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/">
+                <a href={SocialLinks?.TWITTER} target="_blank">
                   <i className="bx bxl-twitter" />
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/">
+                <a href={SocialLinks?.LINKEDIN} target="_blank">
                   <i className="bx bxl-linkedin" />
                 </a>
               </li>
               <li>
-                <a href="https://www.instagram.com/">
+                <a href={SocialLinks?.INSTAGRAM} target="_blank">
                   <i className="bx bxl-instagram-alt" />
                 </a>
               </li>

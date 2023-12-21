@@ -1,9 +1,10 @@
-"use client";
+// "use client";
 
 import { Inter } from "next/font/google";
 
 import { notFound } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { NextIntlClientProvider, useMessages } from "next-intl";
+
 //
 import "../../../public/assets/css/bootstrap-icons.css";
 import "../../../public/assets/css/boxicons.min.css";
@@ -14,14 +15,16 @@ import "../../../public/assets/css/nice-select.css";
 import "../../../styles/custom.css";
 import "../../../public/assets/css/style.css";
 
+// ...
+
 // import "../../../styles/globals.css";
 
 // import "../../../public/assets/css/style-rtl.css";
 // import "../../../public/assets/css/bootstrap.rtl.min.css";
 
 //
-import { useEffect, useState } from "react";
-import Script from "next/script";
+// import { useEffect, useState } from "react";
+
 import Preloader from "../../components/common/Preloader";
 import { WhatsAppProvider } from "./providers";
 
@@ -33,36 +36,36 @@ const inter = Inter({ subsets: ["latin"] });
 // };
 
 // Can be imported from a shared config
-const locales = ["ar", "tr", "en"];
 
 export default function LocaleLayout({ children, params: { locale } }) {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
+  const messages = useMessages();
+  // const handlePreloaderClose = () => {
+  //   setLoading(false);
+  // };
 
-  const handlePreloaderClose = () => {
-    setLoading(false);
-  };
-
-  useEffect(() => {
-    // Simulate loading for 3 seconds (adjust as needed)
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-  }, []);
-  useEffect(() => {
-    import("../../../public/assets/js/bootstrap.min.js");
-  }, []);
+  // useEffect(() => {
+  //   // Simulate loading for 3 seconds (adjust as needed)
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 3000);
+  // }, []);
+  // useEffect(() => {
+  //   import("../../../public/assets/js/bootstrap.min.js");
+  // }, []);
   // Validate that the incoming `locale` parameter is valid
-  if (!locales.includes(locale)) notFound();
 
   return (
     <html lang={locale} dir={locale == "ar" ? "rtl" : "ltr"}>
-      <body className={inter.className}>
-        {loading ? (
-          <Preloader onClose={handlePreloaderClose} />
-        ) : (
+      <NextIntlClientProvider messages={messages}>
+        <body className={inter.className}>
+          {/* {loading ? (
+            <Preloader onClose={handlePreloaderClose} />
+          ) : (
+            )} */}
           <WhatsAppProvider>{children}</WhatsAppProvider>
-        )}
-      </body>
+        </body>
+      </NextIntlClientProvider>
     </html>
   );
 }

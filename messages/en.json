@@ -1,5 +1,54 @@
 {
-  "Index": {
-    "title": "Hello world!"
+  "default": {
+    "Contact": {
+      "address": "Company Address",
+      "Email": "Email",
+      "email_box": "Email Now",
+      "fullName": "Full Name",
+      "location": "Location",
+      "message": "Short Notes",
+      "optional": "Optional",
+      "phonenumber": "Phone Number",
+      "phonenumber_box": "Company Phone Number",
+      "send": " Your Message has been delivered successfuly we will contact you as soon as we can",
+      "subject": "Subject",
+      "submit": "Submit Now",
+      "sub_title": "To Know More",
+      "title": "Contact Us With Support Line"
+    },
+    "Footer": { "brands": "Parts By Brands", "follow": "Follow Us" },
+    "Gallery": { "title": "Our Gallery" },
+    "Header": {
+      "lang": "lang",
+      "contact_us": "Contact Us",
+      "about": "About Us",
+      "home": "Home",
+      "news": "News",
+      "products": "Products"
+    },
+    "Home": {
+      "news_sub_title": "Here are some of the featured news from us",
+      "news_title": "The Latest News",
+      "parts_title": "We have every thing you want",
+      "testimonials": "Here are some of the featured news from us"
+    },
+    "HowItWorks": { "video": "Watch Video" },
+    "News": {
+      "posted_at": "Posted on",
+      "recent_news": "Recent Blog",
+      "share": "Share:",
+      "read_more": "Read More"
+    },
+    "not_found_cta": "Back To Home",
+    "not_found_text": " Something went wrong, web page that is displayed to the user when the server cannot find the requested page.",
+    "not_found_title": "Opps, Page Not Found",
+    "Pagination": { "next": "Next", "prev": "Prev" },
+    "Products": {
+      "cta": "More Details",
+      "more_products": "There are More Car Parts Available",
+      "more_products_cta": "View More",
+      "product_details": "Product Details",
+      "related_products": "Related Products"
+    }
   }
 }

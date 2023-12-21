@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { breadcrumbData } from "../../data/data";
 import { usePathname } from "next/navigation";
@@ -31,79 +33,6 @@ function Breadcrumb() {
                     {currentPathData?.sub_title || "Our Brief History"}
                   </span>
                   <h1>{currentPathData?.title || "Our Brief History"}</h1>
-                  <div className="customar-review">
-                    <ul>
-                      <li>
-                        <a href="#">
-                          <div className="review-top">
-                            <div className="logo">
-                              <img
-                                src="../assets/img/home1/icon/trstpilot-logo.svg"
-                                alt=""
-                              />
-                            </div>
-                            <div className="star">
-                              <img
-                                src="../assets/img/home1/icon/trustpilot-star.svg"
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                          <div className="content">
-                            <ul>
-                              <li>
-                                Trust Rating <span>5.0</span>
-                              </li>
-                              <li>
-                                <span>2348</span> Reviews
-                              </li>
-                            </ul>
-                          </div>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <div className="review-top">
-                            <div className="logo">
-                              <img
-                                src="../assets/img/home1/icon/google-logo.svg"
-                                alt=""
-                              />
-                            </div>
-                            <div className="star">
-                              <ul>
-                                <li>
-                                  <i className="bi bi-star-fill" />
-                                </li>
-                                <li>
-                                  <i className="bi bi-star-fill" />
-                                </li>
-                                <li>
-                                  <i className="bi bi-star-fill" />
-                                </li>
-                                <li>
-                                  <i className="bi bi-star-fill" />
-                                </li>
-                                <li>
-                                  <i className="bi bi-star-half" />
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div className="content">
-                            <ul>
-                              <li>
-                                Trust Rating <span>5.0</span>
-                              </li>
-                              <li>
-                                <span>2348</span> Reviews
-                              </li>
-                            </ul>
-                          </div>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
                 </div>
               </div>
               <div className="col-xl-6 col-lg-5 d-lg-flex d-none align-items-center justify-content-end">

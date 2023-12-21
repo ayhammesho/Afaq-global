@@ -14,7 +14,7 @@ const Loading = ({ children }) => {
     // Simulate loading for 3 seconds (adjust as needed)
     setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 5000);
   }, []);
   return (
     <>{loading ? <Preloader onClose={handlePreloaderClose} /> : { children }}</>

@@ -10,6 +10,7 @@ import { usePathname } from "next/navigation";
 import tr from "../../../public/assets/img/demo/tr.svg";
 import ar from "../../../public/assets/img/demo/ar.svg";
 import en from "../../../public/assets/img/demo/en.svg";
+import { useTranslations } from "next-intl";
 
 const initialState = {
   activeMenu: "",
@@ -50,7 +51,8 @@ function reducer(state, action) {
   }
 }
 
-function Header({ lang }) {
+function Header({ lang, HeaderLogo, categories }) {
+  const t = useTranslations("default");
   const [state, dispatch] = useReducer(reducer, initialState);
   const headerRef = useRef(null);
   const handleScroll = () => {
@@ -115,10 +117,11 @@ function Header({ lang }) {
         <Link legacyBehavior href="/">
           <a>
             <img
-              width={250}
+              width={200}
               alt="image"
               className="img-fluid"
-              src="../assets/img/logo-english.svg"
+              // TODO : FIX IT TO USE ENV
+              src={"http://68.183.74.28:1337" + HeaderLogo}
             />
           </a>
         </Link>
@@ -131,7 +134,8 @@ function Header({ lang }) {
                 <img
                   width={150}
                   alt="image"
-                  src="../assets/img/logo-english.svg"
+                  // TODO : FIX IT TO USE ENV
+                  src={"http://68.183.74.28:1337" + HeaderLogo}
                 />
               </a>
             </Link>
@@ -139,10 +143,10 @@ function Header({ lang }) {
         </div>
         <ul className="menu-list">
           <li>
-            <Link href={`/${lang}/`}>Home</Link>
+            <Link href={`/${lang}/`}>{t("Header.home")}</Link>
           </li>
           <li>
-            <Link href={`/${lang}/about`}>About Us</Link>
+            <Link href={`/${lang}/about`}>{t("Header.about")}</Link>
           </li>
           <li
             className={`menu-item-has-children ${
@@ -150,12 +154,12 @@ function Header({ lang }) {
             }`}
           >
             <a
-              href="#"
+              href={`/${lang}/singleBrand?page=1`}
               className={`drop-down ${
                 state.activeMenu === "home-one" ? "active" : ""
               }`}
             >
-              Products
+              {t("Header.products")}
             </a>
             <i
               onClick={() => toggleMenu("parts")}
@@ -168,46 +172,18 @@ function Header({ lang }) {
                 state.activeMenu === "parts" ? "d-block" : ""
               }`}
             >
-              <li>
-                <Link
-                  className="d-flex flex-wrap align-items-center justify-content-between fw-bold fs-24"
-                  href={`/${lang}/singleBrand`}
-                >
-                  Japanese brands
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="d-flex flex-wrap align-items-center justify-content-between fw-bold fs-24"
-                  href={`/${lang}/singleBrand`}
-                >
-                  Korean brands
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="d-flex flex-wrap align-items-center justify-content-between fw-bold fs-24"
-                  href={`/${lang}/singleBrand`}
-                >
-                  Chinese brands
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="d-flex flex-wrap align-items-center justify-content-between fw-bold fs-24"
-                  href={`/${lang}/singleBrand`}
-                >
-                  Taiwanese brands
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="d-flex flex-wrap align-items-center justify-content-between fw-bold fs-24"
-                  href={`/${lang}/singleBrand`}
-                >
-                  European brands
-                </Link>
-              </li>
+              {categories &&
+                categories.map((category) => (
+                  <li>
+                    <Link
+                      className="d-flex flex-wrap align-items-center justify-content-between fw-bold fs-24"
+                      href={`/${lang}/singleBrand?page=1&category=${category.attributes.CategoryTitle}`}
+                    >
+                      {category.attributes.CategoryTitle}
+                    </Link>
+                  </li>
+                ))}
+
               {/* <li>
                 <Link
                   className="d-flex flex-wrap align-items-center justify-content-between fw-bold fs-24"
@@ -229,11 +205,11 @@ function Header({ lang }) {
             </ul>
           </li>
           <li>
-            <Link href={`/${lang}/news`}>News</Link>
+            <Link href={`/${lang}/news`}>{t("Header.news")}</Link>
           </li>
           <li>
             <Link className="drop-down" href={`/${lang}/contact`}>
-              CONTACT US
+              {t("Header.contact_us")}
             </Link>
           </li>
           <li
@@ -247,7 +223,7 @@ function Header({ lang }) {
                 state.activeMenu === "home-one" ? "active" : ""
               }`}
             >
-              LANG
+              {t("Header.lang")}
             </a>
             <i
               onClick={() => toggleMenu("lang")}
@@ -260,8 +236,8 @@ function Header({ lang }) {
                 state.activeMenu === "lang" ? "d-block" : ""
               }`}
             >
-              {locales.map((locale) => (
-                <li>
+              {locales.map((locale, index) => (
+                <li key={index}>
                   <Link
                     className="d-flex flex-wrap align-items-center justify-content-between fw-bold gap-2 fs-24"
                     href={redirectedPathName(locale.key)}

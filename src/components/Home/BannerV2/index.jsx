@@ -11,7 +11,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
 
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
-function index() {
+function index({ heroData }) {
+  const heroImages =
+    heroData.images.data.map((image) => image.attributes.url) ?? "";
+
   const settings = useMemo(() => {
     return {
       slidesPerView: "auto",
@@ -33,37 +36,23 @@ function index() {
       },
     };
   });
+  // console.log(heroData);
   return (
     <div className="home3-banner-area">
       <Swiper {...settings} className="swiper home3-banner-slider">
         <div className="swiper-wrapper">
-          <SwiperSlide className="swiper-slide">
-            <div
-              className="banner-bg"
-              style={{
-                backgroundImage:
-                  "linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url(../assets/img/demo/kia-brand.jpg)",
-              }}
-            ></div>
-          </SwiperSlide>
-          <SwiperSlide className="swiper-slide">
-            <div
-              className="banner-bg"
-              style={{
-                backgroundImage:
-                  "linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url(../assets/img/demo/toyota-brand.jpg)",
-              }}
-            ></div>
-          </SwiperSlide>
-          <SwiperSlide className="swiper-slide">
-            <div
-              className="banner-bg"
-              style={{
-                backgroundImage:
-                  "linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url(../assets/img/demo/mazda-brand.jpg)",
-              }}
-            ></div>
-          </SwiperSlide>
+          {heroImages.map((imageUrl) => (
+            <SwiperSlide className="swiper-slide" key={imageUrl}>
+              <div
+                className="banner-bg"
+                style={{
+                  backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url(${
+                    "http://68.183.74.28:1337" + imageUrl
+                  })`,
+                }}
+              ></div>
+            </SwiperSlide>
+          ))}
         </div>
       </Swiper>
       <div className="container-fluid">
@@ -72,11 +61,10 @@ function index() {
             <div className="banner-wrapper">
               <div className="banner-content">
                 {/* <h1>{hero.title} </h1> */}
-                <h1>The Largest </h1>
-                <h3 className="text-white mb-4 " style={{ fontSize: "24px" }}>
-                  Car dealerships may sell new cars from one or several
-                  <br />
-                  manufacturers, as well as used cars.
+                <h1>{heroData?.HeroTitle}</h1>
+
+                <h3 className="text-white mb-4 " style={{ fontSize: "20px" }}>
+                  {heroData?.HeroDescreption}
                 </h3>
                 {/* <p>{hero.descreption}</p> */}
                 <div className="banner-content-bottom">
@@ -96,7 +84,7 @@ function index() {
                         />
                         <path d="M0 5.09873C0 4.99473 0.0408428 4.89499 0.113543 4.82146C0.186244 4.74792 0.284847 4.7066 0.387662 4.7066H4.74886C4.85167 4.7066 4.95027 4.74792 5.02297 4.82146C5.09567 4.89499 5.13652 4.99473 5.13652 5.09873C5.13652 5.20273 5.09567 5.30247 5.02297 5.37601C4.95027 5.44955 4.85167 5.49086 4.74886 5.49086H0.387662C0.284847 5.49086 0.186244 5.44955 0.113543 5.37601C0.0408428 5.30247 0 5.20273 0 5.09873ZM15.6836 5.60575C15.7563 5.67929 15.7971 5.77901 15.7971 5.88299C15.7971 5.98697 15.7563 6.08669 15.6836 6.16022L15.6532 6.19101C15.2897 6.55865 14.7968 6.76522 14.2828 6.76528H8.14089C8.03808 6.76528 7.93948 6.72397 7.86678 6.65043C7.79408 6.57689 7.75323 6.47715 7.75323 6.37315C7.75323 6.26915 7.79408 6.16941 7.86678 6.09587C7.93948 6.02234 8.03808 5.98102 8.14089 5.98102H14.2826C14.4354 5.98104 14.5866 5.95063 14.7277 5.89152C14.8688 5.83241 14.997 5.74577 15.105 5.63654L15.1355 5.60575C15.2082 5.53224 15.3068 5.49094 15.4096 5.49094C15.5123 5.49094 15.6109 5.53224 15.6836 5.60575ZM8.52856 14.6079C8.52856 14.5039 8.5694 14.4041 8.6421 14.3306C8.7148 14.257 8.8134 14.2157 8.91622 14.2157H10.5638C10.6666 14.2157 10.7652 14.257 10.8379 14.3306C10.9106 14.4041 10.9514 14.5039 10.9514 14.6079C10.9514 14.7118 10.9106 14.8116 10.8379 14.8851C10.7652 14.9587 10.6666 15 10.5638 15H8.91622C8.8134 15 8.7148 14.9587 8.6421 14.8851C8.5694 14.8116 8.52856 14.7118 8.52856 14.6079ZM11.2422 14.6079C11.2422 14.5039 11.283 14.4041 11.3557 14.3306C11.4284 14.257 11.527 14.2157 11.6298 14.2157H15.991C16.0939 14.2157 16.1925 14.257 16.2652 14.3306C16.3379 14.4041 16.3787 14.5039 16.3787 14.6079C16.3787 14.7118 16.3379 14.8116 16.2652 14.8851C16.1925 14.9587 16.0939 15 15.991 15H11.6298C11.527 15 11.4284 14.9587 11.3557 14.8851C11.283 14.8116 11.2422 14.7118 11.2422 14.6079Z" />
                       </svg>
-                      Discover our Parts
+                      {heroData?.CTA}
                     </a>
                   </Link>
                 </div>

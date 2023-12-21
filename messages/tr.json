@@ -1,5 +1,57 @@
 {
-  "Index": {
-    "title": "treafa"
+  "default": {
+    "Contact": {
+      "address": "şirket adresi",
+      "Email": "E-posta",
+      "email_box": "Şimdi E-postayla Gönder",
+      "fullName": "Ad Soyad",
+      "location": "Konum",
+      "message": "Kısa notlar",
+      "optional": "İsteğe bağlı",
+      "phonenumber": "Telefon numarası",
+      "phonenumber_box": "Şirket Telefon Numarası",
+      "send": "Mesajınız başarıyla iletildi, mümkün olan en kısa sürede sizinle iletişime geçeceğiz",
+      "subject": "Ders",
+      "submit": "Şimdi gönder",
+      "sub_title": "Daha Fazla Bilgi İçin",
+      "title": "Destek Hattıyla Bize Ulaşın"
+    },
+    "Footer": {
+      "brands": "Markalara Göre Parçalar",
+      "follow": "Bizi takip edin"
+    },
+    "Gallery": { "title": "Galerimiz" },
+    "Header": {
+      "lang": "",
+      "contact_us": "Bize Ulaşın",
+      "about": "Hakkımızda",
+      "home": "Ev",
+      "news": "Haberler",
+      "products": "Ürünler"
+    },
+    "Home": {
+      "news_sub_title": "İşte bizden öne çıkan haberlerden bazıları",
+      "news_title": "Güncel Haberler",
+      "parts_title": "İstediğiniz her şeye sahibiz",
+      "testimonials": "İşte bizden öne çıkan haberlerden bazıları"
+    },
+    "HowItWorks": { "video": "Video izle" },
+    "News": {
+      "posted_at": "Yayınlanan",
+      "recent_news": "Son Blog",
+      "share": "Paylaşmak:",
+      "read_more": "Read More"
+    },
+    "not_found_cta": "Eve geri dön",
+    "not_found_text": "Bir şeyler ters gitti; sunucu istenen sayfayı bulamadığında kullanıcıya görüntülenen web sayfası.",
+    "not_found_title": "Hata, Sayfa Bulunamadı",
+    "Pagination": { "next": "Sonraki", "prev": "Önceki" },
+    "Products": {
+      "cta": "Daha fazla detay",
+      "more_products": "Daha Fazla Araba Parçası Mevcut",
+      "more_products_cta": "Daha fazla göster",
+      "product_details": "Ürün Detayları",
+      "related_products": "ilgili ürünler"
+    }
   }
 }

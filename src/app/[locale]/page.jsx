@@ -1,34 +1,65 @@
 import React from "react";
-
-import Banner from "../../components/Home/Banner";
 import BannerV2 from "../../components/Home/BannerV2";
-
 import DreamCar from "../../components/Home/DreamCar";
-import FeatureCars from "../../components/Home/FeaturedCars/index";
-import InerBanner from "../../components/Home/InnerBanner";
-
-import WhyChooseUs from "../../components/Home/WhyDrivco/WhyChooseUs";
-import HowItWorks from "../../components/Home/HowDoesItWork";
-
 import OurTrustedPartner from "../../components/Home/OurTrustedPartners";
 import Modals from "../../components/Home/Modals";
 import Blog from "../../components/Home/Blog";
-
-import Testimonial from "../../components/Home/Testimonial";
 import Header from "../../components/Header/Header";
 import Footer1 from "../../components/Footer/Footer1";
+import {
+  getGlobalSettings,
+  getHomePageData,
+  getBlogPageData,
+  getCategoryOfProducts,
+} from "@/app/libs/getData";
 
-function HomePage({ params: { locale } }) {
+async function HomePage({ params: { locale } }) {
+  const globalSettingsPromise = getGlobalSettings(locale);
+  const homePageDataPromise = getHomePageData(locale);
+  const homeBlogDataPromise = getBlogPageData(locale, 1, 3);
+  const productsCategoriesPromise = getCategoryOfProducts(locale);
+
+  const [globalSettings, homePageData, blogPageData, productsCategories] =
+    await Promise.all([
+      globalSettingsPromise,
+      homePageDataPromise,
+      homeBlogDataPromise,
+      productsCategoriesPromise,
+    ]);
+
+  console.log(productsCategories);
+
+  const headerLogo =
+    globalSettings?.attributes?.HeaderLogo?.data?.attributes?.url;
+  const footerLogo =
+    globalSettings?.attributes?.FooterLogo?.data?.attributes?.url;
+  const SocialLinks = globalSettings?.attributes?.SocialLinks;
+  const FooterSlogan = globalSettings?.attributes?.FooterSlogan;
+  const MapLink = globalSettings?.attributes?.MapLink;
+
+  const heroData = homePageData?.attributes?.HeroSection;
+  const BrandsData = homePageData?.attributes?.BrandsSection;
+  const PartsData = homePageData?.attributes?.PartsSection;
+  const blogData = blogPageData?.data;
+
   return (
     <>
       <Modals />
-      <Header lang={locale} />
-      <BannerV2 />
-      <OurTrustedPartner />
-      <DreamCar lang={locale} />
-
-      <Blog />
-      <Footer1 />
+      <Header
+        lang={locale}
+        HeaderLogo={headerLogo}
+        categories={productsCategories}
+      />
+      {heroData && <BannerV2 heroData={heroData} />}
+      {BrandsData && <OurTrustedPartner BrandsData={BrandsData} />}
+      <DreamCar lang={locale} productsCategories={productsCategories} />
+      <Blog blogData={blogData} />
+      <Footer1
+        footerLogo={footerLogo}
+        SocialLinks={SocialLinks}
+        FooterSlogan={FooterSlogan}
+        MapLink={MapLink}
+      />
     </>
   );
 }

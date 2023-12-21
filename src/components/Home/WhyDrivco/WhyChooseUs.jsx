@@ -1,6 +1,7 @@
 import React from "react";
+import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
-function WhyChooseUs() {
+function WhyChooseUs({ WhyUsData }) {
   return (
     <div className="home5-why-drivco-area pt-90 pb-90 mb-100">
       <div className="container">
@@ -11,11 +12,14 @@ function WhyChooseUs() {
                 className="section-title-2 mb-60 wow fadeInUp"
                 data-wow-delay="200ms"
               >
-                <h2>Why AFAQ?</h2>
-                <p>To get the most accurate and up-to-date information.</p>
+                <h2>{WhyUsData?.Title}</h2>
+                <p>{WhyUsData?.SubTitle}</p>
               </div>
               <div className="drivco-featute">
-                <ul>
+                <div>
+                  <BlocksRenderer content={WhyUsData?.Content} />
+                </div>
+                {/* <ul>
                   <li
                     className="single-feature wow fadeInUp"
                     data-wow-delay="300ms"
@@ -67,13 +71,19 @@ function WhyChooseUs() {
                       </p>
                     </div>
                   </li>
-                </ul>
+                </ul> */}
               </div>
             </div>
           </div>
           <div className="col-lg-6 d-flex justify-content-lg-end justify-content-center">
             <div className="drivco-img wow zoomIn" data-wow-delay="400ms">
-              <img src="../assets/img/demo/why-drivco.png" alt="img" />
+              <img
+                src={
+                  "http://68.183.74.28:1337" +
+                  WhyUsData?.Image.data.attributes.url
+                }
+                alt="img"
+              />
             </div>
           </div>
         </div>
