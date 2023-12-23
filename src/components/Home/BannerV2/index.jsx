@@ -68,7 +68,7 @@ function index({ heroData }) {
                 </h3>
                 {/* <p>{hero.descreption}</p> */}
                 <div className="banner-content-bottom">
-                  <Link legacyBehavior href="#">
+                  <Link legacyBehavior href={`/${lang}/singleBrand?page=1`}>
                     <a className="primary-btn3">
                       <svg
                         width={24}

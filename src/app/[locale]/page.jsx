@@ -48,7 +48,7 @@ async function HomePage({ params: { locale } }) {
         HeaderLogo={headerLogo}
         categories={productsCategories}
       />
-      {heroData && <BannerV2 heroData={heroData} />}
+      {heroData && <BannerV2 heroData={heroData} lang={locale} />}
       {BrandsData && <OurTrustedPartner BrandsData={BrandsData} />}
       <DreamCar lang={locale} productsCategories={productsCategories} />
       <Blog blogData={blogData} lang={locale} />

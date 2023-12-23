@@ -1,4 +1,4 @@
-import { getBlogPageData, getAllProducts } from "@/app/libs/getlData";
+import { getBlogPageData, getAllProducts } from "@/app/libs/getData";
 
 export default async function sitemap() {
   const baseUrlAr = "https://afaqglobal.com/ar";
@@ -16,7 +16,7 @@ export default async function sitemap() {
   // get all products pages
   const products = await getAllProducts("ar", 1, 100);
   const productsUrl =
-    products?.map((product) => {
+    products?.data?.map((product) => {
       return {
         url: `${baseUrlAr}/singleBrand/${product.id}`,
         lastModified: new Date(),
@@ -41,7 +41,7 @@ export default async function sitemap() {
   // get all products pages
   const productsEn = await getAllProducts("ar", 1, 100);
   const productsUrlEn =
-    productsEn?.map((product) => {
+    productsEn?.data?.map((product) => {
       return {
         url: `${baseUrlEn}/singleBrand/${product.id}`,
         lastModified: new Date(),
@@ -64,7 +64,7 @@ export default async function sitemap() {
   // get all products pages
   const productsTr = await getAllProducts("ar", 1, 100);
   const productsUrlTr =
-    productsTr?.map((product) => {
+    productsTr?.data?.map((product) => {
       return {
         url: `${baseUrlTr}/singleBrand/${product.id}`,
         lastModified: new Date(),
