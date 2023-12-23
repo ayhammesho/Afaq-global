@@ -26,7 +26,8 @@ async function ContactPage({ params: { locale } }) {
               />
             </div>
             <div className="col-lg-7">
-              <ContactForm />
+              {" "}
+              <ContactForm />{" "}
             </div>
           </div>
         </div>

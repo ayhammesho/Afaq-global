@@ -12,7 +12,7 @@ const SingleProduct = ({ productName, productImg, link }) => {
             <div className="swiper-wrapper">
               <div className="swiper-slide">
                 <img
-                  src={"http://68.183.74.28:1337" + productImg}
+                  src={process.env.NEXT_PUBLIC_BACKEND_URI + productImg}
                   alt="image"
                 />
               </div>

@@ -13,8 +13,9 @@ SwiperCore.use([Pagination, Autoplay, EffectFade, Navigation]);
 
 import { useTranslations } from "next-intl";
 
-const RelatedProducts = () => {
+const RelatedProducts = ({ relatedProducts }) => {
   const t = useTranslations("default");
+
   const productSlide1 = useMemo(() => {
     return {
       speed: 1500,
@@ -65,132 +66,29 @@ const RelatedProducts = () => {
       <div className="col-lg-12 mb-40">
         <Swiper {...productSlide1} className="swiper product-details-slider">
           <div className="swiper-wrapper">
-            <SwiperSlide className="swiper-slide">
-              <div className="shop-card2">
-                <div className="shop-img">
-                  <img src="../../assets/img/demo/Product-01.png" alt="" />
-                </div>
-                <div className="content">
-                  <h6>
-                    <Link legacyBehavior href="#">
-                      <a>Steering Rack Advance Auto Parts is a retailer.</a>
-                    </Link>
-                  </h6>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <div className="shop-card2">
-                <div className="shop-img">
-                  <img src="../../assets/img/demo/Product-02.png" alt="" />
-                </div>
-                <div className="content">
-                  <h6>
-                    <Link legacyBehavior href="#">
-                      <a>Jekit 355*32mm assembled brake disks.</a>
-                    </Link>
-                  </h6>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <div className="shop-card2">
-                <div className="shop-img">
-                  <img src="../../assets/img/demo/Product-03.png" alt="" />
-                </div>
-                <div className="content">
-                  <h6>
-                    <Link legacyBehavior href="#">
-                      <a>Pump Water Audi Seat Skoda Vw Skf Vkpc 81620.</a>
-                    </Link>
-                  </h6>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <div className="shop-card2">
-                <div className="shop-img">
-                  <img src="../../assets/img/demo/Product-05.png" alt="" />
-                </div>
-                <div className="content">
-                  <h6>
-                    <Link legacyBehavior href="#">
-                      <a>Tech master New Brand Carbon ceramic brakes. </a>
-                    </Link>
-                  </h6>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <div className="shop-card2">
-                <div className="shop-img">
-                  <img src="../../assets/img/demo/Product-06.png" alt="" />
-                </div>
-                <div className="content">
-                  <h6>
-                    <Link legacyBehavior href="#">
-                      <a>WJB WA512187 - Rear Wheel Hub Bearing Assembly.</a>
-                    </Link>
-                  </h6>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <div className="shop-card2">
-                <div className="shop-img">
-                  <img src="../../assets/img/demo/Product-02.png" alt="" />
-                </div>
-                <div className="content">
-                  <h6>
-                    <Link legacyBehavior href="#">
-                      <a>Jekit 355*32mm assembled brake disks.</a>
-                    </Link>
-                  </h6>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <div className="shop-card2">
-                <div className="shop-img">
-                  <img src="../../assets/img/demo/Product-03.png" alt="" />
-                </div>
-                <div className="content">
-                  <h6>
-                    <Link legacyBehavior href="#">
-                      <a>Pump Water Audi Seat Skoda Vw Skf Vkpc 81620.</a>
-                    </Link>
-                  </h6>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="swiper-slide">
-              <div className="shop-card2">
-                <div className="shop-img">
-                  <img src="../../assets/img/demo/Product-05.png" alt="" />
-                </div>
-                <div className="content">
-                  <h6>
-                    <Link legacyBehavior href="#">
-                      <a>Tech master New Brand Carbon ceramic brakes. </a>
-                    </Link>
-                  </h6>
-                </div>
-              </div>
-            </SwiperSlide>
-            <dSwiperSlideiv className="swiper-slide">
-              <div className="shop-card2">
-                <div className="shop-img">
-                  <img src="../../assets/img/demo/Product-06.png" alt="" />
-                </div>
-                <div className="content">
-                  <h6>
-                    <Link legacyBehavior href="#">
-                      <a>WJB WA512187 - Rear Wheel Hub Bearing Assembly.</a>
-                    </Link>
-                  </h6>
-                </div>
-              </div>
-            </dSwiperSlideiv>
+            {relatedProducts &&
+              relatedProducts.map((product) => (
+                <SwiperSlide className="swiper-slide" key={product.id}>
+                  <div className="shop-card2">
+                    <div className="shop-img">
+                      <img
+                        src={
+                          process.env.NEXT_PUBLIC_BACKEND_URI +
+                          product.attributes.ProductImage.data.attributes.url
+                        }
+                        alt=""
+                      />
+                    </div>
+                    <div className="content">
+                      <h6>
+                        <Link legacyBehavior href={`${product.id}`}>
+                          <a>{product.attributes.ProductName}</a>
+                        </Link>
+                      </h6>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
           </div>
         </Swiper>
       </div>
@@ -207,9 +105,9 @@ const RelatedProducts = () => {
             </svg>
           </div>
           <div className="view-btn-area">
-            <p>There are More Car Parts Available</p>
+            <p>{t("Products.more_products")}</p>
             <Link legacyBehavior href="/shop">
-              <a className="view-btn">View More</a>
+              <a className="view-btn">{t("Products.more_products_cta")}</a>
             </Link>
           </div>
           <div className="slider-btn next-2 d-md-flex d-none">

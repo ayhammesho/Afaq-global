@@ -20,7 +20,7 @@ function index({ BrandsData }) {
                   <img
                     key={imageUrl}
                     className="me-1"
-                    src={"http://68.183.74.28:1337" + imageUrl}
+                    src={process.env.NEXT_PUBLIC_BACKEND_URI + imageUrl}
                     width={100}
                     alt=""
                   />

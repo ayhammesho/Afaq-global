@@ -10,7 +10,7 @@ const Product = ({
   productDescreption,
 }) => {
   const [activeImage, setActiveImage] = useState(
-    "http://68.183.74.28:1337" + productImg.data?.attributes?.url
+    process.env.NEXT_PUBLIC_BACKEND_URI + productImg.data?.attributes?.url
   );
   const [activeImageId, setActiveImageId] = useState(productImg.id);
 
@@ -37,7 +37,7 @@ const Product = ({
             >
               <img
                 className="img-fluid"
-                src={"http://68.183.74.28:1337" + productImg.attributes?.url}
+                src={process.env.NEXT_PUBLIC_BACKEND_URI + productImg.attributes?.url}
                 alt=""
               />
             </div>
@@ -53,7 +53,9 @@ const Product = ({
               >
                 <img
                   className="img-fluid"
-                  src={"http://68.183.74.28:1337" + image.attributes?.url}
+                  src={
+                    process.env.NEXT_PUBLIC_BACKEND_URI + image.attributes?.url
+                  }
                   alt=""
                 />
               </div>
@@ -69,7 +71,8 @@ const Product = ({
             <button
               onClick={() => {
                 setActiveImage(
-                  "http://68.183.74.28:1337" + productImg.data?.attributes?.url
+                  process.env.NEXT_PUBLIC_BACKEND_URI +
+                    productImg.data?.attributes?.url
                 );
                 setActiveImageId(productImg.id);
               }}
@@ -87,7 +90,8 @@ const Product = ({
             >
               <img
                 src={
-                  "http://68.183.74.28:1337" + productImg.data?.attributes?.url
+                  process.env.NEXT_PUBLIC_BACKEND_URI +
+                  productImg.data?.attributes?.url
                 }
                 alt=""
               />
@@ -98,7 +102,7 @@ const Product = ({
               <button
                 onClick={() => {
                   setActiveImage(
-                    "http://68.183.74.28:1337" + image.attributes?.url
+                    process.env.NEXT_PUBLIC_BACKEND_URI + image.attributes?.url
                   );
                   setActiveImageId(image.id);
                 }}
@@ -115,7 +119,9 @@ const Product = ({
                 aria-selected="true"
               >
                 <img
-                  src={"http://68.183.74.28:1337" + image.attributes?.url}
+                  src={
+                    process.env.NEXT_PUBLIC_BACKEND_URI + image.attributes?.url
+                  }
                   alt=""
                 />
               </button>

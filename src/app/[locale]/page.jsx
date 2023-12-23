@@ -27,8 +27,6 @@ async function HomePage({ params: { locale } }) {
       productsCategoriesPromise,
     ]);
 
-  console.log(productsCategories);
-
   const headerLogo =
     globalSettings?.attributes?.HeaderLogo?.data?.attributes?.url;
   const footerLogo =
@@ -53,8 +51,10 @@ async function HomePage({ params: { locale } }) {
       {heroData && <BannerV2 heroData={heroData} />}
       {BrandsData && <OurTrustedPartner BrandsData={BrandsData} />}
       <DreamCar lang={locale} productsCategories={productsCategories} />
-      <Blog blogData={blogData} />
+      <Blog blogData={blogData} lang={locale} />
       <Footer1
+        lang={locale}
+        categories={productsCategories}
         footerLogo={footerLogo}
         SocialLinks={SocialLinks}
         FooterSlogan={FooterSlogan}

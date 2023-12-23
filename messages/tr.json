@@ -1,6 +1,9 @@
 {
   "default": {
+    "last_updated": "Son güncelleme",
     "Contact": {
+      "page_title": "Her Türlü Bilgi İçin",
+      "page_sub_title": "Bize Ulaşın",
       "address": "şirket adresi",
       "Email": "E-posta",
       "email_box": "Şimdi E-postayla Gönder",
@@ -17,26 +20,34 @@
       "title": "Destek Hattıyla Bize Ulaşın"
     },
     "Footer": {
+      "site_map": "site sayfaları",
       "brands": "Markalara Göre Parçalar",
       "follow": "Bizi takip edin"
     },
+    "About": {
+      "page_title": "Kısa Tarihçemiz",
+      "page_sub_title": "Hakkımızda"
+    },
     "Gallery": { "title": "Galerimiz" },
     "Header": {
-      "lang": "",
+      "lang": "uzun",
       "contact_us": "Bize Ulaşın",
       "about": "Hakkımızda",
       "home": "Ev",
       "news": "Haberler",
-      "products": "Ürünler"
+      "products": "Ürünler",
+      "privacy_policy": "Gizlilik Politikası"
     },
     "Home": {
       "news_sub_title": "İşte bizden öne çıkan haberlerden bazıları",
       "news_title": "Güncel Haberler",
       "parts_title": "İstediğiniz her şeye sahibiz",
-      "testimonials": "İşte bizden öne çıkan haberlerden bazıları"
+      "testimonials": "Mutlu Müşterilerimiz"
     },
     "HowItWorks": { "video": "Video izle" },
     "News": {
+      "page_title": "En Son Güncellemelerimiz",
+      "page_sub_title": "Haberler",
       "posted_at": "Yayınlanan",
       "recent_news": "Son Blog",
       "share": "Paylaşmak:",
@@ -47,11 +58,17 @@
     "not_found_title": "Hata, Sayfa Bulunamadı",
     "Pagination": { "next": "Sonraki", "prev": "Önceki" },
     "Products": {
+      "page_title": "Ürünler",
+      "page_sub_title": "Parçalarımızı Keşfedin",
       "cta": "Daha fazla detay",
       "more_products": "Daha Fazla Araba Parçası Mevcut",
       "more_products_cta": "Daha fazla göster",
       "product_details": "Ürün Detayları",
       "related_products": "ilgili ürünler"
+    },
+    "Privacy Policy": {
+      "page_title": "Haklarınız ve Korumalarınız",
+      "page_sub_title": "Gizlilik Politikası"
     }
   }
 }

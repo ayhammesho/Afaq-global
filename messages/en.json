@@ -1,6 +1,9 @@
 {
   "default": {
+    "last_updated": "Last Updated",
     "Contact": {
+      "page_title": "For Any Information",
+      "page_sub_title": "Contact Us",
       "address": "Company Address",
       "Email": "Email",
       "email_box": "Email Now",
@@ -16,7 +19,15 @@
       "sub_title": "To Know More",
       "title": "Contact Us With Support Line"
     },
-    "Footer": { "brands": "Parts By Brands", "follow": "Follow Us" },
+    "About": {
+      "page_title": "Our Brief History",
+      "page_sub_title": "About Us"
+    },
+    "Footer": {
+      "site_map": "Site Pages",
+      "brands": "Parts By Brands",
+      "follow": "Follow Us"
+    },
     "Gallery": { "title": "Our Gallery" },
     "Header": {
       "lang": "lang",
@@ -24,16 +35,19 @@
       "about": "About Us",
       "home": "Home",
       "news": "News",
-      "products": "Products"
+      "products": "Products",
+      "privacy_policy": "Privacy Policy"
     },
     "Home": {
       "news_sub_title": "Here are some of the featured news from us",
       "news_title": "The Latest News",
       "parts_title": "We have every thing you want",
-      "testimonials": "Here are some of the featured news from us"
+      "testimonials": "Our Happy Clients"
     },
     "HowItWorks": { "video": "Watch Video" },
     "News": {
+      "page_title": "Our Latest Updates",
+      "page_sub_title": "News",
       "posted_at": "Posted on",
       "recent_news": "Recent Blog",
       "share": "Share:",
@@ -44,11 +58,17 @@
     "not_found_title": "Opps, Page Not Found",
     "Pagination": { "next": "Next", "prev": "Prev" },
     "Products": {
+      "page_title": "Products",
+      "page_sub_title": "Explore Our Parts",
       "cta": "More Details",
       "more_products": "There are More Car Parts Available",
       "more_products_cta": "View More",
       "product_details": "Product Details",
       "related_products": "Related Products"
+    },
+    "Privacy Policy": {
+      "page_title": "Your Rights and Protections",
+      "page_sub_title": "Privacy Policy"
     }
   }
 }

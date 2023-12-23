@@ -1,14 +1,22 @@
 import Product from "@/components/Part Details/Product";
 import ProductDetails from "@/components/Part Details/ProductDetails";
 import RelatedProducts from "@/components/Part Details/RelatedProducts";
-import { getProductDetails } from "@/app/libs/getData";
+import { getProductDetails, getAllProducts } from "@/app/libs/getData";
 
 async function ProductDetailsPage({ params: { locale, id } }) {
-  const productDetails = await getProductDetails(locale, id);
+  const productDetailsPromise = getProductDetails(locale, id);
+  const productsPromise = getAllProducts(locale, 1, 8);
+  const [productDetails, products] = await Promise.all([
+    productDetailsPromise,
+    productsPromise,
+  ]);
+
   const productName = productDetails.attributes?.ProductName;
   const productDescreption = productDetails.attributes?.ProductDetails;
   const productImg = productDetails.attributes?.ProductImage;
   const otherProductImages = productDetails.attributes?.OtherImages?.data;
+
+  const productsData = products.data;
 
   return (
     <div className="product-details-page pt-100 mb-100">
@@ -21,7 +29,7 @@ async function ProductDetailsPage({ params: { locale, id } }) {
           productDescreption={productDescreption}
         />
 
-        {/* <RelatedProducts /> */}
+        <RelatedProducts relatedProducts={productsData} />
       </div>
     </div>
   );

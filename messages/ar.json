@@ -1,6 +1,9 @@
 {
   "default": {
+    "last_updated": "تم التحديث بتاريخ",
     "Contact": {
+      "page_title": "للحصول على أي معلومات",
+      "page_sub_title": "اتصل بنا",
       "address": "عنوان الشركة",
       "Email": "بريد إلكتروني",
       "email_box": "تواصل معنا عبر البريد الإلكتروني ",
@@ -16,7 +19,15 @@
       "sub_title": "لمعرفة المزيد",
       "title": "اتصل بنا عبر خط الدعم"
     },
-    "Footer": { "brands": "أجزاء حسب العلامات التجارية", "follow": "تابعنا" },
+    "About": {
+      "page_title": "تاريخنا الحافل",
+      "page_sub_title": "من نحن"
+    },
+    "Footer": {
+      "site_map": "صفحات الموقع",
+      "brands": "أجزاء حسب العلامات التجارية",
+      "follow": "تابعنا"
+    },
     "Gallery": { "title": "معرضنا" },
     "Header": {
       "lang": "لغات",
@@ -24,16 +35,19 @@
       "about": "من نحن",
       "home": "الرئيسية",
       "news": "أخبار",
-      "products": "منتجات"
+      "products": "منتجات",
+      "privacy_policy": "سياسة الخصوصية"
     },
     "Home": {
       "news_sub_title": "وهنا بعض من الأخبار المميزة منا",
       "news_title": "آخر الأخبار",
       "parts_title": "لدينا كل ما تريد",
-      "testimonials": "وهنا بعض من الأخبار المميزة منا"
+      "testimonials": "عملائنا السعداء"
     },
     "HowItWorks": { "video": "شاهد الفيديو" },
     "News": {
+      "page_title": "آخر التحديثات لدينا",
+      "page_sub_title": "الأخبار",
       "posted_at": "نشر في",
       "recent_news": "أخر الأخبار",
       "share": "شارك:",
@@ -44,11 +58,17 @@
     "not_found_title": "عفوًا، لم يتم العثور على الصفحة",
     "Pagination": { "next": "التالي", "prev": "السابق" },
     "Products": {
+      "page_title": "منتجات",
+      "page_sub_title": "استكشف القطع الخاصة بنا",
       "cta": "المزيد من التفاصيل",
       "more_products": "هناك المزيد من قطع غيار السيارات المتاحة",
       "more_products_cta": "عرض المزيد",
       "product_details": "تفاصيل المنتج",
       "related_products": "منتجات ذات صله"
+    },
+    "Privacy Policy": {
+      "page_title": "حقوقك والحماية",
+      "page_sub_title": "سياسة الخصوصية"
     }
   }
 }

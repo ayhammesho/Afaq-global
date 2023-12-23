@@ -40,7 +40,7 @@ const NewContent = ({
   return (
     <>
       <div className="post-thumb">
-        <img src={"http://68.183.74.28:1337" + blogImage} alt="" />
+        <img src={process.env.NEXT_PUBLIC_BACKEND_URI + blogImage} alt="" />
       </div>
       <h3 className="post-title">{blogTitle}</h3>
       <div className="author-area">

@@ -121,7 +121,7 @@ function Header({ lang, HeaderLogo, categories }) {
               alt="image"
               className="img-fluid"
               // TODO : FIX IT TO USE ENV
-              src={"http://68.183.74.28:1337" + HeaderLogo}
+              src={process.env.NEXT_PUBLIC_BACKEND_URI + HeaderLogo}
             />
           </a>
         </Link>
@@ -135,7 +135,7 @@ function Header({ lang, HeaderLogo, categories }) {
                   width={150}
                   alt="image"
                   // TODO : FIX IT TO USE ENV
-                  src={"http://68.183.74.28:1337" + HeaderLogo}
+                  src={process.env.NEXT_PUBLIC_BACKEND_URI + HeaderLogo}
                 />
               </a>
             </Link>
@@ -174,7 +174,7 @@ function Header({ lang, HeaderLogo, categories }) {
             >
               {categories &&
                 categories.map((category) => (
-                  <li>
+                  <li key={category.id}>
                     <Link
                       className="d-flex flex-wrap align-items-center justify-content-between fw-bold fs-24"
                       href={`/${lang}/singleBrand?page=1&category=${category.attributes.CategoryTitle}`}
@@ -183,29 +183,10 @@ function Header({ lang, HeaderLogo, categories }) {
                     </Link>
                   </li>
                 ))}
-
-              {/* <li>
-                <Link
-                  className="d-flex flex-wrap align-items-center justify-content-between fw-bold fs-24"
-                  href={`/${lang}/singleBrand`}
-                >
-                  KIA
-                  <img src="../assets/img/menu-icon/kia.svg" alt="" />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="d-flex flex-wrap align-items-center gap-2 justify-content-between fw-bold fs-24"
-                  href={`/${lang}/singleBrand`}
-                >
-                  Hyundai
-                  <img src="../assets/img/menu-icon/hyundai.svg" alt="" />
-                </Link>
-              </li> */}
             </ul>
           </li>
           <li>
-            <Link href={`/${lang}/news`}>{t("Header.news")}</Link>
+            <Link href={`/${lang}/news?page=1`}>{t("Header.news")}</Link>
           </li>
           <li>
             <Link className="drop-down" href={`/${lang}/contact`}>

@@ -47,7 +47,7 @@ function index({ heroData }) {
                 className="banner-bg"
                 style={{
                   backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url(${
-                    "http://68.183.74.28:1337" + imageUrl
+                    process.env.NEXT_PUBLIC_BACKEND_URI + imageUrl
                   })`,
                 }}
               ></div>

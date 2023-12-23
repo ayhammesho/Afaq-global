@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-function index({ blogData }) {
+function index({ blogData, lang }) {
   const t = useTranslations("default");
   function formatDate(isoString) {
     const months = [
@@ -47,11 +47,11 @@ function index({ blogData }) {
               >
                 <div className="news-card">
                   <div className="news-img">
-                    <Link legacyBehavior href="/blog-details">
+                    <Link legacyBehavior href={`${lang}/news/${blog.id}`}>
                       <a>
                         <img
                           src={
-                            "http://68.183.74.28:1337" +
+                            process.env.NEXT_PUBLIC_BACKEND_URI +
                             blog.attributes.BlogImage.data[0].attributes.url
                           }
                           alt=""
@@ -61,7 +61,7 @@ function index({ blogData }) {
                   </div>
                   <div className="content">
                     <h6>
-                      <Link legacyBehavior href="/blog-details">
+                      <Link legacyBehavior href={`${lang}/news/${blog.id}`}>
                         <a>{blog.attributes.BlogTitle}</a>
                       </Link>
                     </h6>
@@ -75,7 +75,7 @@ function index({ blogData }) {
                         </div> */}
                         <div className="author-content">
                           <h6>{blog.attributes.Publisher}</h6>
-                          <Link legacyBehavior href="/en/blog-standard">
+                          <Link legacyBehavior href={`${lang}/news/${blog.id}`}>
                             <a>
                               Posted on -{" "}
                               {formatDate(blog.attributes.createdAt)}

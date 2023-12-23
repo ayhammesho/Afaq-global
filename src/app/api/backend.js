@@ -2,7 +2,7 @@ const qs = require("qs");
 
 export async function fetchData(lang, endpoint) {
   try {
-    const url = `http://68.183.74.28:1337/api/${endpoint}?locale=${lang}`;
+    const url = `https://afaqglobal.com/api/${endpoint}?locale=${lang}`;
     const res = await fetch(url, {
       next: { revalidate: 10 },
     });
@@ -32,7 +32,7 @@ export async function fetchDataWithPopulate(
     }
   );
   try {
-    const url = `http://68.183.74.28:1337/api/${endpoint}?${query}`;
+    const url = `https://afaqglobal.com/api/${endpoint}?${query}`;
 
     const res = await fetch(url, {
       cache: "no-store",
@@ -50,7 +50,7 @@ export async function fetchDataWithPopulate(
 }
 export async function fetchSingleData(lang, endpoint, id) {
   try {
-    const url = `http://68.183.74.28:1337/api/${endpoint}/${id}?populate=*&locale=${lang}`;
+    const url = `https://afaqglobal.com/api/${endpoint}/${id}?populate=*&locale=${lang}`;
     const res = await fetch(url, {
       cache: "no-store",
       // next: { cache: "no-cache" },
@@ -73,7 +73,7 @@ export async function fetchDataWithPagination(
   pageSize
 ) {
   try {
-    const url = `http://68.183.74.28:1337/api/${endpoint}?populate=*&locale=${lang}&pagination[page]=${pageIndex}&pagination[pageSize]=${pageSize}`;
+    const url = `https://afaqglobal.com/api/${endpoint}?populate=*&locale=${lang}&pagination[page]=${pageIndex}&pagination[pageSize]=${pageSize}`;
     console.log(url);
     const res = await fetch(url, {
       cache: "no-store",
@@ -120,7 +120,7 @@ export async function fetchDataWithPaginationAndFiltering(
     }
   );
   try {
-    const url = `http://68.183.74.28:1337/api/${endpoint}?${query}`;
+    const url = `https://afaqglobal.com/api/${endpoint}?${query}`;
     // console.log(url);
     const res = await fetch(url, {
       cache: "no-store",

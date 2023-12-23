@@ -1,6 +1,6 @@
 "use client";
 
-import Preloader from "../../components/common/Preloader";
+import Preloader from "@/components/common/Preloader";
 import { useEffect, useState } from "react";
 
 const Loading = ({ children }) => {

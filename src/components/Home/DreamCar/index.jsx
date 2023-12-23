@@ -33,7 +33,7 @@ function index({ lang, productsCategories }) {
                   className="img-fluid category-image h-100"
                   style={{
                     backgroundImage: `url(${
-                      "http://68.183.74.28:1337" +
+                      process.env.NEXT_PUBLIC_BACKEND_URI +
                       category.attributes.CategoryImage.data.attributes.url
                     })`,
                   }}

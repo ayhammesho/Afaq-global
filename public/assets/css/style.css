@@ -21282,4 +21282,8 @@ html:lang(ar) .no-sidebar .list-group-wrapper .item .product-card4 .product-img 
   }
 }
 
+.whatsapp-transition {
+  transition: all 0.3s ease-in;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -8,11 +8,13 @@ import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import { useTranslations } from "next-intl";
 
+import Alert from "react-bootstrap/Alert";
+
 const ContactForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [thereError, setThereIsError] = useState("");
   const [isSuccessful, setIsSuccessful] = useState(false);
-  const [value, setValue] = useState();
+  const [phoneNumberValue, setPhoneNumberValue] = useState();
   const t = useTranslations("default");
 
   const {
@@ -25,13 +27,13 @@ const ContactForm = () => {
   const onSubmit = async (data) => {
     //  const NewData = {...data,Subject}
     setIsLoading(true);
-    const url = `http://68.183.74.28:1337/api/contact-uses`;
+    console.log(data);
+    const url = `${process.env.NEXT_PUBLIC_BACKEND_URI}/api/contact-uses`;
 
     const res = await fetch(url, {
       cache: "no-cache",
       method: "POST",
       headers: {
-        "access-control-allow-origin": "*",
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ data }),
@@ -43,6 +45,7 @@ const ContactForm = () => {
     } else {
       setIsLoading(false); // <-- Here
       setIsSuccessful(true);
+      setPhoneNumberValue("");
     }
     reset();
   };
@@ -56,8 +59,11 @@ const ContactForm = () => {
               <label>{t("Contact.fullName")}*</label>
               <input
                 type="text"
+                className={
+                  errors.FULLNAME ? "border  border-1 border-danger " : ""
+                }
                 placeholder="Jackson Mile"
-                {...register("Name", {
+                {...register("FULLNAME", {
                   required: "This Filed is Required",
                   minLength: {
                     value: 3,
@@ -65,38 +71,56 @@ const ContactForm = () => {
                   },
                 })}
               />
-              {errors.Name && (
-                <p className="font-bold text-red-500" role="alert">
-                  {errors.Name.message}
+              {errors.FULLNAME && (
+                <p
+                  className="text-danger "
+                  style={{ fontSize: "12px" }}
+                  role="alert"
+                >
+                  {errors.FULLNAME.message}
                 </p>
               )}
             </div>
           </div>
           <div className="col-md-6">
             <div className="form-inner mb-30">
-              <label>{t("Contact.phonenumber")}</label>
+              <label>
+                {t("Contact.phonenumber")}{" "}
+                <span>( {t("Contact.optional")})</span>
+              </label>
+
               <PhoneInput
-                placeholder="Ex- +880-13* ** ***"
-                // value={value}
-                {...register("Phone", {
-                  pattern: {
-                    value: /^\+?[0-9]\d{1,20}$/,
-                    message: "your phone number should be like +21 999 999 999",
-                  },
+                className={
+                  errors.PHONENUMBER ? "border  border-1 border-danger " : ""
+                }
+                value={phoneNumberValue}
+                placeholder="Ex- +880 13* ** ***"
+                {...register("PHONENUMBER", {
+                  value: phoneNumberValue,
                 })}
-                onChange={setValue}
+                onChange={setPhoneNumberValue}
               />
+              {errors.PHONENUMBER && (
+                <p
+                  className="text-danger "
+                  style={{ fontSize: "12px" }}
+                  role="alert"
+                >
+                  {errors.PHONENUMBER.message}
+                </p>
+              )}
             </div>
           </div>
           <div className="col-md-6">
             <div className="form-inner mb-30">
-              <label>
-                {t("Contact.Email")} <span>( {t("Contact.optional")})</span>
-              </label>
+              <label>{t("Contact.Email")}*</label>
               <input
                 type="email"
+                className={
+                  errors.EMAIL ? "border  border-1 border-danger " : ""
+                }
                 placeholder="Ex- info@example.com"
-                {...register("Email", {
+                {...register("EMAIL", {
                   required: "This Filed is Required",
                   pattern: {
                     value: /^\S+@\S+$/i,
@@ -104,9 +128,13 @@ const ContactForm = () => {
                   },
                 })}
               />
-              {errors.Email && (
-                <p className="font-bold text-red-500" role="alert">
-                  {errors.Email.message}
+              {errors.EMAIL && (
+                <p
+                  className="text-danger "
+                  style={{ fontSize: "12px" }}
+                  role="alert"
+                >
+                  {errors.EMAIL.message}
                 </p>
               )}
             </div>
@@ -115,23 +143,42 @@ const ContactForm = () => {
             <div className="form-inner mb-30">
               <label> {t("Contact.subject")}*</label>
               <input
+                className={
+                  errors.SUBJECT ? "border  border-1 border-danger " : ""
+                }
                 type="text"
                 placeholder="Subject"
-                {...register("Subject", { required: "This Filed is Required" })}
+                {...register("SUBJECT", { required: "This Filed is Required" })}
               />
+              {errors.SUBJECT && (
+                <p
+                  className="text-danger "
+                  style={{ fontSize: "12px" }}
+                  role="alert"
+                >
+                  {errors.SUBJECT.message}
+                </p>
+              )}
             </div>
           </div>
           <div className="col-md-12">
             <div className="form-inner mb-30">
               <label> {t("Contact.message")}*</label>
               <textarea
+                className={
+                  errors.MESSAGE ? "border  border-1 border-danger " : ""
+                }
                 placeholder="Write Something..."
                 defaultValue={""}
-                {...register("Message", { required: "This Filed is Required" })}
+                {...register("MESSAGE", { required: "This Filed is Required" })}
               />
-              {errors.Message && (
-                <p className="text-red-500" role="alert">
-                  {errors.Message.message}
+              {errors.MESSAGE && (
+                <p
+                  className="text-danger "
+                  style={{ fontSize: "12px" }}
+                  role="alert"
+                >
+                  {errors.MESSAGE.message}
                 </p>
               )}
             </div>
@@ -149,11 +196,9 @@ const ContactForm = () => {
               </div>
             </div>
             <div className="mt-4">
-              {thereError && (
-                <p className="font-bold text-red-500">{thereError}</p>
-              )}
+              {thereError && <Alert variant={"danger"}>{thereError}</Alert>}
               {isSuccessful && (
-                <p className=" font-bold text-green-500">{t("Contact.send")}</p>
+                <Alert variant={"success"}>{t("Contact.send")}</Alert>
               )}
             </div>
           </div>
