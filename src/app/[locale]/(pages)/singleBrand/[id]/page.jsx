@@ -29,7 +29,7 @@ async function ProductDetailsPage({ params: { locale, id } }) {
           productDescreption={productDescreption}
         />
 
-        <RelatedProducts relatedProducts={productsData} />
+        <RelatedProducts relatedProducts={productsData} lang={locale} />
       </div>
     </div>
   );

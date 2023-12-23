@@ -13,7 +13,7 @@ SwiperCore.use([Pagination, Autoplay, EffectFade, Navigation]);
 
 import { useTranslations } from "next-intl";
 
-const RelatedProducts = ({ relatedProducts }) => {
+const RelatedProducts = ({ relatedProducts, lang }) => {
   const t = useTranslations("default");
 
   const productSlide1 = useMemo(() => {
@@ -106,7 +106,7 @@ const RelatedProducts = ({ relatedProducts }) => {
           </div>
           <div className="view-btn-area">
             <p>{t("Products.more_products")}</p>
-            <Link legacyBehavior href="/shop">
+            <Link legacyBehavior href={`/${lang}/singleBrand?page=1`}>
               <a className="view-btn">{t("Products.more_products_cta")}</a>
             </Link>
           </div>
