@@ -11,7 +11,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
 
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
-function index({ heroData }) {
+function index({ heroData, lang }) {
   const heroImages =
     heroData.images.data.map((image) => image.attributes.url) ?? "";
 
