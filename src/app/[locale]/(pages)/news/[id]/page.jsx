@@ -29,7 +29,7 @@ async function NewDetailsPage({ params: { locale, id } }) {
               postedAt={postedAt}
             />
 
-            <SocialShareSection />
+            <SocialShareSection blogImage={blogImage} />
             <div className="row mb-100">
               {/* <div className="col-lg-12">
                 <SingleNewNavigation />

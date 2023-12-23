@@ -64,7 +64,7 @@ const ContactForm = () => {
                 }
                 placeholder="Jackson Mile"
                 {...register("FULLNAME", {
-                  required: "This Filed is Required",
+                  required: "Please Enter Your Full Name",
                   minLength: {
                     value: 3,
                     message: "The name should at least 3 characters long",
@@ -121,7 +121,7 @@ const ContactForm = () => {
                 }
                 placeholder="Ex- info@example.com"
                 {...register("EMAIL", {
-                  required: "This Filed is Required",
+                  required: "Email is Required",
                   pattern: {
                     value: /^\S+@\S+$/i,
                     message: "your email should be like info@example.com",
@@ -148,7 +148,9 @@ const ContactForm = () => {
                 }
                 type="text"
                 placeholder="Subject"
-                {...register("SUBJECT", { required: "This Filed is Required" })}
+                {...register("SUBJECT", {
+                  required: "Please Add Subject to the message",
+                })}
               />
               {errors.SUBJECT && (
                 <p
@@ -170,7 +172,9 @@ const ContactForm = () => {
                 }
                 placeholder="Write Something..."
                 defaultValue={""}
-                {...register("MESSAGE", { required: "This Filed is Required" })}
+                {...register("MESSAGE", {
+                  required: "Tell us why you contact us",
+                })}
               />
               {errors.MESSAGE && (
                 <p

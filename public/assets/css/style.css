@@ -2613,14 +2613,14 @@ header.style-1 .main-menu ul > li:hover i {
   color: var(--black-color2);
   font-size: 20px;
 }
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
   header.style-1 .main-menu ul > li:first-child {
     padding-left: 0;
   }
   header.style-1 .main-menu ul > li:first-child a {
     padding-left: 0;
   }
-}
+} */
 header.style-1 .main-menu ul > li a {
   color: var(--title-color);
   display: block;
@@ -20609,17 +20609,15 @@ html:lang(ar) .mobile-menu-btn {
     width: 35px;
   }
 }
-html:lang(ar) header.header-area .main-menu ul > li:first-child {
-  padding-left: 8px;
-}
-@media (max-width: 991px) {
+
+/* @media (max-width: 991px) {
   html:lang(ar) header.header-area .main-menu ul > li:first-child {
     padding: 10px 0;
   }
-}
-html:lang(ar) header.header-area .main-menu ul > li:first-child a {
+} */
+/* html:lang(ar) header.header-area .main-menu ul > li:first-child a {
   padding: 15px 20px;
-}
+} */
 @media (max-width: 991px) {
   html:lang(ar) header.header-area .main-menu ul > li:first-child a {
     padding: 0;

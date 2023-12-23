@@ -4,6 +4,7 @@ import { getAllProducts, getProductsByCategories } from "@/app/libs/getData";
 import { notFound } from "next/navigation";
 
 async function SingleBrandCategoryPage({ params: { locale }, searchParams }) {
+  let emptyData = "";
   let products;
   if (searchParams.category) {
     products = await getProductsByCategories(
@@ -22,7 +23,10 @@ async function SingleBrandCategoryPage({ params: { locale }, searchParams }) {
 
   const productsData = products?.data;
   const productsPagination = products?.meta?.pagination;
-  if (
+
+  if (productsPagination.pageCount === 0) {
+    emptyData = "There is no products with this category yet";
+  } else if (
     searchParams.page > productsPagination.pageCount ||
     searchParams.page < 1
   ) {
@@ -34,6 +38,9 @@ async function SingleBrandCategoryPage({ params: { locale }, searchParams }) {
       <div className="single-category-page mb-100 mt-100">
         <div className="container">
           <div className="row g-4 mb-40">
+            {emptyData !== "" && (
+              <h2 className="text-center text-danger h-50">{emptyData}</h2>
+            )}
             {productsData.map((product) => (
               <SingleProduct
                 key={product.id}
@@ -45,7 +52,7 @@ async function SingleBrandCategoryPage({ params: { locale }, searchParams }) {
           </div>
           <div className="row">
             <div className="col-lg-12">
-              {productsPagination && (
+              {productsPagination.pageCount !== 0 && (
                 <Pagination paginationData={productsPagination} />
               )}
             </div>

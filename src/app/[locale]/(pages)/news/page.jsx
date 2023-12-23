@@ -14,7 +14,14 @@ async function NewsPage({ params: { locale }, searchParams }) {
   const blogsData = blogsResponse?.data;
   const recentBlogs = recentBlogsResponse?.data;
   const blogsPagination = blogsResponse?.meta?.pagination;
-  if (searchParams.page > blogsPagination.pageCount || searchParams.page < 1) {
+
+  let emptyData = "";
+  if (blogsPagination.pageCount === 0) {
+    emptyData = "our latest news are coming soon";
+  } else if (
+    searchParams.page > blogsPagination.pageCount ||
+    searchParams.page < 1
+  ) {
     notFound();
   }
 
@@ -23,6 +30,9 @@ async function NewsPage({ params: { locale }, searchParams }) {
       <div className="container">
         <div className="row g-lg-4 gy-5">
           <div className="col-lg-8">
+            {emptyData !== "" && (
+              <h2 className="text-center text-danger">{emptyData}</h2>
+            )}
             {blogsData &&
               blogsData?.map((blog) => (
                 <SingleNewsCard

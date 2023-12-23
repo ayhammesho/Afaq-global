@@ -27108,7 +27108,7 @@ header.header-area .main-menu ul > li.position-inherit > a::after {
 
 
 header.header-area .main-menu ul > li:first-child {
-    padding-left: 8px;
+    
     @include lg-down-device(){
         padding: 10px 0;
     }

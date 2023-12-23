@@ -81,7 +81,7 @@ const ContactInformation = ({
         <div className="content">
           <span>{t("Contact.phonenumber")}</span>
           <h6>
-            <a>{companyPhone}</a>
+            <a href={`tel:${companyPhone}`}>{companyPhone}</a>
           </h6>
         </div>
       </div>

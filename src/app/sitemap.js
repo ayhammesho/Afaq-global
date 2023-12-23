@@ -39,7 +39,7 @@ export default async function sitemap() {
     }) ?? [];
 
   // get all products pages
-  const productsEn = await getAllProducts("ar", 1, 100);
+  const productsEn = await getAllProducts("en", 1, 100);
   const productsUrlEn =
     productsEn?.data?.map((product) => {
       return {
@@ -62,7 +62,7 @@ export default async function sitemap() {
     }) ?? [];
 
   // get all products pages
-  const productsTr = await getAllProducts("ar", 1, 100);
+  const productsTr = await getAllProducts("tr", 1, 100);
   const productsUrlTr =
     productsTr?.data?.map((product) => {
       return {

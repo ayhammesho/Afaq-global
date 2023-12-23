@@ -28,7 +28,6 @@ export default async function PagesLayout({ children, params: { locale } }) {
       />
       <Breadcrumb />
       {children}
-      ;
       <Footer1
         lang={locale}
         categories={productsCategories}
