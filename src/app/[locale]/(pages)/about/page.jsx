@@ -6,13 +6,29 @@ import CustomerSlider from "@/components/About Us/CustomerSlider";
 import Testimonial from "@/components/Home/Testimonial/index";
 import { getAboutPageData, getTestimonials } from "@/app/libs/getData";
 
+export async function generateMetadata({ params: { locale } }) {
+  const aboutPageData = await getAboutPageData(locale);
+  const seo = aboutPageData?.attributes?.seo[0];
+
+  return {
+    title: `${seo?.metaTitle}| AFAQ Global`,
+    description: seo?.metaDescription || "",
+    keywords: seo?.keywords || "",
+    openGraph: {
+      images:
+        process.env.NEXT_PUBLIC_BACKEND_URI +
+        seo?.metaImage?.data?.attributes?.url,
+    },
+  };
+}
+
 async function About({ params: { locale } }) {
   const aboutPageData = await getAboutPageData(locale);
   const testimonials = await getTestimonials(locale);
 
   const WelcomeSectionData = aboutPageData?.attributes?.WelcomeSection;
   const WhyUsData = aboutPageData?.attributes?.WHYAFAQSection;
-  const galleryData = aboutPageData?.attributes?.Gallery.Images.data;
+  const galleryData = aboutPageData?.attributes?.Gallery?.Images?.data;
   const howDoesWorkData = aboutPageData?.attributes?.HowDoesWorkSection;
 
   return (

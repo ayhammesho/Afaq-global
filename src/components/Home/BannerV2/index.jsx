@@ -31,7 +31,7 @@ function index({ heroData, lang }) {
         prevEl: ".prev-4",
       },
       pagination: {
-        el: ".paginations111",
+        el: ".paginations",
         clickable: true,
       },
     };
@@ -46,7 +46,7 @@ function index({ heroData, lang }) {
               <div
                 className="banner-bg"
                 style={{
-                  backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%), url(${
+                  backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(${
                     process.env.NEXT_PUBLIC_BACKEND_URI + imageUrl
                   })`,
                 }}
@@ -59,13 +59,11 @@ function index({ heroData, lang }) {
         <div className="row">
           <div className="col-lg-12">
             <div className="banner-wrapper">
-              <div className="banner-content">
+              <div className="banner-content col-12 col-md-7 ">
                 {/* <h1>{hero.title} </h1> */}
                 <h1>{heroData?.HeroTitle}</h1>
 
-                <h3 className="text-white mb-4 " style={{ fontSize: "20px" }}>
-                  {heroData?.HeroDescreption}
-                </h3>
+                <p className="text-white mb-4 ">{heroData?.HeroDescreption}</p>
                 {/* <p>{hero.descreption}</p> */}
                 <div className="banner-content-bottom">
                   <Link legacyBehavior href={`/${lang}/singleBrand?page=1`}>
@@ -100,7 +98,7 @@ function index({ heroData, lang }) {
                     <path d="M0 6.50008L8 0L2.90909 6.50008L8 13L0 6.50008Z" />
                   </svg>
                 </div>
-                <div className="paginations111" />
+                <div className="paginations" />
                 <div className="slider-btn next-4 d-md-flex d-none">
                   <svg
                     width={11}

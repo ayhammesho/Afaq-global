@@ -30,10 +30,10 @@ export function WhatsAppProvider({ lang, children }) {
         <FloatingWhatsApp
           style={!isLoading ? { opacity: 1 } : { opacity: 0 }}
           className="whatsapp-transition"
-          phoneNumber={whatsAppData.WhatsappNumber}
-          accountName={whatsAppData.Name}
-          chatMessage={whatsAppData.InsideMessage}
-          placeholder={whatsAppData.ShortMessage}
+          phoneNumber={whatsAppData?.WhatsappNumber}
+          accountName={whatsAppData?.Name}
+          chatMessage={whatsAppData?.InsideMessage}
+          placeholder={whatsAppData?.ShortMessage}
           avatar={"../../assets/img/demo/LOGO_cutted.png"}
         />
       )}

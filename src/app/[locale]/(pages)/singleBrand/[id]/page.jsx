@@ -3,6 +3,22 @@ import ProductDetails from "@/components/Part Details/ProductDetails";
 import RelatedProducts from "@/components/Part Details/RelatedProducts";
 import { getProductDetails, getAllProducts } from "@/app/libs/getData";
 
+export async function generateMetadata({ params: { locale, id } }) {
+  const product = await getProductDetails(locale, id);
+  const seo = product?.attributes?.seo;
+
+  return {
+    title: `${seo?.metaTitle}| AFAQ Global`,
+    description: seo?.metaDescription || "",
+    keywords: seo?.keywords || "",
+    openGraph: {
+      images:
+        process.env.NEXT_PUBLIC_BACKEND_URI +
+        seo?.metaImage?.data?.attributes?.url,
+    },
+  };
+}
+
 async function ProductDetailsPage({ params: { locale, id } }) {
   const productDetailsPromise = getProductDetails(locale, id);
   const productsPromise = getAllProducts(locale, 1, 8);

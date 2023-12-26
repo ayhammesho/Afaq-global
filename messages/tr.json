@@ -17,7 +17,21 @@
       "subject": "Ders",
       "submit": "Şimdi gönder",
       "sub_title": "Daha Fazla Bilgi İçin",
-      "title": "Destek Hattıyla Bize Ulaşın"
+      "title": "Destek Hattıyla Bize Ulaşın",
+      "placeholders": {
+        "full_name": "Ad Soyad",
+        "email": "Örneğin info@example.com",
+        "subject": "konu",
+        "message": "mektubun",
+        "phone_number": ""
+      },
+      "auth": {
+        "full_name": "Lütfen tam adınızı yazınız",
+        "email": "E-posta adresiniz @ içermelidir",
+        "subject": "Hangi konu hakkında iletişim kuruyorsunuz?",
+        "message": "Bizimle neden iletişime geçtiğinizi bize bildirin",
+        "phone_number": ""
+      }
     },
     "Footer": {
       "site_map": "site sayfaları",

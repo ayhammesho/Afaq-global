@@ -3,6 +3,8 @@
 ===========================*/
 // @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
+
+
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +14,19 @@
 :root {
   --font-montserrat: "Montserrat", sans-serif;
   --font-open-sans: "Open Sans", sans-serif;
+  // Colors ---------------
+  --white-color: #fff;
+  --black-color: #000;
+  --black-color2: #2a274a;
+  --title-color: #3f3d5c;
+  --text-color: #5e5e5e;
+  // Theme Color
+  --primary-color1: #c0923c;
+}
+
+:root:lang(ar) {
+  --font-montserrat: "Tajawal", sans-serif;
+  --font-open-sans: "Tajawal", sans-serif;
   // Colors ---------------
   --white-color: #fff;
   --black-color: #000;
@@ -98,6 +113,42 @@
   src: url(../fonts/OpenSans-ExtraBold.ttf) format("truetype");
   font-weight: 800;
 }
+@font-face {
+  font-family: "Tajawal";
+  src: url(../fonts/Tajawal-Black.ttf) format("truetype");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Tajawal";
+  src: url(../fonts/Tajawal-ExtraBold.ttf) format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Tajawal";
+  src: url(../fonts/Tajawal-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Tajawal";
+  src: url(../fonts/Tajawal-Medium.ttf) format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Tajawal";
+  src: url(../fonts/Tajawal-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Tajawal";
+  src: url(../fonts/Tajawal-Light.ttf) format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Tajawal";
+  src: url(../fonts/Tajawal-ExtraLight.ttf) format("truetype");
+  font-weight: 200;
+}
+
 
 /*================================================
 1. Mixins Css
@@ -11385,22 +11436,22 @@ header.style-6 {
     h1 {
       font-family: var(--font-montserrat);
       font-weight: 700;
-      font-size: 75px;
+      font-size: 48px;
       line-height: 1.11;
       color: var(--title-color);
       margin-bottom: 20px;
 
       @include xxl-down-device() {
-        font-size: 60px;
+        font-size: 36px;
       }
 
       @include sm-down-device() {
-        font-size: 50px;
+        font-size: 28px;
       }
     }
 
     p {
-      font-size: 20px;
+      font-size: 16px;
       color: var(--text-color);
       line-height: 34px;
       margin-bottom: 0;
@@ -16496,23 +16547,34 @@ footer {
       h1 {
         color: var(--white-color);
         font-family: var(--font-montserrat);
-        font-size: 75px;
+        font-size: 48px;
         font-weight: 700;
-        line-height: 1.1;
-        margin-bottom: 15px;
+        line-height: 1.5;
+        margin-bottom: 24px;
         @include xxl-device() {
-          font-size: 60px;
+          font-size: 36px;
         }
         @include xxl-down-device() {
-          font-size: 60px;
+          font-size: 36px;
         }
         @include md-down-device() {
-          font-size: 55px;
+          font-size: 24px;
         }
-        // @include md-down-device(){
-        //   font-style: 30px;
-        // }
+        @include md-down-device(){
+          font-style: 20px;
+        }
       }
+          p {
+      font-family: var(--font-open-sans);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--white-color);
+      margin-bottom: 40px;
+    }
+
+      
       .banner-feature {
         ul {
           margin: 0;
@@ -26889,10 +26951,39 @@ button {
 
 // ARABIC STYLING 
 
+
+
 html:lang(ar) {
   /*================================================
 1. Mixins Css
 =================================================*/
+
+body {
+  // margin: 0;
+  // padding: 0;
+ font-family: 'Tajawal', sans-serif !important;
+  // color: var(--title-color);
+  // font-size: 16px;
+  // font-weight: 400;
+  // line-height: 30px;
+
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Tajawal', sans-serif !important;
+  // font-weight: 600;
+  // line-height: 1.4;
+  // color: var(--title-color);
+}
+
+
 
 
 

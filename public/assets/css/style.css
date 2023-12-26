@@ -18,6 +18,17 @@
   --primary-color1: #c0923c;
 }
 
+:root:lang(ar) {
+  --font-montserrat: "Tajawal", sans-serif;
+  --font-open-sans: "Tajawal", sans-serif;
+  --white-color: #fff;
+  --black-color: #000;
+  --black-color2: #2a274a;
+  --title-color: #3f3d5c;
+  --text-color: #5e5e5e;
+  --primary-color1: #c0923c;
+}
+
 /*================================================
 1. fonts familly Css
 =================================================*/
@@ -90,6 +101,41 @@
   font-family: "Open Sans";
   src: url(../fonts/OpenSans-ExtraBold.ttf) format("truetype");
   font-weight: 800;
+}
+@font-face {
+  font-family: "Tajawal";
+  src: url(../fonts/Tajawal-Black.ttf) format("truetype");
+  font-weight: 900;
+}
+@font-face {
+  font-family: "Tajawal";
+  src: url(../fonts/Tajawal-ExtraBold.ttf) format("truetype");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Tajawal";
+  src: url(../fonts/Tajawal-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Tajawal";
+  src: url(../fonts/Tajawal-Medium.ttf) format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Tajawal";
+  src: url(../fonts/Tajawal-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Tajawal";
+  src: url(../fonts/Tajawal-Light.ttf) format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Tajawal";
+  src: url(../fonts/Tajawal-ExtraLight.ttf) format("truetype");
+  font-weight: 200;
 }
 /*================================================
 1. Mixins Css
@@ -2613,14 +2659,14 @@ header.style-1 .main-menu ul > li:hover i {
   color: var(--black-color2);
   font-size: 20px;
 }
-/* @media (min-width: 992px) {
+@media (min-width: 992px) {
   header.style-1 .main-menu ul > li:first-child {
     padding-left: 0;
   }
   header.style-1 .main-menu ul > li:first-child a {
     padding-left: 0;
   }
-} */
+}
 header.style-1 .main-menu ul > li a {
   color: var(--title-color);
   display: block;
@@ -10209,23 +10255,23 @@ header.style-6 .main-menu .hotline-area .content h6 a {
 .banner-section1 .banner-content h1 {
   font-family: var(--font-montserrat);
   font-weight: 700;
-  font-size: 75px;
+  font-size: 48px;
   line-height: 1.11;
   color: var(--title-color);
   margin-bottom: 20px;
 }
 @media (max-width: 1399px) {
   .banner-section1 .banner-content h1 {
-    font-size: 60px;
+    font-size: 36px;
   }
 }
 @media (max-width: 576px) {
   .banner-section1 .banner-content h1 {
-    font-size: 50px;
+    font-size: 28px;
   }
 }
 .banner-section1 .banner-content p {
-  font-size: 20px;
+  font-size: 16px;
   color: var(--text-color);
   line-height: 34px;
   margin-bottom: 0;
@@ -14715,25 +14761,39 @@ footer.style-3 .footer-btm .social-area ul li a:hover {
 .home3-banner-area .banner-wrapper .banner-content h1 {
   color: var(--white-color);
   font-family: var(--font-montserrat);
-  font-size: 75px;
+  font-size: 48px;
   font-weight: 700;
-  line-height: 1.1;
-  margin-bottom: 15px;
+  line-height: 1.5;
+  margin-bottom: 24px;
 }
 @media (min-width: 1400px) and (max-width: 1599px) {
   .home3-banner-area .banner-wrapper .banner-content h1 {
-    font-size: 60px;
+    font-size: 36px;
   }
 }
 @media (max-width: 1399px) {
   .home3-banner-area .banner-wrapper .banner-content h1 {
-    font-size: 60px;
+    font-size: 36px;
   }
 }
 @media (max-width: 767px) {
   .home3-banner-area .banner-wrapper .banner-content h1 {
-    font-size: 55px;
+    font-size: 24px;
   }
+}
+@media (max-width: 767px) {
+  .home3-banner-area .banner-wrapper .banner-content h1 {
+    font-style: 20px;
+  }
+}
+.home3-banner-area .banner-wrapper .banner-content p {
+  font-family: var(--font-open-sans);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--white-color);
+  margin-bottom: 40px;
 }
 .home3-banner-area .banner-wrapper .banner-content .banner-feature ul {
   margin: 0;
@@ -20539,6 +20599,17 @@ html:lang(ar) {
   1. Mixins Css
   =================================================*/
 }
+html:lang(ar) body {
+  font-family: "Tajawal", sans-serif !important;
+}
+html:lang(ar) h1,
+html:lang(ar) h2,
+html:lang(ar) h3,
+html:lang(ar) h4,
+html:lang(ar) h5,
+html:lang(ar) h6 {
+  font-family: "Tajawal", sans-serif !important;
+}
 html:lang(ar) .top-bar .search-area form .form-inner input {
   border-radius: 0 5px 5px 0;
 }
@@ -20609,15 +20680,14 @@ html:lang(ar) .mobile-menu-btn {
     width: 35px;
   }
 }
-
-/* @media (max-width: 991px) {
+@media (max-width: 991px) {
   html:lang(ar) header.header-area .main-menu ul > li:first-child {
     padding: 10px 0;
   }
-} */
-/* html:lang(ar) header.header-area .main-menu ul > li:first-child a {
+}
+html:lang(ar) header.header-area .main-menu ul > li:first-child a {
   padding: 15px 20px;
-} */
+}
 @media (max-width: 991px) {
   html:lang(ar) header.header-area .main-menu ul > li:first-child a {
     padding: 0;

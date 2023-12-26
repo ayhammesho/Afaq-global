@@ -62,9 +62,9 @@ const ContactForm = () => {
                 className={
                   errors.FULLNAME ? "border  border-1 border-danger " : ""
                 }
-                placeholder="Jackson Mile"
+                placeholder={t("Contact.placeholders.full_name")}
                 {...register("FULLNAME", {
-                  required: "Please Enter Your Full Name",
+                  required: t("Contact.auth.full_name"),
                   minLength: {
                     value: 3,
                     message: "The name should at least 3 characters long",
@@ -90,6 +90,7 @@ const ContactForm = () => {
               </label>
 
               <PhoneInput
+                international
                 className={
                   errors.PHONENUMBER ? "border  border-1 border-danger " : ""
                 }
@@ -119,12 +120,12 @@ const ContactForm = () => {
                 className={
                   errors.EMAIL ? "border  border-1 border-danger " : ""
                 }
-                placeholder="Ex- info@example.com"
+                placeholder={t("Contact.placeholders.email")}
                 {...register("EMAIL", {
                   required: "Email is Required",
                   pattern: {
                     value: /^\S+@\S+$/i,
-                    message: "your email should be like info@example.com",
+                    message: t("Contact.auth.email"),
                   },
                 })}
               />
@@ -147,9 +148,9 @@ const ContactForm = () => {
                   errors.SUBJECT ? "border  border-1 border-danger " : ""
                 }
                 type="text"
-                placeholder="Subject"
+                placeholder={t("Contact.placeholders.subject")}
                 {...register("SUBJECT", {
-                  required: "Please Add Subject to the message",
+                  required: t("Contact.auth.subject"),
                 })}
               />
               {errors.SUBJECT && (
@@ -170,10 +171,10 @@ const ContactForm = () => {
                 className={
                   errors.MESSAGE ? "border  border-1 border-danger " : ""
                 }
-                placeholder="Write Something..."
+                placeholder={t("Contact.placeholders.message")}
                 defaultValue={""}
                 {...register("MESSAGE", {
-                  required: "Tell us why you contact us",
+                  required: t("Contact.auth.message"),
                 })}
               />
               {errors.MESSAGE && (

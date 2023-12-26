@@ -17,7 +17,21 @@
       "subject": "Subject",
       "submit": "Submit Now",
       "sub_title": "To Know More",
-      "title": "Contact Us With Support Line"
+      "title": "Contact Us With Support Line",
+      "placeholders": {
+        "full_name": "Jackson Mile",
+        "email": "Ex- info@example.com",
+        "subject": "Subject",
+        "message": "Write Something...",
+        "phone_number": "Ex- +880 13* ** ***"
+      },
+      "auth": {
+        "full_name": "Please Enter Your Full Name",
+        "email": "your email should be like info@example.com",
+        "subject": "Please Add Subject to the message",
+        "message": "Tell us why you contact us",
+        "phone_number": ""
+      }
     },
     "About": {
       "page_title": "Our Brief History",

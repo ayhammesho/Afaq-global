@@ -13,6 +13,22 @@ import {
   getCategoryOfProducts,
 } from "@/app/libs/getData";
 
+export async function generateMetadata({ params: { locale } }) {
+  const homePageDataPromise = await getHomePageData(locale);
+  const seo = homePageDataPromise?.attributes?.seo[0];
+
+  return {
+    title: `${seo?.metaTitle}| AFAQ Global`,
+    description: seo?.metaDescription || "",
+    keywords: seo?.keywords || "",
+    openGraph: {
+      images:
+        process.env.NEXT_PUBLIC_BACKEND_URI +
+        seo?.metaImage?.data?.attributes?.url,
+    },
+  };
+}
+
 async function HomePage({ params: { locale } }) {
   const globalSettingsPromise = getGlobalSettings(locale);
   const homePageDataPromise = getHomePageData(locale);

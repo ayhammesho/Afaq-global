@@ -3,6 +3,22 @@ import { getPrivacyPage } from "@/app/libs/getData";
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { getTranslations } from "next-intl/server";
 
+export async function generateMetadata({ params: { locale } }) {
+  const PrivacyPageData = await getPrivacyPage(locale);
+  const seo = PrivacyPageData?.attributes?.seo[0];
+
+  return {
+    title: `${seo?.metaTitle}| AFAQ Global`,
+    description: seo?.metaDescription || "",
+    keywords: seo?.keywords || "",
+    openGraph: {
+      images:
+        process.env.NEXT_PUBLIC_BACKEND_URI +
+        seo?.metaImage?.data?.attributes?.url,
+    },
+  };
+}
+
 async function ReturnEnchange({ params: { locale } }) {
   function formatDate(isoString) {
     const months = [
@@ -29,7 +45,6 @@ async function ReturnEnchange({ params: { locale } }) {
 
   const pageData = await getPrivacyPage(locale);
   const t = await getTranslations("default");
-  console.log(pageData);
 
   return (
     <div className="return-and-exchange-pages pt-100 mb-100">

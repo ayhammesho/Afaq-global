@@ -48,9 +48,18 @@ export async function fetchDataWithPopulate(
     console.error("An error occurred:", err);
   }
 }
-export async function fetchSingleData(lang, endpoint, id) {
+export async function fetchSingleData(lang, endpoint, id, populateArray = "*") {
+  const query = qs.stringify(
+    {
+      locale: [lang],
+      populate: populateArray,
+    },
+    {
+      encodeValuesOnly: true, // prettify URL
+    }
+  );
   try {
-    const url = `https://afaqglobal.com/api/${endpoint}/${id}?populate=*&locale=${lang}`;
+    const url = `https://afaqglobal.com/api/${endpoint}/${id}?${query}`;
     const res = await fetch(url, {
       cache: "no-store",
       // next: { cache: "no-cache" },

@@ -35,6 +35,10 @@ export async function getHomePageData(lang) {
     "BrandsSection",
     "BrandsSection.images",
     "PartsSection",
+    "seo",
+    "seo.metaImage",
+    "seo.metaSocial",
+    "seo.metaSocial.image",
   ]);
   return fetchedData.data[0];
 }
@@ -48,6 +52,10 @@ export async function getAboutPageData(lang) {
     "Gallery",
     "Gallery.Images",
     "HowDoesWorkSection",
+    "seo",
+    "seo.metaImage",
+    "seo.metaSocial",
+    "seo.metaSocial.image",
   ]);
   return fetchedData.data[0];
 }
@@ -83,17 +91,34 @@ export async function getTestimonials(lang) {
 }
 
 export async function getPrivacyPage(lang) {
-  const fetchedData = await fetchDataWithPopulate(lang, "privacy-policy-pages");
+  const fetchedData = await fetchDataWithPopulate(
+    lang,
+    "privacy-policy-pages",
+    ["seo", "seo.metaImage", "seo.metaSocial", "seo.metaSocial.image"]
+  );
   return fetchedData.data;
 }
 
 export async function getProductDetails(lang, id) {
-  const fetchedData = await fetchSingleData(lang, "products", id);
+  const fetchedData = await fetchSingleData(lang, "products", id, [
+    "ProductImage",
+    "OtherImages",
+    "seo",
+    "seo.metaImage",
+    "seo.metaSocial",
+    "seo.metaSocial.image",
+  ]);
   return fetchedData.data;
 }
 
 export async function getSingleBlog(lang, id) {
-  const fetchedData = await fetchSingleData(lang, "blogs-pages", id);
+  const fetchedData = await fetchSingleData(lang, "blogs-pages", id, [
+    "BlogImage",
+    "seo",
+    "seo.metaImage",
+    "seo.metaSocial",
+    "seo.metaSocial.image",
+  ]);
   return fetchedData.data;
 }
 

@@ -5,6 +5,22 @@ import NewContent from "@/components/News/NewContent";
 
 import { getSingleBlog } from "@/app/libs/getData";
 
+export async function generateMetadata({ params: { locale, id } }) {
+  const singleNew = await getSingleBlog(locale, id);
+  const seo = singleNew?.attributes?.seo;
+
+  return {
+    title: `${seo?.metaTitle}| AFAQ Global`,
+    description: seo?.metaDescription || "",
+    keywords: seo?.keywords || "",
+    openGraph: {
+      images:
+        process.env.NEXT_PUBLIC_BACKEND_URI +
+        seo?.metaImage?.data?.attributes?.url,
+    },
+  };
+}
+
 async function NewDetailsPage({ params: { locale, id } }) {
   const blogsData = await getSingleBlog(locale, id);
 
