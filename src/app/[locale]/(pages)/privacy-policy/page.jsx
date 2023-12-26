@@ -5,7 +5,7 @@ import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata({ params: { locale } }) {
   const PrivacyPageData = await getPrivacyPage(locale);
-  const seo = PrivacyPageData?.attributes?.seo[0];
+  const seo = PrivacyPageData?.attributes?.seo?.[0];
 
   return {
     title: `${seo?.metaTitle}| AFAQ Global`,
