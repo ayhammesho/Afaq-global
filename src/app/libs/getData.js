@@ -7,7 +7,25 @@ import {
 } from "@/app/api/backend";
 
 export async function getGlobalSettings(lang) {
-  const fetchedData = await fetchDataWithPopulate(lang, "global-settings");
+  const fetchedData = await fetchDataWithPopulate(lang, "global-settings", [
+    "HeaderLogo",
+    "FooterLogo",
+    "SocialLinks",
+    "WHATSAPPSETTINGS",
+    "WHATSAPPSETTINGS.Image",
+    "AboutUsHeroSection",
+    "AboutUsHeroSection.Image",
+    "ProductsHeroSection",
+    "ProductsHeroSection.Image",
+    "NewsHeroSection",
+    "NewsHeroSection.Image",
+    "ContactUsHeroSection",
+    "ContactUsHeroSection.Image",
+    "seo",
+    "seo.metaImage",
+    "seo.metaSocial ",
+    "seo.metaSocial.image ",
+  ]);
   // console.log(fetchedData);
   return fetchedData.data[0];
 }

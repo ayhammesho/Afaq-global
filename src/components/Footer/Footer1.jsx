@@ -19,11 +19,7 @@ function Footer1({
               <div className="footer-logo">
                 <Link legacyBehavior href="/">
                   <a>
-                    <img
-                      width={300}
-                      src={process.env.NEXT_PUBLIC_BACKEND_URI + footerLogo}
-                      alt=""
-                    />
+                    <img width={300} src={footerLogo} alt="" />
                   </a>
                 </Link>
                 {/* <p className="text-white mt-4 ">{FooterSlogan}</p> */}

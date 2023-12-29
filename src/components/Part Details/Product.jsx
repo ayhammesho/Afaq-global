@@ -10,7 +10,7 @@ const Product = ({
   productDescreption,
 }) => {
   const [activeImage, setActiveImage] = useState(
-    process.env.NEXT_PUBLIC_BACKEND_URI + productImg.data?.attributes?.url
+    productImg.data?.attributes?.url
   );
   const [activeImageId, setActiveImageId] = useState(productImg.id);
 
@@ -51,13 +51,7 @@ const Product = ({
                 role="tabpanel"
                 aria-labelledby={"v-pills-img" + image.id + "-tab"}
               >
-                <img
-                  className="img-fluid"
-                  src={
-                    process.env.NEXT_PUBLIC_BACKEND_URI + image.attributes?.url
-                  }
-                  alt=""
-                />
+                <img className="img-fluid" src={image.attributes?.url} alt="" />
               </div>
             ))}
         </div>
@@ -70,10 +64,7 @@ const Product = ({
           {otherProductImages && (
             <button
               onClick={() => {
-                setActiveImage(
-                  process.env.NEXT_PUBLIC_BACKEND_URI +
-                    productImg.data?.attributes?.url
-                );
+                setActiveImage(productImg.data?.attributes?.url);
                 setActiveImageId(productImg.id);
               }}
               key={productImg.id}
@@ -88,22 +79,14 @@ const Product = ({
               aria-controls={"v-pills-img" + productImg.id}
               aria-selected="true"
             >
-              <img
-                src={
-                  process.env.NEXT_PUBLIC_BACKEND_URI +
-                  productImg.data?.attributes?.url
-                }
-                alt=""
-              />
+              <img src={productImg.data?.attributes?.url} alt="" />
             </button>
           )}
           {otherProductImages &&
             otherProductImages.map((image) => (
               <button
                 onClick={() => {
-                  setActiveImage(
-                    process.env.NEXT_PUBLIC_BACKEND_URI + image.attributes?.url
-                  );
+                  setActiveImage(image.attributes?.url);
                   setActiveImageId(image.id);
                 }}
                 key={image.id}
@@ -118,12 +101,7 @@ const Product = ({
                 aria-controls={"v-pills-img" + image.id}
                 aria-selected="true"
               >
-                <img
-                  src={
-                    process.env.NEXT_PUBLIC_BACKEND_URI + image.attributes?.url
-                  }
-                  alt=""
-                />
+                <img src={image.attributes?.url} alt="" />
               </button>
             ))}
         </div>

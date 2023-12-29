@@ -32,10 +32,7 @@ function index({ lang, productsCategories }) {
                 <div
                   className="img-fluid category-image h-100"
                   style={{
-                    backgroundImage: `url(${
-                      process.env.NEXT_PUBLIC_BACKEND_URI +
-                      category.attributes.CategoryImage.data.attributes.url
-                    })`,
+                    backgroundImage: `url(${category.attributes.CategoryImage.data.attributes.url})`,
                   }}
                 ></div>
                 {console.log(

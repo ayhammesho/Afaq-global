@@ -46,9 +46,7 @@ function index({ heroData, lang }) {
               <div
                 className="banner-bg"
                 style={{
-                  backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(${
-                    process.env.NEXT_PUBLIC_BACKEND_URI + imageUrl
-                  })`,
+                  backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(${imageUrl})`,
                 }}
               ></div>
             </SwiperSlide>

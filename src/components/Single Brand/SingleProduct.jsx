@@ -11,10 +11,7 @@ const SingleProduct = ({ productName, productImg, link }) => {
           <div className="swiper product-img-slider">
             <div className="swiper-wrapper">
               <div className="swiper-slide">
-                <img
-                  src={process.env.NEXT_PUBLIC_BACKEND_URI + productImg}
-                  alt="image"
-                />
+                <img src={productImg} alt="image" />
               </div>
             </div>
           </div>

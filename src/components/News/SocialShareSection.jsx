@@ -31,9 +31,7 @@ const SocialShareSection = ({ blogImage }) => {
         <ul className="social-link d-flex align-items-center">
           <li>
             <a>
-              <FacebookShareButton
-                url={process.env.NEXT_PUBLIC_BACKEND_URI + pathname}
-              >
+              <FacebookShareButton url={pathname}>
                 <FacebookIcon size={25} round={true} />
               </FacebookShareButton>
             </a>

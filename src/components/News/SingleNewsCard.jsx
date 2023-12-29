@@ -32,7 +32,7 @@ const singleNewsCard = ({ id, blogTitle, publisher, blogImage, createdAt }) => {
       <div className="news-img">
         <Link legacyBehavior href={`news/${id}`}>
           <a>
-            <img src={process.env.NEXT_PUBLIC_BACKEND_URI + blogImage} alt="" />
+            <img src={blogImage} alt="" />
           </a>
         </Link>
       </div>

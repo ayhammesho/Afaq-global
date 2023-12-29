@@ -4,11 +4,16 @@ import Footer1 from "../../../components/Footer/Footer1";
 import Breadcrumb from "../../../components/common/Breadcrumb";
 
 import Modals from "../../../components/Home/Modals";
-import { getGlobalSettings, getCategoryOfProducts } from "@/app/libs/getData";
+import {
+  getGlobalSettings,
+  getCategoryOfProducts,
+  getPrivacyPage,
+} from "@/app/libs/getData";
 
 export default async function PagesLayout({ children, params: { locale } }) {
   const globalSettings = await getGlobalSettings(locale);
   const productsCategories = await getCategoryOfProducts(locale);
+  const PrivacyPageData = await getPrivacyPage(locale);
 
   const HeaderLogo =
     globalSettings?.attributes?.HeaderLogo?.data?.attributes?.url;
@@ -26,7 +31,10 @@ export default async function PagesLayout({ children, params: { locale } }) {
         HeaderLogo={HeaderLogo}
         categories={productsCategories}
       />
-      <Breadcrumb />
+      <Breadcrumb
+        globalSettings={globalSettings}
+        PrivacyPageData={PrivacyPageData}
+      />
       {children}
       <Footer1
         lang={locale}

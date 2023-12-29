@@ -14825,7 +14825,7 @@ header.style-6 {
      16. Footer Section
 ========================================*/
 footer {
-  background: var(--title-color);
+  background: white;
 
   .footer-top {
     padding: 90px 11%;
@@ -14853,7 +14853,7 @@ footer {
 
       h5 {
         margin-bottom: 0;
-        color: var(--white-color);
+        color: var(--primary-color1);
         font-size: 20px;
         font-family: var(--font-montserrat);
         font-weight: 600;
@@ -14874,7 +14874,7 @@ footer {
           }
 
           a {
-            color: #b3b3b3;
+            color: var(--black-color2);
             font-size: 15px;
             font-family: var(--font-open-sans);
             font-weight: 600;
@@ -14884,13 +14884,13 @@ footer {
             gap: 7px;
 
             svg {
-              fill: #b3b3b3;
+              fill: var(--black-color2);
               transition: 0.35s;
               opacity: 0;
             }
 
             &:hover {
-              color: var(--white-color);
+              color: var(--title-color);
 
               svg {
                 fill: var(--primary-color1);
@@ -15044,7 +15044,7 @@ footer {
         line-height: 1;
 
         a {
-          color: #b3b3b3;
+          color: var(--black-color2);
           font-size: 15px;
           font-family: var(--font-open-sans);
           font-weight: 600;
@@ -15062,7 +15062,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 1px solid rgba(#fff, 0.05);
+    border-top: 1px solid rgba(var(--black-color2), 0.05);
     padding: 17px 11%;
 
     @include seventeen-down-device() {
@@ -15090,7 +15090,7 @@ footer {
     .copyright-area {
       p {
         margin-bottom: 0;
-        color: var(--white-color);
+        color: var(--black-color2);
         font-size: 14px;
         font-weight: 400;
         font-family: var(--font-open-sans);
@@ -15107,7 +15107,7 @@ footer {
       gap: 15px;
 
       h6 {
-        color: var(--white-color);
+        color: var(--black-color2);
         font-size: 14px;
         font-family: var(--font-open-sans);
         font-weight: 400;
@@ -15155,9 +15155,9 @@ footer {
           li {
             a {
               &:hover {
-                color: var(--white-color);
+                color: var(--black-color2);
                 svg {
-                  fill: var(--white-color);
+                  fill: var(--black-color2);
                   opacity: 1;
                 }
               }

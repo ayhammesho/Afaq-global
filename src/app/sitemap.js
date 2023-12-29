@@ -29,7 +29,7 @@ export default async function sitemap() {
   const baseUrlEn = "https://afaqglobal.com/en";
 
   // Get All news from CMS
-  const newsEn = await getBlogPageData("ar", 1, 100);
+  const newsEn = await getBlogPageData("en", 1, 100);
   const newsUrlsEn =
     newsEn?.data?.map((news) => {
       return {
@@ -52,7 +52,7 @@ export default async function sitemap() {
   const baseUrlTr = "https://afaqglobal.com/tr";
 
   // Get All news from CMS
-  const newsTr = await getBlogPageData("ar", 1, 100);
+  const newsTr = await getBlogPageData("tr", 1, 100);
   const newsUrlsTr =
     newsTr?.data?.map((news) => {
       return {

@@ -4,6 +4,20 @@ import Pagination from "@/components/News/Pagination";
 import { getBlogPageData } from "@/app/libs/getData";
 import { notFound } from "next/navigation";
 
+export async function generateMetadata({ params: { locale } }) {
+  const aboutPageData = await getBlogPageData(locale);
+  const seo = aboutPageData?.attributes?.seo[0];
+
+  return {
+    title: `${seo?.metaTitle}| AFAQ Global`,
+    description: seo?.metaDescription || "",
+    keywords: seo?.keywords || "",
+    openGraph: {
+      images: seo?.metaImage?.data?.attributes?.url,
+    },
+  };
+}
+
 async function NewsPage({ params: { locale }, searchParams }) {
   const blogsResponse = await getBlogPageData(
     locale,

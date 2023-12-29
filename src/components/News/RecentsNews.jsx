@@ -91,8 +91,7 @@ const RecentsNews = ({ recentBlogs }) => {
                           <img
                             src={
                               blog.attributes.BlogImage?.data
-                                ? process.env.NEXT_PUBLIC_BACKEND_URI +
-                                  blog.attributes.BlogImage?.data[0].attributes
+                                ? blog.attributes.BlogImage?.data[0].attributes
                                     .url
                                 : ""
                             }

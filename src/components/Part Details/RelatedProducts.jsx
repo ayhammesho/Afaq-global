@@ -73,7 +73,6 @@ const RelatedProducts = ({ relatedProducts, lang }) => {
                     <div className="shop-img">
                       <img
                         src={
-                          process.env.NEXT_PUBLIC_BACKEND_URI +
                           product.attributes.ProductImage.data.attributes.url
                         }
                         alt=""

@@ -121,7 +121,7 @@ function Header({ lang, HeaderLogo, categories }) {
               alt="image"
               className="img-fluid"
               // TODO : FIX IT TO USE ENV
-              src={process.env.NEXT_PUBLIC_BACKEND_URI + HeaderLogo}
+              src={HeaderLogo}
             />
           </a>
         </Link>
@@ -135,7 +135,7 @@ function Header({ lang, HeaderLogo, categories }) {
                   width={150}
                   alt="image"
                   // TODO : FIX IT TO USE ENV
-                  src={process.env.NEXT_PUBLIC_BACKEND_URI + HeaderLogo}
+                  src={HeaderLogo}
                 />
               </a>
             </Link>

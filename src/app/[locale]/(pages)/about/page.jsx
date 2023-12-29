@@ -15,9 +15,7 @@ export async function generateMetadata({ params: { locale } }) {
     description: seo?.metaDescription || "",
     keywords: seo?.keywords || "",
     openGraph: {
-      images:
-        process.env.NEXT_PUBLIC_BACKEND_URI +
-        seo?.metaImage?.data?.attributes?.url,
+      images: seo?.metaImage?.data?.attributes?.url,
     },
   };
 }

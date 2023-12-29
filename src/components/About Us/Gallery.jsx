@@ -15,7 +15,7 @@ const Gallery = ({ galleryData }) => {
 
   const images = galleryData.map((image, index) => ({
     id: index,
-    imageBig: process.env.NEXT_PUBLIC_BACKEND_URI + image.attributes.url,
+    imageBig: image.attributes.url,
   }));
 
   return (
@@ -41,9 +41,7 @@ const Gallery = ({ galleryData }) => {
                 <div className="gallery-item">
                   <img
                     className="img-fluid"
-                    src={
-                      process.env.NEXT_PUBLIC_BACKEND_URI + image.attributes.url
-                    }
+                    src={image.attributes.url}
                     alt="gallery"
                     onClick={() =>
                       setOpenimg({ openingState: true, openingIndex: index })
