@@ -13,7 +13,7 @@ import Link from "next/link";
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 function index({ heroData, lang }) {
   const heroImages =
-    heroData.images.data.map((image) => image.attributes.url) ?? "";
+    heroData.images.data?.map((image) => image?.attributes?.url) ?? "";
 
   const settings = useMemo(() => {
     return {

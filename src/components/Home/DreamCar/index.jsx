@@ -32,12 +32,10 @@ function index({ lang, productsCategories }) {
                 <div
                   className="img-fluid category-image h-100"
                   style={{
-                    backgroundImage: `url(${category.attributes.CategoryImage.data.attributes.url})`,
+                    backgroundImage: `url(${category?.attributes?.CategoryImage?.data?.attributes?.url})`,
                   }}
                 ></div>
-                {console.log(
-                  category.attributes.CategoryImage.data.attributes.url
-                )}
+
                 <div className=" position-absolute category-link  w-100 bottom-0 start-0  d-flex justify-content-center text-center py-3">
                   <h4 className="text-white">
                     {category.attributes.CategoryTitle}

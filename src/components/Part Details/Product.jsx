@@ -45,13 +45,17 @@ const Product = ({
           {otherProductImages &&
             otherProductImages.map((image) => (
               <div
-                key={image.id}
+                key={image?.id}
                 className="tab-pane fade"
-                id={"v-pills-img" + image.id}
+                id={"v-pills-img" + image?.id}
                 role="tabpanel"
-                aria-labelledby={"v-pills-img" + image.id + "-tab"}
+                aria-labelledby={"v-pills-img" + image?.id + "-tab"}
               >
-                <img className="img-fluid" src={image.attributes?.url} alt="" />
+                <img
+                  className="img-fluid"
+                  src={image?.attributes?.url}
+                  alt=""
+                />
               </div>
             ))}
         </div>
@@ -86,22 +90,22 @@ const Product = ({
             otherProductImages.map((image) => (
               <button
                 onClick={() => {
-                  setActiveImage(image.attributes?.url);
-                  setActiveImageId(image.id);
+                  setActiveImage(image?.attributes?.url);
+                  setActiveImageId(image?.id);
                 }}
-                key={image.id}
+                key={image?.id}
                 className={`nav-link ${
-                  activeImageId == image.id ? "active" : ""
+                  activeImageId == image?.id ? "active" : ""
                 }`}
-                id={"v-pills-img" + image.id + "-tab"}
+                id={"v-pills-img" + image?.id + "-tab"}
                 data-bs-toggle="pill"
-                data-bs-target={"v-pills-img" + image.id}
+                data-bs-target={"v-pills-img" + image?.id}
                 type="button"
                 role="tab"
-                aria-controls={"v-pills-img" + image.id}
+                aria-controls={"v-pills-img" + image?.id}
                 aria-selected="true"
               >
-                <img src={image.attributes?.url} alt="" />
+                <img src={image?.attributes?.url} alt="" />
               </button>
             ))}
         </div>

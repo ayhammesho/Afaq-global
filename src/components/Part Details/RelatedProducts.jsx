@@ -73,7 +73,8 @@ const RelatedProducts = ({ relatedProducts, lang }) => {
                     <div className="shop-img">
                       <img
                         src={
-                          product.attributes.ProductImage.data.attributes.url
+                          product?.attributes?.ProductImage?.data?.attributes
+                            ?.url
                         }
                         alt=""
                       />

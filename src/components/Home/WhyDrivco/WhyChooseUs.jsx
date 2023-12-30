@@ -77,7 +77,7 @@ function WhyChooseUs({ WhyUsData }) {
           </div>
           <div className="col-lg-6 d-flex justify-content-lg-end justify-content-center">
             <div className="drivco-img wow zoomIn" data-wow-delay="400ms">
-              <img src={WhyUsData?.Image.data.attributes.url} alt="img" />
+              <img src={WhyUsData?.Image?.data?.attributes?.url} alt="img" />
             </div>
           </div>
         </div>

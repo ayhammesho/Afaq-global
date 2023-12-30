@@ -90,8 +90,8 @@ const NewContent = ({
               <div className="blog-dt-img">
                 <img
                   className="img-fluid"
-                  src={image.url}
-                  alt={image.alternativeText}
+                  src={image?.url}
+                  alt={image?.alternativeText}
                 />
               </div>
             ),

@@ -15,7 +15,7 @@ const Gallery = ({ galleryData }) => {
 
   const images = galleryData.map((image, index) => ({
     id: index,
-    imageBig: image.attributes.url,
+    imageBig: image?.attributes?.url,
   }));
 
   return (
@@ -33,7 +33,7 @@ const Gallery = ({ galleryData }) => {
           <div className="row g-4 mb-50">
             {galleryData.map((image, index) => (
               <div
-                key={image.id}
+                key={image?.id}
                 className="col-lg-4 col-sm-6 wow fadeInUp"
                 data-wow-delay="200ms"
                 data-wow-duration="1500ms"
@@ -41,7 +41,7 @@ const Gallery = ({ galleryData }) => {
                 <div className="gallery-item">
                   <img
                     className="img-fluid"
-                    src={image.attributes.url}
+                    src={image?.attributes?.url}
                     alt="gallery"
                     onClick={() =>
                       setOpenimg({ openingState: true, openingIndex: index })

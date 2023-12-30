@@ -2,8 +2,8 @@ import React from "react";
 import Marquee from "react-fast-marquee";
 
 function index({ BrandsData }) {
-  const brandsImages = BrandsData.images.data.map(
-    (image) => image.attributes.url ?? ""
+  const brandsImages = BrandsData.images.data?.map(
+    (image) => image?.attributes?.url ?? ""
   );
   return (
     <div className="trusted-partner-section mb-100 pt-50">

@@ -50,7 +50,10 @@ function index({ blogData, lang }) {
                     <Link legacyBehavior href={`${lang}/news/${blog.id}`}>
                       <a>
                         <img
-                          src={blog.attributes.BlogImage.data[0].attributes.url}
+                          src={
+                            blog?.attributes?.BlogImage?.data?.[0].attributes
+                              ?.url
+                          }
                           alt=""
                         />
                       </a>
