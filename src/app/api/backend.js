@@ -35,7 +35,7 @@ export async function fetchDataWithPopulate(
     const url = `https://admin.afaqglobal.com/api/${endpoint}?${query}`;
 
     const res = await fetch(url, {
-      cache: "no-store",
+      next: { revalidate: 10 },
       // next: { cache: "no-cache" },
     });
     if (!res.ok) {
@@ -61,7 +61,7 @@ export async function fetchSingleData(lang, endpoint, id, populateArray = "*") {
   try {
     const url = `https://admin.afaqglobal.com/api/${endpoint}/${id}?${query}`;
     const res = await fetch(url, {
-      cache: "no-store",
+      next: { revalidate: 10 },
       // next: { cache: "no-cache" },
     });
     if (!res.ok) {
@@ -85,7 +85,7 @@ export async function fetchDataWithPagination(
     const url = `https://admin.afaqglobal.com/api/${endpoint}?populate=*&locale=${lang}&pagination[page]=${pageIndex}&pagination[pageSize]=${pageSize}`;
     console.log(url);
     const res = await fetch(url, {
-      cache: "no-store",
+      next: { revalidate: 10 },
       // next: { cache: "no-cache" },
     });
     if (!res.ok) {
@@ -132,7 +132,7 @@ export async function fetchDataWithPaginationAndFiltering(
     const url = `https://admin.afaqglobal.com/api/${endpoint}?${query}`;
     // console.log(url);
     const res = await fetch(url, {
-      cache: "no-store",
+      next: { revalidate: 10 },
       // next: { cache: "no-cache" },
     });
     if (!res.ok) {
