@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 export async function generateMetadata({ params: { locale } }) {
   const aboutPageData = await getBlogPageData(locale);
   const seo = aboutPageData?.attributes?.seo[0];
+  // console.log(aboutPageData?.attributes?.seo);
 
   return {
     title: `${seo?.metaTitle}| AFAQ Global`,

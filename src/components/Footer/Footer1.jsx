@@ -17,12 +17,12 @@ function Footer1({
           <div className="row row-cols-xl-4 row-cols-lg-3 row-cols-md-3 row-cols-sm-3 row-cols-1   g-lg-4 gy-5 ">
             <div className="col d-flex justify-content-lg-start">
               <div className="footer-logo">
-                <Link legacyBehavior href="/">
+                <Link legacyBehavior href={"/" + lang}>
                   <a>
                     <img width={300} src={footerLogo} alt="" />
                   </a>
                 </Link>
-                {/* <p className="text-white mt-4 ">{FooterSlogan}</p> */}
+                <p className=" mt-4 fw-bold  ">{FooterSlogan}</p>
               </div>
             </div>
 

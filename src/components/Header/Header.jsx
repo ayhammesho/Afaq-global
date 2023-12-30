@@ -114,7 +114,7 @@ function Header({ lang, HeaderLogo, categories }) {
       }
     >
       <div className="header-logo  d-flex">
-        <Link legacyBehavior href="/">
+        <Link legacyBehavior href={"/" + lang}>
           <a>
             <img
               width={200}

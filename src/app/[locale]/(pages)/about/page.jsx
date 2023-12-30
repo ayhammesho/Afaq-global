@@ -8,7 +8,7 @@ import { getAboutPageData, getTestimonials } from "@/app/libs/getData";
 
 export async function generateMetadata({ params: { locale } }) {
   const aboutPageData = await getAboutPageData(locale);
-  const seo = aboutPageData?.attributes?.seo?.[0];
+  const seo = aboutPageData?.attributes?.seo;
 
   return {
     title: `${seo?.metaTitle}| AFAQ Global`,
@@ -39,7 +39,7 @@ async function About({ params: { locale } }) {
 
       {galleryData && <Gallery galleryData={galleryData} />}
 
-      {/* <HowItWorks howDoesWorkData={howDoesWorkData} /> */}
+      <HowItWorks howDoesWorkData={howDoesWorkData} />
       {/* <CustomerSlider /> */}
       <Testimonial testimonials={testimonials} />
     </>

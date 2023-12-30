@@ -70,6 +70,7 @@ export async function getAboutPageData(lang) {
     "Gallery",
     "Gallery.Images",
     "HowDoesWorkSection",
+    "HowDoesWorkSection.FourKeyFeuture",
     "seo",
     "seo.metaImage",
     "seo.metaSocial",

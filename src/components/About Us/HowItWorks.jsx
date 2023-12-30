@@ -16,7 +16,7 @@ const HowItWorks = ({ howDoesWorkData }) => {
                 <h2>{howDoesWorkData?.Title}</h2>
                 <p>{howDoesWorkData?.SubTitle}</p>
               </div>
-              <div className="video-btn">
+              <div className="video-btn ">
                 <a onClick={() => setOpen(true)} className="video-popup">
                   <i className="bi bi-play-circle" /> Watch video
                 </a>
@@ -27,9 +27,9 @@ const HowItWorks = ({ howDoesWorkData }) => {
             <div className="col-lg-12">
               <div className="work-process-group">
                 <div className="row justify-content-center g-lg-0 gy-5">
-                  <div className="col-lg-3 col-sm-6">
-                    <div className="single-work-process text-center">
-                      <div className="step">
+                  <div className=" col-sm-6">
+                    <div className=" text-center">
+                      {/* <div className="step">
                         <span>01</span>
                       </div>
                       <div className="icon">
@@ -37,17 +37,18 @@ const HowItWorks = ({ howDoesWorkData }) => {
                           src="../assets/img/home2/icon/loaction.svg"
                           alt=""
                         />
-                      </div>
+                      </div> */}
                       <div className="content">
-                        <h6>Choose Any where</h6>
+                        <h3 style={{ color: "#c0923c" }}>
+                          {howDoesWorkData?.FourKeyFeuture?.FeutureTitle}
+                        </h3>
                         <p>
-                          Car servicing is the regular maintenance and
-                          inspection of a vehicle to ensure.
+                          {howDoesWorkData?.FourKeyFeuture?.FeutureSmallContent}
                         </p>
                       </div>
                     </div>
                   </div>
-                  <div className="col-lg-3 col-sm-6">
+                  {/* <div className="col-lg-3 col-sm-6">
                     <div className="single-work-process text-center">
                       <div className="step">
                         <span>02</span>
@@ -103,7 +104,7 @@ const HowItWorks = ({ howDoesWorkData }) => {
                         </p>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -115,7 +116,16 @@ const HowItWorks = ({ howDoesWorkData }) => {
           channel="youtube"
           youtube={{ mute: 0, autoplay: 0 }}
           isOpen={isOpen}
-          videoId="L61p2uyiMSo"
+          videoId={
+            howDoesWorkData?.VideoLink?.includes(
+              "https://www.youtube.com/embed/"
+            )
+              ? howDoesWorkData?.VideoLink.replace(
+                  "https://www.youtube.com/embed/",
+                  ""
+                )
+              : howDoesWorkData?.VideoLink.replace("https://youtu.be/", "")
+          }
           onClose={() => setOpen(false)}
         />
       </React.Fragment>
